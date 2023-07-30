@@ -32,7 +32,7 @@ namespace KTVProject
             {
                 this.pn_mv.Dock = DockStyle.None;
             }
-            //master分支提交测试
+            //dev分支提交测试
         }
     }
 }
