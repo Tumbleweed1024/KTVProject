@@ -136,9 +136,9 @@ namespace KTVProject
             this.panelBottom.Controls.Add(this.panelVolumeDown);
             this.panelBottom.Controls.Add(this.panelSearch);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 935);
+            this.panelBottom.Location = new System.Drawing.Point(0, 947);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(1920, 145);
+            this.panelBottom.Size = new System.Drawing.Size(2116, 273);
             this.panelBottom.TabIndex = 0;
             // 
             // panelToIndex
@@ -146,7 +146,7 @@ namespace KTVProject
             this.panelToIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelToIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelToIndex.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelToIndex.Location = new System.Drawing.Point(83, 5);
+            this.panelToIndex.Location = new System.Drawing.Point(310, 49);
             this.panelToIndex.Name = "panelToIndex";
             this.panelToIndex.Size = new System.Drawing.Size(123, 123);
             this.panelToIndex.TabIndex = 7;
@@ -160,7 +160,7 @@ namespace KTVProject
             this.panelNextMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelNextMusic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNextMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelNextMusic.Location = new System.Drawing.Point(1169, 5);
+            this.panelNextMusic.Location = new System.Drawing.Point(1396, 49);
             this.panelNextMusic.Name = "panelNextMusic";
             this.panelNextMusic.Size = new System.Drawing.Size(123, 123);
             this.panelNextMusic.TabIndex = 6;
@@ -174,7 +174,7 @@ namespace KTVProject
             this.panelFullScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelFullScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelFullScreen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelFullScreen.Location = new System.Drawing.Point(1531, 5);
+            this.panelFullScreen.Location = new System.Drawing.Point(1833, 49);
             this.panelFullScreen.Name = "panelFullScreen";
             this.panelFullScreen.Size = new System.Drawing.Size(123, 123);
             this.panelFullScreen.TabIndex = 8;
@@ -186,7 +186,7 @@ namespace KTVProject
             // awmp_bz
             // 
             this.awmp_bz.Enabled = true;
-            this.awmp_bz.Location = new System.Drawing.Point(1870, 92);
+            this.awmp_bz.Location = new System.Drawing.Point(2511, 171);
             this.awmp_bz.Name = "awmp_bz";
             this.awmp_bz.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_bz.OcxState")));
             this.awmp_bz.Size = new System.Drawing.Size(36, 36);
@@ -198,7 +198,7 @@ namespace KTVProject
             this.panelAccompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelAccompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelAccompany.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAccompany.Location = new System.Drawing.Point(1712, 5);
+            this.panelAccompany.Location = new System.Drawing.Point(2246, 49);
             this.panelAccompany.Name = "panelAccompany";
             this.panelAccompany.Size = new System.Drawing.Size(123, 123);
             this.panelAccompany.TabIndex = 7;
@@ -212,7 +212,7 @@ namespace KTVProject
             this.panelMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelMute.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMute.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMute.Location = new System.Drawing.Point(264, 5);
+            this.panelMute.Location = new System.Drawing.Point(491, 49);
             this.panelMute.Name = "panelMute";
             this.panelMute.Size = new System.Drawing.Size(123, 123);
             this.panelMute.TabIndex = 6;
@@ -226,7 +226,7 @@ namespace KTVProject
             this.panelReplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelReplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelReplay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelReplay.Location = new System.Drawing.Point(1350, 5);
+            this.panelReplay.Location = new System.Drawing.Point(1577, 49);
             this.panelReplay.Name = "panelReplay";
             this.panelReplay.Size = new System.Drawing.Size(123, 123);
             this.panelReplay.TabIndex = 5;
@@ -240,7 +240,7 @@ namespace KTVProject
             this.panelPaused.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelPaused.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelPaused.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPaused.Location = new System.Drawing.Point(807, 5);
+            this.panelPaused.Location = new System.Drawing.Point(1034, 49);
             this.panelPaused.Name = "panelPaused";
             this.panelPaused.Size = new System.Drawing.Size(123, 123);
             this.panelPaused.TabIndex = 4;
@@ -254,7 +254,7 @@ namespace KTVProject
             this.panelVolumeUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelVolumeUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelVolumeUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelVolumeUp.Location = new System.Drawing.Point(626, 5);
+            this.panelVolumeUp.Location = new System.Drawing.Point(853, 49);
             this.panelVolumeUp.Name = "panelVolumeUp";
             this.panelVolumeUp.Size = new System.Drawing.Size(123, 123);
             this.panelVolumeUp.TabIndex = 3;
@@ -268,7 +268,7 @@ namespace KTVProject
             this.panelVolumeDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelVolumeDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelVolumeDown.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelVolumeDown.Location = new System.Drawing.Point(445, 5);
+            this.panelVolumeDown.Location = new System.Drawing.Point(672, 49);
             this.panelVolumeDown.Name = "panelVolumeDown";
             this.panelVolumeDown.Size = new System.Drawing.Size(123, 123);
             this.panelVolumeDown.TabIndex = 2;
@@ -282,7 +282,7 @@ namespace KTVProject
             this.panelSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSearch.Location = new System.Drawing.Point(988, 5);
+            this.panelSearch.Location = new System.Drawing.Point(1215, 49);
             this.panelSearch.Name = "panelSearch";
             this.panelSearch.Size = new System.Drawing.Size(123, 123);
             this.panelSearch.TabIndex = 0;
@@ -303,17 +303,17 @@ namespace KTVProject
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1920, 93);
+            this.panelTop.Size = new System.Drawing.Size(2116, 114);
             this.panelTop.TabIndex = 1;
             // 
             // labelTime
             // 
             this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("思源黑体 CN", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
             this.labelTime.Location = new System.Drawing.Point(1641, 18);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(269, 87);
+            this.labelTime.Size = new System.Drawing.Size(315, 82);
             this.labelTime.TabIndex = 3;
             this.labelTime.Text = "00:00:00";
             // 
@@ -331,11 +331,11 @@ namespace KTVProject
             // 
             this.labelCountDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCountDown.AutoSize = true;
-            this.labelCountDown.Font = new System.Drawing.Font("思源黑体 CN", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelCountDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelCountDown.ForeColor = System.Drawing.Color.White;
             this.labelCountDown.Location = new System.Drawing.Point(12, 23);
             this.labelCountDown.Name = "labelCountDown";
-            this.labelCountDown.Size = new System.Drawing.Size(113, 58);
+            this.labelCountDown.Size = new System.Drawing.Size(132, 55);
             this.labelCountDown.TabIndex = 4;
             this.labelCountDown.Text = "0000";
             this.labelCountDown.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -363,11 +363,11 @@ namespace KTVProject
             // 
             this.lbl_xys.AutoSize = true;
             this.lbl_xys.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_xys.Font = new System.Drawing.Font("思源黑体 CN", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_xys.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbl_xys.ForeColor = System.Drawing.Color.White;
             this.lbl_xys.Location = new System.Drawing.Point(122, 8);
             this.lbl_xys.Name = "lbl_xys";
-            this.lbl_xys.Size = new System.Drawing.Size(208, 54);
+            this.lbl_xys.Size = new System.Drawing.Size(242, 52);
             this.lbl_xys.TabIndex = 3;
             this.lbl_xys.Text = "暂无歌曲！";
             // 
@@ -375,11 +375,11 @@ namespace KTVProject
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("思源黑体 CN", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 54);
+            this.label5.Size = new System.Drawing.Size(166, 52);
             this.label5.TabIndex = 2;
             this.label5.Text = "下一首:";
             // 
@@ -396,11 +396,11 @@ namespace KTVProject
             // 
             this.lbl_dqbf.AutoSize = true;
             this.lbl_dqbf.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_dqbf.Font = new System.Drawing.Font("思源黑体 CN", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_dqbf.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbl_dqbf.ForeColor = System.Drawing.Color.White;
             this.lbl_dqbf.Location = new System.Drawing.Point(151, 8);
             this.lbl_dqbf.Name = "lbl_dqbf";
-            this.lbl_dqbf.Size = new System.Drawing.Size(208, 54);
+            this.lbl_dqbf.Size = new System.Drawing.Size(242, 52);
             this.lbl_dqbf.TabIndex = 1;
             this.lbl_dqbf.Text = "暂无歌曲！";
             // 
@@ -408,11 +408,11 @@ namespace KTVProject
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("思源黑体 CN", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 54);
+            this.label2.Size = new System.Drawing.Size(210, 52);
             this.label2.TabIndex = 0;
             this.label2.Text = "当前歌曲:";
             // 
@@ -442,11 +442,11 @@ namespace KTVProject
             // 
             this.labelSongCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSongCount.AutoSize = true;
-            this.labelSongCount.Font = new System.Drawing.Font("思源黑体 CN", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelSongCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelSongCount.ForeColor = System.Drawing.Color.White;
             this.labelSongCount.Location = new System.Drawing.Point(19, 3);
             this.labelSongCount.Name = "labelSongCount";
-            this.labelSongCount.Size = new System.Drawing.Size(52, 64);
+            this.labelSongCount.Size = new System.Drawing.Size(56, 61);
             this.labelSongCount.TabIndex = 5;
             this.labelSongCount.Text = "0";
             this.labelSongCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -472,10 +472,9 @@ namespace KTVProject
             this.panelFill.Controls.Add(this.pn_yidian);
             this.panelFill.Controls.Add(this.panelVolume);
             this.panelFill.Controls.Add(this.panelCenter);
-            this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(0, 93);
+            this.panelFill.Location = new System.Drawing.Point(0, 120);
             this.panelFill.Name = "panelFill";
-            this.panelFill.Size = new System.Drawing.Size(1920, 842);
+            this.panelFill.Size = new System.Drawing.Size(2560, 1201);
             this.panelFill.TabIndex = 2;
             // 
             // pn_yidian
@@ -499,7 +498,7 @@ namespace KTVProject
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(319, 302);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 15);
+            this.label22.Size = new System.Drawing.Size(62, 18);
             this.label22.TabIndex = 5;
             this.label22.Text = "下一页";
             // 
@@ -518,7 +517,7 @@ namespace KTVProject
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(125, 10);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 15);
+            this.label11.Size = new System.Drawing.Size(71, 18);
             this.label11.TabIndex = 2;
             this.label11.Text = "label11";
             // 
@@ -527,7 +526,7 @@ namespace KTVProject
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(70, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 15);
+            this.label12.Size = new System.Drawing.Size(71, 18);
             this.label12.TabIndex = 1;
             this.label12.Text = "label12";
             // 
@@ -536,7 +535,7 @@ namespace KTVProject
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(15, 10);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 15);
+            this.label13.Size = new System.Drawing.Size(71, 18);
             this.label13.TabIndex = 0;
             this.label13.Text = "label13";
             // 
@@ -545,7 +544,7 @@ namespace KTVProject
             this.lbl_zys.AutoSize = true;
             this.lbl_zys.Location = new System.Drawing.Point(239, 302);
             this.lbl_zys.Name = "lbl_zys";
-            this.lbl_zys.Size = new System.Drawing.Size(63, 15);
+            this.lbl_zys.Size = new System.Drawing.Size(71, 18);
             this.lbl_zys.TabIndex = 4;
             this.lbl_zys.Text = "label21";
             // 
@@ -554,7 +553,7 @@ namespace KTVProject
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(220, 302);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(15, 15);
+            this.label20.Size = new System.Drawing.Size(17, 18);
             this.label20.TabIndex = 3;
             this.label20.Text = "/";
             // 
@@ -563,7 +562,7 @@ namespace KTVProject
             this.lbl_dqy.AutoSize = true;
             this.lbl_dqy.Location = new System.Drawing.Point(161, 302);
             this.lbl_dqy.Name = "lbl_dqy";
-            this.lbl_dqy.Size = new System.Drawing.Size(63, 15);
+            this.lbl_dqy.Size = new System.Drawing.Size(71, 18);
             this.lbl_dqy.TabIndex = 2;
             this.lbl_dqy.Text = "label19";
             // 
@@ -572,7 +571,7 @@ namespace KTVProject
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(76, 302);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 15);
+            this.label18.Size = new System.Drawing.Size(62, 18);
             this.label18.TabIndex = 1;
             this.label18.Text = "上一页";
             // 
@@ -601,7 +600,7 @@ namespace KTVProject
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(125, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 15);
+            this.label14.Size = new System.Drawing.Size(71, 18);
             this.label14.TabIndex = 2;
             this.label14.Text = "label14";
             // 
@@ -610,7 +609,7 @@ namespace KTVProject
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(70, 10);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 15);
+            this.label15.Size = new System.Drawing.Size(71, 18);
             this.label15.TabIndex = 1;
             this.label15.Text = "label15";
             // 
@@ -619,7 +618,7 @@ namespace KTVProject
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(15, 10);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 15);
+            this.label16.Size = new System.Drawing.Size(71, 18);
             this.label16.TabIndex = 0;
             this.label16.Text = "label16";
             // 
@@ -638,7 +637,7 @@ namespace KTVProject
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(125, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 15);
+            this.label8.Size = new System.Drawing.Size(62, 18);
             this.label8.TabIndex = 2;
             this.label8.Text = "label8";
             // 
@@ -647,7 +646,7 @@ namespace KTVProject
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(70, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 15);
+            this.label9.Size = new System.Drawing.Size(62, 18);
             this.label9.TabIndex = 1;
             this.label9.Text = "label9";
             // 
@@ -656,7 +655,7 @@ namespace KTVProject
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(15, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 15);
+            this.label10.Size = new System.Drawing.Size(71, 18);
             this.label10.TabIndex = 0;
             this.label10.Text = "label10";
             // 
@@ -675,7 +674,7 @@ namespace KTVProject
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(125, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 15);
+            this.label7.Size = new System.Drawing.Size(62, 18);
             this.label7.TabIndex = 2;
             this.label7.Text = "label7";
             // 
@@ -684,7 +683,7 @@ namespace KTVProject
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(70, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 15);
+            this.label6.Size = new System.Drawing.Size(62, 18);
             this.label6.TabIndex = 1;
             this.label6.Text = "label6";
             // 
@@ -693,7 +692,7 @@ namespace KTVProject
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 15);
+            this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             // 
@@ -701,20 +700,21 @@ namespace KTVProject
             // 
             this.panelVolume.Controls.Add(this.labelVolumnValue);
             this.panelVolume.Controls.Add(this.label1);
-            this.panelVolume.Location = new System.Drawing.Point(1657, 6);
+            this.panelVolume.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panelVolume.Location = new System.Drawing.Point(2193, -3);
             this.panelVolume.Name = "panelVolume";
-            this.panelVolume.Size = new System.Drawing.Size(251, 61);
+            this.panelVolume.Size = new System.Drawing.Size(390, 77);
             this.panelVolume.TabIndex = 2;
             this.panelVolume.Visible = false;
             // 
             // labelVolumnValue
             // 
             this.labelVolumnValue.AutoSize = true;
-            this.labelVolumnValue.Font = new System.Drawing.Font("思源黑体 CN", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelVolumnValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelVolumnValue.ForeColor = System.Drawing.Color.White;
-            this.labelVolumnValue.Location = new System.Drawing.Point(114, 0);
+            this.labelVolumnValue.Location = new System.Drawing.Point(164, 3);
             this.labelVolumnValue.Name = "labelVolumnValue";
-            this.labelVolumnValue.Size = new System.Drawing.Size(123, 68);
+            this.labelVolumnValue.Size = new System.Drawing.Size(138, 64);
             this.labelVolumnValue.TabIndex = 2;
             this.labelVolumnValue.Text = "NUL";
             this.labelVolumnValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -722,13 +722,13 @@ namespace KTVProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("思源黑体 CN", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 0);
+            this.label1.Location = new System.Drawing.Point(9, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 68);
+            this.label1.Size = new System.Drawing.Size(350, 64);
             this.label1.TabIndex = 1;
-            this.label1.Text = "音量：          %";
+            this.label1.Text = "音量：       %";
             // 
             // panelCenter
             // 
@@ -741,7 +741,7 @@ namespace KTVProject
             this.panelCenter.Controls.Add(this.p_show);
             this.panelCenter.Location = new System.Drawing.Point(180, 70);
             this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(1560, 702);
+            this.panelCenter.Size = new System.Drawing.Size(2200, 1061);
             this.panelCenter.TabIndex = 0;
             // 
             // panelIndex
@@ -753,10 +753,9 @@ namespace KTVProject
             this.panelIndex.Controls.Add(this.panelMusicType);
             this.panelIndex.Controls.Add(this.panelTopList);
             this.panelIndex.Controls.Add(this.panelSinger);
-            this.panelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelIndex.Location = new System.Drawing.Point(0, 0);
             this.panelIndex.Name = "panelIndex";
-            this.panelIndex.Size = new System.Drawing.Size(1558, 700);
+            this.panelIndex.Size = new System.Drawing.Size(2198, 1059);
             this.panelIndex.TabIndex = 0;
             // 
             // panelMV
@@ -857,10 +856,11 @@ namespace KTVProject
             // 
             // frmIndex
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(2116, 1220);
             this.Controls.Add(this.panelFill);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelBottom);
