@@ -306,6 +306,8 @@ namespace KTVProject
             //显示音量，计时器开启
             this.labelVolumnValue.Text = Convert.ToString(volume);
             this.panelVolume.Visible = true;
+            //置顶音量
+            this.panelVolume.BringToFront();
             //如果计时器已经启动，则先停止
             if (this.timerVolume.Enabled)
             {
@@ -357,6 +359,8 @@ namespace KTVProject
             //显示音量，计时器开启
             this.labelVolumnValue.Text = Convert.ToString(volume);
             this.panelVolume.Visible = true;
+            //置顶音量
+            this.panelVolume.BringToFront();
             //如果计时器已经启动，则先停止
             if (this.timerVolume.Enabled)
             {
@@ -918,11 +922,6 @@ namespace KTVProject
             if(minute >= 60)
             {
                 this.labelCountDown.Text = Convert.ToString(Convert.ToInt32(this.labelCountDown.Text) - 1);
-            }
-            //调整时间位置
-            if (this.labelCountDown.Location.X != 66 - (this.labelCountDown.Text.Length - 1) * 18)
-            {
-                this.labelCountDown.Left = 66 - (this.labelCountDown.Text.Length - 1) * 18;
             }
             //余额不足十分钟标为红色
             if (this.labelCountDown.Text.Length < 2)
