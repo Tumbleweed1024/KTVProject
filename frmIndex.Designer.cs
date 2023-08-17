@@ -136,9 +136,9 @@ namespace KTVProject
             this.panelBottom.Controls.Add(this.panelVolumeDown);
             this.panelBottom.Controls.Add(this.panelSearch);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 947);
+            this.panelBottom.Location = new System.Drawing.Point(0, 1327);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(2116, 273);
+            this.panelBottom.Size = new System.Drawing.Size(2560, 273);
             this.panelBottom.TabIndex = 0;
             // 
             // panelToIndex
@@ -296,6 +296,7 @@ namespace KTVProject
             this.panelTop.BackColor = System.Drawing.Color.Transparent;
             this.panelTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTop.Controls.Add(this.labelTime);
+            this.panelTop.Controls.Add(this.panelVolume);
             this.panelTop.Controls.Add(this.panelCountdown);
             this.panelTop.Controls.Add(this.panelScroll);
             this.panelTop.Controls.Add(this.panelPlayList);
@@ -303,7 +304,7 @@ namespace KTVProject
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(2116, 114);
+            this.panelTop.Size = new System.Drawing.Size(2560, 114);
             this.panelTop.TabIndex = 1;
             // 
             // labelTime
@@ -470,7 +471,6 @@ namespace KTVProject
             // 
             this.panelFill.BackColor = System.Drawing.Color.Transparent;
             this.panelFill.Controls.Add(this.pn_yidian);
-            this.panelFill.Controls.Add(this.panelVolume);
             this.panelFill.Controls.Add(this.panelCenter);
             this.panelFill.Location = new System.Drawing.Point(0, 120);
             this.panelFill.Name = "panelFill";
@@ -701,7 +701,7 @@ namespace KTVProject
             this.panelVolume.Controls.Add(this.labelVolumnValue);
             this.panelVolume.Controls.Add(this.label1);
             this.panelVolume.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panelVolume.Location = new System.Drawing.Point(2193, -3);
+            this.panelVolume.Location = new System.Drawing.Point(2142, 32);
             this.panelVolume.Name = "panelVolume";
             this.panelVolume.Size = new System.Drawing.Size(390, 77);
             this.panelVolume.TabIndex = 2;
@@ -709,6 +709,9 @@ namespace KTVProject
             // 
             // labelVolumnValue
             // 
+            this.labelVolumnValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelVolumnValue.AutoSize = true;
             this.labelVolumnValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelVolumnValue.ForeColor = System.Drawing.Color.White;
@@ -721,6 +724,9 @@ namespace KTVProject
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -860,7 +866,7 @@ namespace KTVProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2116, 1220);
+            this.ClientSize = new System.Drawing.Size(2560, 1600);
             this.Controls.Add(this.panelFill);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelBottom);
