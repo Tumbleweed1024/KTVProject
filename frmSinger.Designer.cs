@@ -106,34 +106,38 @@ namespace KTVProject
             // 
             // pn_mv
             // 
-            this.pn_mv.Location = new System.Drawing.Point(861, 157);
+            this.pn_mv.Location = new System.Drawing.Point(1292, 236);
+            this.pn_mv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pn_mv.Name = "pn_mv";
-            this.pn_mv.Size = new System.Drawing.Size(576, 324);
+            this.pn_mv.Size = new System.Drawing.Size(864, 486);
             this.pn_mv.TabIndex = 0;
             // 
             // lblshangyiye
             // 
             this.lblshangyiye.AutoSize = true;
-            this.lblshangyiye.Location = new System.Drawing.Point(185, 503);
+            this.lblshangyiye.Location = new System.Drawing.Point(278, 754);
+            this.lblshangyiye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblshangyiye.Name = "lblshangyiye";
-            this.lblshangyiye.Size = new System.Drawing.Size(41, 12);
+            this.lblshangyiye.Size = new System.Drawing.Size(62, 18);
             this.lblshangyiye.TabIndex = 12;
             this.lblshangyiye.Text = "上一页";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 130);
+            this.label5.Location = new System.Drawing.Point(69, 195);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(62, 18);
             this.label5.TabIndex = 1;
             this.label5.Text = "label5";
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox5.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox5.Size = new System.Drawing.Size(150, 158);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -142,25 +146,28 @@ namespace KTVProject
             // 
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(356, 11);
+            this.panel5.Location = new System.Drawing.Point(534, 16);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(134, 157);
+            this.panel5.Size = new System.Drawing.Size(201, 236);
             this.panel5.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 130);
+            this.label4.Location = new System.Drawing.Point(69, 195);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "label4";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox4.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox4.Size = new System.Drawing.Size(150, 158);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -169,25 +176,28 @@ namespace KTVProject
             // 
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(25, 185);
+            this.panel4.Location = new System.Drawing.Point(38, 278);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(134, 157);
+            this.panel4.Size = new System.Drawing.Size(201, 236);
             this.panel4.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 130);
+            this.label3.Location = new System.Drawing.Point(69, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "label3";
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox3.Size = new System.Drawing.Size(150, 158);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -196,25 +206,28 @@ namespace KTVProject
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(184, 185);
+            this.panel3.Location = new System.Drawing.Point(276, 278);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(134, 157);
+            this.panel3.Size = new System.Drawing.Size(201, 236);
             this.panel3.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 130);
+            this.label2.Location = new System.Drawing.Point(69, 195);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox2.Size = new System.Drawing.Size(150, 158);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -223,25 +236,28 @@ namespace KTVProject
             // 
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(184, 11);
+            this.panel6.Location = new System.Drawing.Point(276, 16);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(134, 157);
+            this.panel6.Size = new System.Drawing.Size(201, 236);
             this.panel6.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 130);
+            this.label1.Location = new System.Drawing.Point(69, 195);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(62, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 158);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -252,17 +268,19 @@ namespace KTVProject
             this.panel8.Controls.Add(this.lblNv);
             this.panel8.Controls.Add(this.lblNan);
             this.panel8.Controls.Add(this.lblAll);
-            this.panel8.Location = new System.Drawing.Point(163, 41);
+            this.panel8.Location = new System.Drawing.Point(244, 62);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(395, 48);
+            this.panel8.Size = new System.Drawing.Size(592, 72);
             this.panel8.TabIndex = 11;
             // 
             // lblZuhe
             // 
             this.lblZuhe.AutoSize = true;
-            this.lblZuhe.Location = new System.Drawing.Point(253, 18);
+            this.lblZuhe.Location = new System.Drawing.Point(380, 27);
+            this.lblZuhe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblZuhe.Name = "lblZuhe";
-            this.lblZuhe.Size = new System.Drawing.Size(29, 12);
+            this.lblZuhe.Size = new System.Drawing.Size(44, 18);
             this.lblZuhe.TabIndex = 3;
             this.lblZuhe.Tag = "3";
             this.lblZuhe.Text = "组合";
@@ -270,9 +288,10 @@ namespace KTVProject
             // lblNv
             // 
             this.lblNv.AutoSize = true;
-            this.lblNv.Location = new System.Drawing.Point(187, 17);
+            this.lblNv.Location = new System.Drawing.Point(280, 26);
+            this.lblNv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNv.Name = "lblNv";
-            this.lblNv.Size = new System.Drawing.Size(17, 12);
+            this.lblNv.Size = new System.Drawing.Size(26, 18);
             this.lblNv.TabIndex = 2;
             this.lblNv.Tag = "2";
             this.lblNv.Text = "女";
@@ -280,9 +299,10 @@ namespace KTVProject
             // lblNan
             // 
             this.lblNan.AutoSize = true;
-            this.lblNan.Location = new System.Drawing.Point(111, 18);
+            this.lblNan.Location = new System.Drawing.Point(166, 27);
+            this.lblNan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNan.Name = "lblNan";
-            this.lblNan.Size = new System.Drawing.Size(17, 12);
+            this.lblNan.Size = new System.Drawing.Size(26, 18);
             this.lblNan.TabIndex = 1;
             this.lblNan.Tag = "1";
             this.lblNan.Text = "男";
@@ -290,9 +310,10 @@ namespace KTVProject
             // lblAll
             // 
             this.lblAll.AutoSize = true;
-            this.lblAll.Location = new System.Drawing.Point(41, 17);
+            this.lblAll.Location = new System.Drawing.Point(62, 26);
+            this.lblAll.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAll.Name = "lblAll";
-            this.lblAll.Size = new System.Drawing.Size(29, 12);
+            this.lblAll.Size = new System.Drawing.Size(44, 18);
             this.lblAll.TabIndex = 0;
             this.lblAll.Tag = "0";
             this.lblAll.Text = "全部";
@@ -300,27 +321,30 @@ namespace KTVProject
             // lblZongYe
             // 
             this.lblZongYe.AutoSize = true;
-            this.lblZongYe.Location = new System.Drawing.Point(360, 503);
+            this.lblZongYe.Location = new System.Drawing.Point(540, 754);
+            this.lblZongYe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblZongYe.Name = "lblZongYe";
-            this.lblZongYe.Size = new System.Drawing.Size(41, 12);
+            this.lblZongYe.Size = new System.Drawing.Size(62, 18);
             this.lblZongYe.TabIndex = 10;
             this.lblZongYe.Text = "label9";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(343, 503);
+            this.label8.Location = new System.Drawing.Point(514, 754);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(11, 12);
+            this.label8.Size = new System.Drawing.Size(17, 18);
             this.label8.TabIndex = 9;
             this.label8.Text = "/";
             // 
             // lblDangqianye
             // 
             this.lblDangqianye.AutoSize = true;
-            this.lblDangqianye.Location = new System.Drawing.Point(295, 503);
+            this.lblDangqianye.Location = new System.Drawing.Point(442, 754);
+            this.lblDangqianye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDangqianye.Name = "lblDangqianye";
-            this.lblDangqianye.Size = new System.Drawing.Size(41, 12);
+            this.lblDangqianye.Size = new System.Drawing.Size(62, 18);
             this.lblDangqianye.TabIndex = 8;
             this.lblDangqianye.Text = "label7";
             // 
@@ -328,26 +352,29 @@ namespace KTVProject
             // 
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(356, 185);
+            this.panel2.Location = new System.Drawing.Point(534, 278);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(134, 157);
+            this.panel2.Size = new System.Drawing.Size(201, 236);
             this.panel2.TabIndex = 0;
             // 
             // lblxiayiye
             // 
             this.lblxiayiye.AutoSize = true;
-            this.lblxiayiye.Location = new System.Drawing.Point(468, 503);
+            this.lblxiayiye.Location = new System.Drawing.Point(702, 754);
+            this.lblxiayiye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblxiayiye.Name = "lblxiayiye";
-            this.lblxiayiye.Size = new System.Drawing.Size(41, 12);
+            this.lblxiayiye.Size = new System.Drawing.Size(62, 18);
             this.lblxiayiye.TabIndex = 13;
             this.lblxiayiye.Text = "下一页";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 130);
+            this.label6.Location = new System.Drawing.Point(69, 195);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.Size = new System.Drawing.Size(62, 18);
             this.label6.TabIndex = 1;
             this.label6.Text = "label6";
             // 
@@ -360,9 +387,10 @@ namespace KTVProject
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(139, 117);
+            this.panel1.Location = new System.Drawing.Point(208, 176);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 364);
+            this.panel1.Size = new System.Drawing.Size(806, 546);
             this.panel1.TabIndex = 7;
             // 
             // panel9
@@ -373,54 +401,60 @@ namespace KTVProject
             this.panel9.Controls.Add(this.lblDang);
             this.panel9.Controls.Add(this.lblsyy);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(6, 6);
+            this.panel9.Location = new System.Drawing.Point(9, 9);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(531, 358);
+            this.panel9.Size = new System.Drawing.Size(796, 537);
             this.panel9.TabIndex = 2;
             this.panel9.Visible = false;
             // 
             // lblxyy
             // 
             this.lblxyy.AutoSize = true;
-            this.lblxyy.Location = new System.Drawing.Point(436, 302);
+            this.lblxyy.Location = new System.Drawing.Point(654, 453);
+            this.lblxyy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblxyy.Name = "lblxyy";
-            this.lblxyy.Size = new System.Drawing.Size(41, 12);
+            this.lblxyy.Size = new System.Drawing.Size(62, 18);
             this.lblxyy.TabIndex = 5;
             this.lblxyy.Text = "下一页";
             // 
             // lblzong
             // 
             this.lblzong.AutoSize = true;
-            this.lblzong.Location = new System.Drawing.Point(296, 305);
+            this.lblzong.Location = new System.Drawing.Point(444, 458);
+            this.lblzong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblzong.Name = "lblzong";
-            this.lblzong.Size = new System.Drawing.Size(47, 12);
+            this.lblzong.Size = new System.Drawing.Size(71, 18);
             this.lblzong.TabIndex = 4;
             this.lblzong.Text = "label23";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(279, 305);
+            this.label22.Location = new System.Drawing.Point(418, 458);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(11, 12);
+            this.label22.Size = new System.Drawing.Size(17, 18);
             this.label22.TabIndex = 3;
             this.label22.Text = "/";
             // 
             // lblDang
             // 
             this.lblDang.AutoSize = true;
-            this.lblDang.Location = new System.Drawing.Point(228, 305);
+            this.lblDang.Location = new System.Drawing.Point(342, 458);
+            this.lblDang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDang.Name = "lblDang";
-            this.lblDang.Size = new System.Drawing.Size(47, 12);
+            this.lblDang.Size = new System.Drawing.Size(71, 18);
             this.lblDang.TabIndex = 2;
             this.lblDang.Text = "label21";
             // 
             // lblsyy
             // 
             this.lblsyy.AutoSize = true;
-            this.lblsyy.Location = new System.Drawing.Point(105, 302);
+            this.lblsyy.Location = new System.Drawing.Point(158, 453);
+            this.lblsyy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblsyy.Name = "lblsyy";
-            this.lblsyy.Size = new System.Drawing.Size(41, 12);
+            this.lblsyy.Size = new System.Drawing.Size(62, 18);
             this.lblsyy.TabIndex = 1;
             this.lblsyy.Text = "上一页";
             // 
@@ -430,9 +464,10 @@ namespace KTVProject
             this.panel10.Controls.Add(this.panel13);
             this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(24, 35);
+            this.panel10.Location = new System.Drawing.Point(36, 52);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(474, 240);
+            this.panel10.Size = new System.Drawing.Size(711, 360);
             this.panel10.TabIndex = 0;
             // 
             // panel14
@@ -440,35 +475,39 @@ namespace KTVProject
             this.panel14.Controls.Add(this.label17);
             this.panel14.Controls.Add(this.label18);
             this.panel14.Controls.Add(this.label19);
-            this.panel14.Location = new System.Drawing.Point(36, 17);
+            this.panel14.Location = new System.Drawing.Point(54, 26);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(399, 40);
+            this.panel14.Size = new System.Drawing.Size(598, 60);
             this.panel14.TabIndex = 3;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(309, 11);
+            this.label17.Location = new System.Drawing.Point(464, 16);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(47, 12);
+            this.label17.Size = new System.Drawing.Size(71, 18);
             this.label17.TabIndex = 2;
             this.label17.Text = "label17";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(168, 11);
+            this.label18.Location = new System.Drawing.Point(252, 16);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(47, 12);
+            this.label18.Size = new System.Drawing.Size(71, 18);
             this.label18.TabIndex = 1;
             this.label18.Text = "label18";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 11);
+            this.label19.Location = new System.Drawing.Point(18, 16);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 12);
+            this.label19.Size = new System.Drawing.Size(71, 18);
             this.label19.TabIndex = 0;
             this.label19.Text = "label19";
             // 
@@ -477,35 +516,39 @@ namespace KTVProject
             this.panel13.Controls.Add(this.label14);
             this.panel13.Controls.Add(this.label15);
             this.panel13.Controls.Add(this.label16);
-            this.panel13.Location = new System.Drawing.Point(36, 63);
+            this.panel13.Location = new System.Drawing.Point(54, 94);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(399, 40);
+            this.panel13.Size = new System.Drawing.Size(598, 60);
             this.panel13.TabIndex = 3;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(309, 11);
+            this.label14.Location = new System.Drawing.Point(464, 16);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 12);
+            this.label14.Size = new System.Drawing.Size(71, 18);
             this.label14.TabIndex = 2;
             this.label14.Text = "label14";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(168, 11);
+            this.label15.Location = new System.Drawing.Point(252, 16);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 12);
+            this.label15.Size = new System.Drawing.Size(71, 18);
             this.label15.TabIndex = 1;
             this.label15.Text = "label15";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 11);
+            this.label16.Location = new System.Drawing.Point(18, 16);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 12);
+            this.label16.Size = new System.Drawing.Size(71, 18);
             this.label16.TabIndex = 0;
             this.label16.Text = "label16";
             // 
@@ -514,35 +557,39 @@ namespace KTVProject
             this.panel12.Controls.Add(this.label11);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Controls.Add(this.label13);
-            this.panel12.Location = new System.Drawing.Point(36, 118);
+            this.panel12.Location = new System.Drawing.Point(54, 177);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(399, 40);
+            this.panel12.Size = new System.Drawing.Size(598, 60);
             this.panel12.TabIndex = 3;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(309, 11);
+            this.label11.Location = new System.Drawing.Point(464, 16);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 12);
+            this.label11.Size = new System.Drawing.Size(71, 18);
             this.label11.TabIndex = 2;
             this.label11.Text = "label11";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(168, 11);
+            this.label12.Location = new System.Drawing.Point(252, 16);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 12);
+            this.label12.Size = new System.Drawing.Size(71, 18);
             this.label12.TabIndex = 1;
             this.label12.Text = "label12";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 11);
+            this.label13.Location = new System.Drawing.Point(18, 16);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 12);
+            this.label13.Size = new System.Drawing.Size(71, 18);
             this.label13.TabIndex = 0;
             this.label13.Text = "label13";
             // 
@@ -551,35 +598,39 @@ namespace KTVProject
             this.panel11.Controls.Add(this.label10);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Controls.Add(this.label7);
-            this.panel11.Location = new System.Drawing.Point(36, 179);
+            this.panel11.Location = new System.Drawing.Point(54, 268);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(399, 40);
+            this.panel11.Size = new System.Drawing.Size(598, 60);
             this.panel11.TabIndex = 0;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(309, 11);
+            this.label10.Location = new System.Drawing.Point(464, 16);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 12);
+            this.label10.Size = new System.Drawing.Size(71, 18);
             this.label10.TabIndex = 2;
             this.label10.Text = "label10";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(168, 11);
+            this.label9.Location = new System.Drawing.Point(252, 16);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.Size = new System.Drawing.Size(62, 18);
             this.label9.TabIndex = 1;
             this.label9.Text = "label9";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 11);
+            this.label7.Location = new System.Drawing.Point(18, 16);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.Size = new System.Drawing.Size(62, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "label7";
             // 
@@ -587,25 +638,27 @@ namespace KTVProject
             // 
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(25, 11);
+            this.panel7.Location = new System.Drawing.Point(38, 16);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(134, 157);
+            this.panel7.Size = new System.Drawing.Size(201, 236);
             this.panel7.TabIndex = 2;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox6.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox6.Size = new System.Drawing.Size(150, 158);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
             // frmSinger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1558, 700);
+            this.ClientSize = new System.Drawing.Size(2337, 1050);
             this.Controls.Add(this.lblshangyiye);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.lblZongYe);
@@ -616,6 +669,7 @@ namespace KTVProject
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmSinger";
             this.ShowIcon = false;

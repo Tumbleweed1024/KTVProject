@@ -82,9 +82,6 @@ namespace KTVProject
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelVolume = new System.Windows.Forms.Panel();
-            this.labelVolumnValue = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelCenter = new System.Windows.Forms.Panel();
             this.panelIndex = new System.Windows.Forms.Panel();
             this.panelMV = new System.Windows.Forms.Panel();
@@ -93,6 +90,9 @@ namespace KTVProject
             this.panelMusicType = new System.Windows.Forms.Panel();
             this.panelTopList = new System.Windows.Forms.Panel();
             this.panelSinger = new System.Windows.Forms.Panel();
+            this.panelVolume = new System.Windows.Forms.Panel();
+            this.labelVolumnValue = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.p_show = new System.Windows.Forms.Panel();
             this.timerVolume = new System.Windows.Forms.Timer(this.components);
             this.timer1s = new System.Windows.Forms.Timer(this.components);
@@ -113,11 +113,11 @@ namespace KTVProject
             this.panel14.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panelVolume.SuspendLayout();
             this.panelCenter.SuspendLayout();
             this.panelIndex.SuspendLayout();
             this.panelMV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).BeginInit();
+            this.panelVolume.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBottom
@@ -488,7 +488,7 @@ namespace KTVProject
             this.pn_yidian.Controls.Add(this.lbl_dqy);
             this.pn_yidian.Controls.Add(this.label18);
             this.pn_yidian.Controls.Add(this.panel10);
-            this.pn_yidian.Location = new System.Drawing.Point(1176, 9);
+            this.pn_yidian.Location = new System.Drawing.Point(1605, 9);
             this.pn_yidian.Name = "pn_yidian";
             this.pn_yidian.Size = new System.Drawing.Size(465, 332);
             this.pn_yidian.TabIndex = 5;
@@ -697,6 +697,113 @@ namespace KTVProject
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             // 
+            // panelCenter
+            // 
+            this.panelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCenter.Controls.Add(this.panelIndex);
+            this.panelCenter.Controls.Add(this.panelVolume);
+            this.panelCenter.Controls.Add(this.p_show);
+            this.panelCenter.Location = new System.Drawing.Point(179, 23);
+            this.panelCenter.Name = "panelCenter";
+            this.panelCenter.Size = new System.Drawing.Size(2208, 1242);
+            this.panelCenter.TabIndex = 0;
+            // 
+            // panelIndex
+            // 
+            this.panelIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelIndex.Controls.Add(this.panelMV);
+            this.panelIndex.Controls.Add(this.panelItem);
+            this.panelIndex.Controls.Add(this.panelMusicType);
+            this.panelIndex.Controls.Add(this.panelTopList);
+            this.panelIndex.Controls.Add(this.panelSinger);
+            this.panelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelIndex.Location = new System.Drawing.Point(0, 0);
+            this.panelIndex.Name = "panelIndex";
+            this.panelIndex.Size = new System.Drawing.Size(2206, 1240);
+            this.panelIndex.TabIndex = 0;
+            // 
+            // panelMV
+            // 
+            this.panelMV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMV.Controls.Add(this.awmp_mv);
+            this.panelMV.Location = new System.Drawing.Point(1039, 15);
+            this.panelMV.Name = "panelMV";
+            this.panelMV.Size = new System.Drawing.Size(1152, 648);
+            this.panelMV.TabIndex = 2;
+            // 
+            // awmp_mv
+            // 
+            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.awmp_mv.Enabled = true;
+            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
+            this.awmp_mv.Name = "awmp_mv";
+            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
+            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
+            this.awmp_mv.TabIndex = 0;
+            // 
+            // panelItem
+            // 
+            this.panelItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelItem.Location = new System.Drawing.Point(1040, 692);
+            this.panelItem.Name = "panelItem";
+            this.panelItem.Size = new System.Drawing.Size(507, 250);
+            this.panelItem.TabIndex = 5;
+            this.panelItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseDown);
+            this.panelItem.MouseEnter += new System.EventHandler(this.panelItem_MouseEnter);
+            this.panelItem.MouseLeave += new System.EventHandler(this.panelItem_MouseLeave);
+            this.panelItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseUp);
+            // 
+            // panelMusicType
+            // 
+            this.panelMusicType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMusicType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMusicType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMusicType.Location = new System.Drawing.Point(1040, 971);
+            this.panelMusicType.Name = "panelMusicType";
+            this.panelMusicType.Size = new System.Drawing.Size(507, 250);
+            this.panelMusicType.TabIndex = 4;
+            this.panelMusicType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseDown);
+            this.panelMusicType.MouseEnter += new System.EventHandler(this.panelMusicType_MouseEnter);
+            this.panelMusicType.MouseLeave += new System.EventHandler(this.panelMusicType_MouseLeave);
+            this.panelMusicType.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseUp);
+            // 
+            // panelTopList
+            // 
+            this.panelTopList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTopList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTopList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelTopList.Location = new System.Drawing.Point(2157, 1212);
+            this.panelTopList.Name = "panelTopList";
+            this.panelTopList.Size = new System.Drawing.Size(484, 1199);
+            this.panelTopList.TabIndex = 1;
+            this.panelTopList.Visible = false;
+            this.panelTopList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseDown);
+            this.panelTopList.MouseEnter += new System.EventHandler(this.panelTopList_MouseEnter);
+            this.panelTopList.MouseLeave += new System.EventHandler(this.panelTopList_MouseLeave);
+            this.panelTopList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseUp);
+            // 
+            // panelSinger
+            // 
+            this.panelSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelSinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSinger.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSinger.Location = new System.Drawing.Point(15, 16);
+            this.panelSinger.Name = "panelSinger";
+            this.panelSinger.Size = new System.Drawing.Size(538, 1206);
+            this.panelSinger.TabIndex = 0;
+            this.panelSinger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseDown);
+            this.panelSinger.MouseEnter += new System.EventHandler(this.panelSinger_MouseEnter);
+            this.panelSinger.MouseLeave += new System.EventHandler(this.panelSinger_MouseLeave);
+            this.panelSinger.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseUp);
+            // 
             // panelVolume
             // 
             this.panelVolume.Controls.Add(this.labelVolumnValue);
@@ -736,112 +843,6 @@ namespace KTVProject
             this.label1.Size = new System.Drawing.Size(369, 75);
             this.label1.TabIndex = 1;
             this.label1.Text = "音量：       %";
-            // 
-            // panelCenter
-            // 
-            this.panelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCenter.Controls.Add(this.panelIndex);
-            this.panelCenter.Controls.Add(this.panelVolume);
-            this.panelCenter.Controls.Add(this.p_show);
-            this.panelCenter.Location = new System.Drawing.Point(179, 23);
-            this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(2208, 1242);
-            this.panelCenter.TabIndex = 0;
-            // 
-            // panelIndex
-            // 
-            this.panelIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelIndex.Controls.Add(this.panelMV);
-            this.panelIndex.Controls.Add(this.panelItem);
-            this.panelIndex.Controls.Add(this.panelMusicType);
-            this.panelIndex.Controls.Add(this.panelTopList);
-            this.panelIndex.Controls.Add(this.panelSinger);
-            this.panelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelIndex.Location = new System.Drawing.Point(0, 0);
-            this.panelIndex.Name = "panelIndex";
-            this.panelIndex.Size = new System.Drawing.Size(2206, 1240);
-            this.panelIndex.TabIndex = 0;
-            // 
-            // panelMV
-            // 
-            this.panelMV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMV.Controls.Add(this.awmp_mv);
-            this.panelMV.Location = new System.Drawing.Point(526, 21);
-            this.panelMV.Name = "panelMV";
-            this.panelMV.Size = new System.Drawing.Size(1152, 648);
-            this.panelMV.TabIndex = 2;
-            // 
-            // awmp_mv
-            // 
-            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.awmp_mv.Enabled = true;
-            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
-            this.awmp_mv.Name = "awmp_mv";
-            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
-            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
-            this.awmp_mv.TabIndex = 0;
-            // 
-            // panelItem
-            // 
-            this.panelItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelItem.Location = new System.Drawing.Point(527, 691);
-            this.panelItem.Name = "panelItem";
-            this.panelItem.Size = new System.Drawing.Size(560, 528);
-            this.panelItem.TabIndex = 5;
-            this.panelItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseDown);
-            this.panelItem.MouseEnter += new System.EventHandler(this.panelItem_MouseEnter);
-            this.panelItem.MouseLeave += new System.EventHandler(this.panelItem_MouseLeave);
-            this.panelItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseUp);
-            // 
-            // panelMusicType
-            // 
-            this.panelMusicType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMusicType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMusicType.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMusicType.Location = new System.Drawing.Point(1118, 691);
-            this.panelMusicType.Name = "panelMusicType";
-            this.panelMusicType.Size = new System.Drawing.Size(560, 528);
-            this.panelMusicType.TabIndex = 4;
-            this.panelMusicType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseDown);
-            this.panelMusicType.MouseEnter += new System.EventHandler(this.panelMusicType_MouseEnter);
-            this.panelMusicType.MouseLeave += new System.EventHandler(this.panelMusicType_MouseLeave);
-            this.panelMusicType.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseUp);
-            // 
-            // panelTopList
-            // 
-            this.panelTopList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTopList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTopList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelTopList.Location = new System.Drawing.Point(1699, 20);
-            this.panelTopList.Name = "panelTopList";
-            this.panelTopList.Size = new System.Drawing.Size(484, 1199);
-            this.panelTopList.TabIndex = 1;
-            this.panelTopList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseDown);
-            this.panelTopList.MouseEnter += new System.EventHandler(this.panelTopList_MouseEnter);
-            this.panelTopList.MouseLeave += new System.EventHandler(this.panelTopList_MouseLeave);
-            this.panelTopList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseUp);
-            // 
-            // panelSinger
-            // 
-            this.panelSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelSinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSinger.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSinger.Location = new System.Drawing.Point(20, 20);
-            this.panelSinger.Name = "panelSinger";
-            this.panelSinger.Size = new System.Drawing.Size(484, 1199);
-            this.panelSinger.TabIndex = 0;
-            this.panelSinger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseDown);
-            this.panelSinger.MouseEnter += new System.EventHandler(this.panelSinger_MouseEnter);
-            this.panelSinger.MouseLeave += new System.EventHandler(this.panelSinger_MouseLeave);
-            this.panelSinger.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseUp);
             // 
             // p_show
             // 
@@ -906,12 +907,12 @@ namespace KTVProject
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panelVolume.ResumeLayout(false);
-            this.panelVolume.PerformLayout();
             this.panelCenter.ResumeLayout(false);
             this.panelIndex.ResumeLayout(false);
             this.panelMV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).EndInit();
+            this.panelVolume.ResumeLayout(false);
+            this.panelVolume.PerformLayout();
             this.ResumeLayout(false);
 
         }

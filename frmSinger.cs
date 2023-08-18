@@ -20,8 +20,10 @@ namespace KTVProject
 
         private void frmSinger_Load(object sender, EventArgs e)
         {
+            //MV置顶，防止无法全屏
             pn_mv.BringToFront();
         }
+        //MV全屏方法，通过底栏按钮调用
         public void mvDock(bool full)
         {
             if (full)

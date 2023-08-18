@@ -188,7 +188,7 @@ namespace KTVProject
         SqlConnection conn;
         SqlCommand comm;
         SqlDataReader reader;
-        string connstring = "Data Source=.;Initial Catalog=KTVProject;User ID=Admin;Password=123456";
+        string connstring = "Data Source=.;Initial Catalog=KTVProject;User ID=sa;Password=123456";
         #endregion
 
         #region 鼠标动作
@@ -917,12 +917,12 @@ namespace KTVProject
             {
                 this.labelCountDown.Text = "10";
             }
-            //减时间
-            minute++;
-            if(minute >= 60)
-            {
-                this.labelCountDown.Text = Convert.ToString(Convert.ToInt32(this.labelCountDown.Text) - 1);
-            }
+            ////减时间
+            //minute++;
+            //if(minute >= 60)
+            //{
+            //    this.labelCountDown.Text = Convert.ToString(Convert.ToInt32(this.labelCountDown.Text) - 1);
+            //}
             //余额不足十分钟标为红色
             if (this.labelCountDown.Text.Length < 2)
             {
