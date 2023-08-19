@@ -13,11 +13,11 @@ namespace KTVProject
 {
     public partial class frmSinger : Form
     {
+        public frmIndex frmindex;
         public frmSinger()
         {
             InitializeComponent();
         }
-        public frmIndex frmindex;
         //歌手名单集合
         List<Singers> ls = new List<Singers>();
         //歌星名单当前页
@@ -45,12 +45,6 @@ namespace KTVProject
             //显示歌手
             showSinger();
         }
-        #region 连接数据库
-        SqlConnection conn;
-        SqlCommand comm;
-        SqlDataReader reader;
-        string connstring = "Data Source=.;Initial Catalog=KTVProject;User ID=sa;Password=123456";
-        #endregion
         //MV全屏方法，通过底栏按钮调用
         public void mvDock(bool full)
         {
@@ -69,7 +63,7 @@ namespace KTVProject
             string py = this.textBox1.Text;
             try
             {
-                conn.Open();
+                DBHelper.OpenConnection();
                 string tiaojian = "";
                 if (py != string.Empty)
                 {
@@ -90,9 +84,8 @@ namespace KTVProject
                 //    tiaojian += " and Singersuoxie like '" + py + "%'";
                 //}
 
-                string sql = "select count(*)  from Singer where SingerDisplay = True " + tiaojian + "";
-                comm = new SqlCommand(sql, conn);
-                int count = Convert.ToInt32(comm.ExecuteScalar());
+                string sql = "select count(*)  from Singer where SingerDisplay='True'  " + tiaojian + "";
+                int count = (int)DBHelper.GetExecuteScalar(sql);
                 if (count % pageSize == 0)
                 {
                     zong = count / pageSize;
@@ -110,7 +103,7 @@ namespace KTVProject
             }
             finally
             {
-                conn.Close();
+                DBHelper.CloseConnection();
             }
         }
         //显示歌手
@@ -120,7 +113,7 @@ namespace KTVProject
             string py = this.textBox1.Text.Trim();
             try
             {
-                conn.Open();
+                DBHelper.OpenConnection();
                 string tiaojian = "";
 
                 if (!leixing.Equals("0"))
@@ -137,9 +130,8 @@ namespace KTVProject
                 {
                     tiaojian += " and SingerAbbr like '" + py + "%'";
                 }
-                string sql = "select top " + pageSize + " SingerID,SingerName,SingerCoverPath from Singer where SingerDisplay=True and SingerID not in(select top " + (pageSize * (pageNow - 1)) + " SingerID from Singer where SingerDisplay=True" + tiaojian + ")" + tiaojian + "";
-                comm = new SqlCommand(sql, conn);
-                SqlDataReader reader = comm.ExecuteReader();
+                string sql = "select top " + pageSize + " SingerID,SingerName,SingerCoverPath from Singer where SingerDisplay='True' and SingerID not in(select top " + (pageSize * (pageNow - 1)) + " SingerID from Singer where SingerDisplay='True'" + tiaojian + ")" + tiaojian + "";
+                SqlDataReader reader = DBHelper.GetExecuteReader(sql);
                 for (int i = 0; i < this.panel1.Controls.Count; i++)
                 {
                     if (reader.Read())
@@ -163,7 +155,7 @@ namespace KTVProject
             }
             finally
             {
-                conn.Close();
+                DBHelper.CloseConnection();
             }
         }
         //歌手上下页禁用
@@ -192,18 +184,12 @@ namespace KTVProject
         //歌手上一页
         private void lblshangyiye_Click(object sender, EventArgs e)
         {
-            pageNow--;
-            showSinger();//显示下一页歌手列表
-            this.lblDangqianye.Text = pageNow.ToString();
-            jinyong();
+
         }
         //歌手下一页
         private void lblxiayiye_Click(object sender, EventArgs e)
         {
-            pageNow++;
-            showSinger();//显示下一页歌手列表
-            this.lblDangqianye.Text = pageNow.ToString();
-            jinyong();
+
         }
         //变色
         public void SetColor(object sender, EventArgs e)
@@ -262,14 +248,13 @@ namespace KTVProject
             string tiaojian = "";
             try
             {
-                conn.Open();
+                DBHelper.OpenConnection();
                 if (!py.Trim().Equals(""))
                 {
                     tiaojian += " and m.MusicAbbr like '%" + py + "%'";
                 }
                 string sql = "select top " + pageSize1 + "     MusicID,MusicName,s.SingerName, '点歌' as dg, MusicID from Music as m,Singer as s where m.SingerID=s.SingerID and s.MusicID not in(select top " + (pageSize1 * (pageNow1 - 1)) + " MusicID from Music where MusicDisplay=True and SingerID=" + singerId + " " + tiaojian + ") and m.MusicDisplay=True and s.SingerID=" + singerId + " " + tiaojian + " ";
-                comm = new SqlCommand(sql, conn);
-                SqlDataReader reader = comm.ExecuteReader();
+                SqlDataReader reader = DBHelper.GetExecuteReader(sql);
                 for (int i = 0; i < this.panel10.Controls.Count; i++)
                 {
                     if (reader.Read())
@@ -296,18 +281,13 @@ namespace KTVProject
             }
             finally
             {
-                conn.Close();
+                DBHelper.CloseConnection();
             }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            singerId = Convert.ToInt32(((Control)sender).Tag);
-            this.panel9.Visible = true;
-            this.panel9.Dock = DockStyle.Fill;
-            getSongZong();
-            showSong();
-            jinyong2();
+
         }
         //歌曲的上下页
         public void jinyong2()
@@ -339,14 +319,14 @@ namespace KTVProject
             string py = this.textBox1.Text.ToString();
             try
             {
-                DBHepler.OpenConnection();
+                DBHelper.OpenConnection();
                 string tiaojian = "";
                 if (py != string.Empty)
                 {
                     tiaojian += " and Songnamesuoxie like '" + py + "'";
                 }
                 string sql = "select count(*) from Song  where deletezhuangtai=0 and SingerId =" + singerId;
-                int count = (int)DBHepler.GetExecuteScalar(sql);
+                int count = (int)DBHelper.GetExecuteScalar(sql);
                 if (count % pageSize1 == 0)
                 {
                     pageZong1 = count / pageSize1;
@@ -364,63 +344,38 @@ namespace KTVProject
             }
             finally
             {
-                DBHepler.CloseConnection();
+                DBHelper.CloseConnection();
             }
         }
 
         private void label17_Click(object sender, EventArgs e)
         {
 
-            string songId = ((Label)sender).Tag.ToString();
-            form2.diange(songId);
-            form2.SongId = songId;//将SongId传给主页SongId
-            form2.countjia();//执行增加点击次数
-            this.label17.Text = "已点";
-            this.panel14.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
         }
 
         private void label14_Click(object sender, EventArgs e)
         {
-            string songId = ((Label)sender).Tag.ToString();
-            form2.diange(songId);
-            form2.SongId = songId;//将SongId传给主页SongId
-            form2.countjia();//执行增加点击次数
-            this.label14.Text = "已点";
-            this.panel13.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
-            string songId = ((Label)sender).Tag.ToString();
-            form2.diange(songId);
-            form2.SongId = songId;//将SongId传给主页SongId
-            form2.countjia();//执行增加点击次数
-            this.label11.Text = "已点";
-            this.panel12.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
-            string songId = ((Label)sender).Tag.ToString();
-            form2.diange(songId);
-            form2.SongId = songId;//将SongId传给主页SongId
-            form2.countjia();//执行增加点击次数
-            this.label10.Text = "已点";
-            this.panel11.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.textBox1.Text.Trim().Length == 0)
-            {
-                return;
-            }
-            this.textBox1.Text = this.textBox1.Text.Substring(0, this.textBox1.Text.Length - 1);
+
         }
 
         private void pictureBox29_Click(object sender, EventArgs e)
         {
-            this.textBox1.Text += ((PictureBox)sender).Tag.ToString();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -184,12 +184,6 @@ namespace KTVProject
             //播放
             play();
         }
-        #region 连接数据库
-        SqlConnection conn;
-        SqlCommand comm;
-        SqlDataReader reader;
-        string connstring = "Data Source=.;Initial Catalog=KTVProject;User ID=sa;Password=123456";
-        #endregion
 
         #region 鼠标动作
 
@@ -1110,14 +1104,13 @@ namespace KTVProject
             }
         }
         //点歌
-        public void diange(int musicID)
+        public void diange(string songId)
         {
 
-            conn.Open();
+            DBHelper.OpenConnection();
             //根据传过来的歌曲编号查询歌曲信息，并且添加到存放已点列表的集合中
-            string sql = "select m.MusicID,m.MusicName,s.SingerName,m.MusicAccompanyPath,m.MusicAccompanyPath from Music m,Singer s where MusicDisplay=True and m.SingerID=s.SingerID and m.MusicID=" + musicID;
-            comm = new SqlCommand(sql, conn);
-            reader = comm.ExecuteReader();
+            string sql = "select m.MusicID,m.MusicName,s.SingerName,m.MusicAccompanyPath,m.MusicAccompanyPath from Music m,Singer s where MusicDisplay=True and m.SingerID=s.SingerID and m.MusicID=" + songId;
+            SqlDataReader reader = DBHelper.GetExecuteReader(sql);
             if (reader.Read())
             {
                 Music music = new Music();
@@ -1129,7 +1122,7 @@ namespace KTVProject
                 musics.Add(music);//添加到集合
             }
             reader.Close();
-            conn.Close();
+            DBHelper.CloseConnection();
             getydCount();//每次点歌完对已点数目进行更新
 
             if (musics.Count == 1)
@@ -1137,6 +1130,8 @@ namespace KTVProject
                 play();
             }
         }
+
+        public string SongId = "";
         //已点的数量变化
         public void getydCount()
         {
@@ -1147,12 +1142,11 @@ namespace KTVProject
         //更改歌曲的播放次数
         public void countjia()
         {
-            conn.Open();
+            DBHelper.OpenConnection();
             string count = "";
             //查询次数
             string sql = "select MusicViews from Music where MusicID='" + MusicID + "' ";
-            comm = new SqlCommand(sql, conn);
-            reader = comm.ExecuteReader();
+            SqlDataReader reader = DBHelper.GetExecuteReader(sql);
             if (reader.Read())
             {
                 count = reader["MusicViews"].ToString();
@@ -1160,9 +1154,8 @@ namespace KTVProject
             int count2 = (Convert.ToInt32(count)) + 1;//count 次数加1
             reader.Close();
             string sql2 = "update Music set MusicViews='" + count2 + "' where MusicID='" + MusicID + "' ";
-            comm = new SqlCommand(sql2, conn);
-            comm.ExecuteNonQuery();
-            conn.Close();
+            DBHelper.GetExecuteNonQuery(sql2);//执行修改语句
+            DBHelper.CloseConnection();
         }
         //已点
         private void pictureBox6_Click(object sender, EventArgs e)
