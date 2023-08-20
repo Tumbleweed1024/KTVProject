@@ -1109,7 +1109,7 @@ namespace KTVProject
 
             DBHelper.OpenConnection();
             //根据传过来的歌曲编号查询歌曲信息，并且添加到存放已点列表的集合中
-            string sql = "select m.MusicID,m.MusicName,s.SingerName,m.MusicAccompanyPath,m.MusicAccompanyPath from Music m,Singer s where MusicDisplay=True and m.SingerID=s.SingerID and m.MusicID=" + songId;
+            string sql = "select m.MusicID,m.MusicName,s.SingerName,m.MusicAccompanyPath,m.MusicMVPath from Music m,Singer s where MusicDisplay='True' and m.SingerID=s.SingerID and m.MusicID=" + songId;
             SqlDataReader reader = DBHelper.GetExecuteReader(sql);
             if (reader.Read())
             {
@@ -1151,7 +1151,7 @@ namespace KTVProject
             {
                 count = reader["MusicViews"].ToString();
             }
-            int count2 = (Convert.ToInt32(count)) + 1;//count 次数加1
+            int count2 = Convert.ToInt32(count) + 1;//count 次数加1
             reader.Close();
             string sql2 = "update Music set MusicViews='" + count2 + "' where MusicID='" + MusicID + "' ";
             DBHelper.GetExecuteNonQuery(sql2);//执行修改语句

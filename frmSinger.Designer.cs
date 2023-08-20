@@ -165,10 +165,10 @@ namespace KTVProject
             // 
             // pn_mv
             // 
-            this.pn_mv.Location = new System.Drawing.Point(1300, 88);
+            this.pn_mv.Location = new System.Drawing.Point(1202, 56);
             this.pn_mv.Margin = new System.Windows.Forms.Padding(4);
             this.pn_mv.Name = "pn_mv";
-            this.pn_mv.Size = new System.Drawing.Size(864, 486);
+            this.pn_mv.Size = new System.Drawing.Size(960, 540);
             this.pn_mv.TabIndex = 0;
             // 
             // label10
@@ -180,6 +180,7 @@ namespace KTVProject
             this.label10.Size = new System.Drawing.Size(71, 18);
             this.label10.TabIndex = 2;
             this.label10.Text = "label10";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -190,6 +191,7 @@ namespace KTVProject
             this.label11.Size = new System.Drawing.Size(71, 18);
             this.label11.TabIndex = 2;
             this.label11.Text = "label11";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -219,7 +221,7 @@ namespace KTVProject
             this.panel14.Location = new System.Drawing.Point(54, 26);
             this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(598, 60);
+            this.panel14.Size = new System.Drawing.Size(849, 83);
             this.panel14.TabIndex = 3;
             // 
             // label17
@@ -231,6 +233,7 @@ namespace KTVProject
             this.label17.Size = new System.Drawing.Size(71, 18);
             this.label17.TabIndex = 2;
             this.label17.Text = "label17";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -257,7 +260,7 @@ namespace KTVProject
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox20.BackgroundImage")));
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(66, 142);
+            this.pictureBox20.Location = new System.Drawing.Point(152, 136);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(57, 60);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -270,7 +273,7 @@ namespace KTVProject
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(255, 142);
+            this.pictureBox11.Location = new System.Drawing.Point(341, 136);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(57, 60);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,7 +286,7 @@ namespace KTVProject
             this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox26.BackgroundImage")));
             this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.Location = new System.Drawing.Point(284, 38);
+            this.pictureBox26.Location = new System.Drawing.Point(370, 32);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(57, 60);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -296,7 +299,7 @@ namespace KTVProject
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox14.BackgroundImage")));
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(444, 249);
+            this.pictureBox14.Location = new System.Drawing.Point(530, 243);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(57, 60);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -309,7 +312,7 @@ namespace KTVProject
             this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox25.BackgroundImage")));
             this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(255, 249);
+            this.pictureBox25.Location = new System.Drawing.Point(341, 243);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(57, 60);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -342,7 +345,7 @@ namespace KTVProject
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(381, 142);
+            this.pictureBox13.Location = new System.Drawing.Point(467, 136);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(57, 60);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -355,7 +358,7 @@ namespace KTVProject
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox19.BackgroundImage")));
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(536, 38);
+            this.pictureBox19.Location = new System.Drawing.Point(622, 32);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(57, 60);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -368,7 +371,7 @@ namespace KTVProject
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(192, 249);
+            this.pictureBox12.Location = new System.Drawing.Point(278, 243);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(57, 60);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -381,7 +384,7 @@ namespace KTVProject
             this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox24.BackgroundImage")));
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(129, 249);
+            this.pictureBox24.Location = new System.Drawing.Point(215, 243);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(57, 60);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -394,7 +397,7 @@ namespace KTVProject
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.BackgroundImage")));
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(507, 142);
+            this.pictureBox15.Location = new System.Drawing.Point(593, 136);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(57, 60);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -407,7 +410,7 @@ namespace KTVProject
             this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(158, 38);
+            this.pictureBox18.Location = new System.Drawing.Point(244, 32);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(57, 60);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -420,7 +423,7 @@ namespace KTVProject
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox16.BackgroundImage")));
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(192, 144);
+            this.pictureBox16.Location = new System.Drawing.Point(278, 138);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(57, 60);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -433,7 +436,7 @@ namespace KTVProject
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox23.BackgroundImage")));
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(346, 38);
+            this.pictureBox23.Location = new System.Drawing.Point(432, 32);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(57, 60);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -446,7 +449,7 @@ namespace KTVProject
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(410, 38);
+            this.pictureBox17.Location = new System.Drawing.Point(496, 32);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(57, 60);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -459,7 +462,7 @@ namespace KTVProject
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox21.BackgroundImage")));
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(472, 38);
+            this.pictureBox21.Location = new System.Drawing.Point(558, 32);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(57, 60);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -472,7 +475,7 @@ namespace KTVProject
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox22.BackgroundImage")));
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(318, 249);
+            this.pictureBox22.Location = new System.Drawing.Point(404, 243);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(57, 60);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -485,7 +488,7 @@ namespace KTVProject
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox27.BackgroundImage")));
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(32, 38);
+            this.pictureBox27.Location = new System.Drawing.Point(118, 32);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(57, 60);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -498,7 +501,7 @@ namespace KTVProject
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox28.BackgroundImage")));
             this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.Location = new System.Drawing.Point(444, 144);
+            this.pictureBox28.Location = new System.Drawing.Point(530, 138);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(57, 60);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -511,7 +514,7 @@ namespace KTVProject
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox29.BackgroundImage")));
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(-32, 38);
+            this.pictureBox29.Location = new System.Drawing.Point(54, 32);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(57, 60);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -524,7 +527,7 @@ namespace KTVProject
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox30.BackgroundImage")));
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(129, 142);
+            this.pictureBox30.Location = new System.Drawing.Point(215, 136);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(57, 60);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -537,7 +540,7 @@ namespace KTVProject
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox31.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox31.BackgroundImage")));
             this.pictureBox31.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox31.Image")));
-            this.pictureBox31.Location = new System.Drawing.Point(220, 38);
+            this.pictureBox31.Location = new System.Drawing.Point(306, 32);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(57, 60);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -550,7 +553,7 @@ namespace KTVProject
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox32.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox32.BackgroundImage")));
             this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.Location = new System.Drawing.Point(318, 142);
+            this.pictureBox32.Location = new System.Drawing.Point(404, 136);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(57, 60);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -563,7 +566,7 @@ namespace KTVProject
             this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox33.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox33.BackgroundImage")));
             this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.Location = new System.Drawing.Point(381, 249);
+            this.pictureBox33.Location = new System.Drawing.Point(467, 243);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(57, 60);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -576,7 +579,7 @@ namespace KTVProject
             this.pictureBox34.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox34.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox34.BackgroundImage")));
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
-            this.pictureBox34.Location = new System.Drawing.Point(3, 142);
+            this.pictureBox34.Location = new System.Drawing.Point(89, 136);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(57, 60);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -589,7 +592,7 @@ namespace KTVProject
             this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox35.BackgroundImage")));
             this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.Location = new System.Drawing.Point(94, 38);
+            this.pictureBox35.Location = new System.Drawing.Point(180, 32);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(57, 60);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -612,10 +615,10 @@ namespace KTVProject
             this.panel15.Controls.Add(this.button1);
             this.panel15.Controls.Add(this.textBox1);
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(1283, 600);
+            this.panel15.Location = new System.Drawing.Point(1327, 668);
             this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(748, 454);
+            this.panel15.Size = new System.Drawing.Size(864, 454);
             this.panel15.TabIndex = 16;
             // 
             // button1
@@ -664,10 +667,10 @@ namespace KTVProject
             this.panel16.Controls.Add(this.pictureBox34);
             this.panel16.Controls.Add(this.pictureBox35);
             this.panel16.Controls.Add(this.pictureBox36);
-            this.panel16.Location = new System.Drawing.Point(33, 90);
+            this.panel16.Location = new System.Drawing.Point(54, 96);
             this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(753, 345);
+            this.panel16.Size = new System.Drawing.Size(767, 345);
             this.panel16.TabIndex = 0;
             // 
             // pictureBox36
@@ -675,7 +678,7 @@ namespace KTVProject
             this.pictureBox36.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox36.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox36.BackgroundImage")));
             this.pictureBox36.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox36.Image")));
-            this.pictureBox36.Location = new System.Drawing.Point(66, 249);
+            this.pictureBox36.Location = new System.Drawing.Point(152, 243);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(57, 60);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -692,6 +695,7 @@ namespace KTVProject
             this.label14.Size = new System.Drawing.Size(71, 18);
             this.label14.TabIndex = 2;
             this.label14.Text = "label14";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label9
             // 
@@ -708,26 +712,26 @@ namespace KTVProject
             this.panel13.Controls.Add(this.label14);
             this.panel13.Controls.Add(this.label15);
             this.panel13.Controls.Add(this.label16);
-            this.panel13.Location = new System.Drawing.Point(54, 94);
+            this.panel13.Location = new System.Drawing.Point(54, 175);
             this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(598, 60);
+            this.panel13.Size = new System.Drawing.Size(849, 83);
             this.panel13.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(534, 278);
+            this.panel2.Location = new System.Drawing.Point(824, 399);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(201, 236);
+            this.panel2.Size = new System.Drawing.Size(288, 318);
             this.panel2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 195);
+            this.label1.Location = new System.Drawing.Point(112, 270);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 18);
@@ -739,15 +743,16 @@ namespace KTVProject
             this.pictureBox1.Location = new System.Drawing.Point(24, 20);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 158);
+            this.pictureBox1.Size = new System.Drawing.Size(230, 230);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 195);
+            this.label2.Location = new System.Drawing.Point(92, 270);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 18);
@@ -756,28 +761,29 @@ namespace KTVProject
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 21);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 158);
+            this.pictureBox2.Size = new System.Drawing.Size(230, 230);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(276, 278);
+            this.panel3.Location = new System.Drawing.Point(424, 399);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(201, 236);
+            this.panel3.Size = new System.Drawing.Size(288, 318);
             this.panel3.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 195);
+            this.label3.Location = new System.Drawing.Point(77, 270);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 18);
@@ -789,25 +795,26 @@ namespace KTVProject
             this.pictureBox3.Location = new System.Drawing.Point(24, 20);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(150, 158);
+            this.pictureBox3.Size = new System.Drawing.Size(230, 230);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(38, 278);
+            this.panel4.Location = new System.Drawing.Point(40, 399);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(201, 236);
+            this.panel4.Size = new System.Drawing.Size(288, 318);
             this.panel4.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 195);
+            this.label4.Location = new System.Drawing.Point(112, 262);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
@@ -819,15 +826,16 @@ namespace KTVProject
             this.pictureBox4.Location = new System.Drawing.Point(24, 20);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(150, 158);
+            this.pictureBox4.Size = new System.Drawing.Size(230, 230);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 195);
+            this.label5.Location = new System.Drawing.Point(112, 262);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 18);
@@ -839,25 +847,26 @@ namespace KTVProject
             this.pictureBox5.Location = new System.Drawing.Point(24, 20);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(150, 158);
+            this.pictureBox5.Size = new System.Drawing.Size(230, 230);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(276, 16);
+            this.panel6.Location = new System.Drawing.Point(424, 36);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(201, 236);
+            this.panel6.Size = new System.Drawing.Size(288, 318);
             this.panel6.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(69, 195);
+            this.label6.Location = new System.Drawing.Point(90, 257);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 18);
@@ -869,19 +878,20 @@ namespace KTVProject
             this.pictureBox6.Location = new System.Drawing.Point(24, 20);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(150, 158);
+            this.pictureBox6.Size = new System.Drawing.Size(230, 230);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(38, 16);
+            this.panel7.Location = new System.Drawing.Point(40, 36);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(201, 236);
+            this.panel7.Size = new System.Drawing.Size(288, 318);
             this.panel7.TabIndex = 2;
             // 
             // panel1
@@ -892,20 +902,20 @@ namespace KTVProject
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(133, 380);
+            this.panel1.Location = new System.Drawing.Point(30, 136);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(806, 546);
+            this.panel1.Size = new System.Drawing.Size(1135, 826);
             this.panel1.TabIndex = 8;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(534, 16);
+            this.panel5.Location = new System.Drawing.Point(824, 36);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(201, 236);
+            this.panel5.Size = new System.Drawing.Size(288, 318);
             this.panel5.TabIndex = 2;
             // 
             // panel9
@@ -916,17 +926,17 @@ namespace KTVProject
             this.panel9.Controls.Add(this.lblDang);
             this.panel9.Controls.Add(this.lblsyy);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(110, 384);
+            this.panel9.Location = new System.Drawing.Point(30, 136);
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(840, 512);
+            this.panel9.Size = new System.Drawing.Size(1131, 822);
             this.panel9.TabIndex = 10;
             this.panel9.Visible = false;
             // 
             // lblxyy
             // 
             this.lblxyy.AutoSize = true;
-            this.lblxyy.Location = new System.Drawing.Point(654, 453);
+            this.lblxyy.Location = new System.Drawing.Point(770, 741);
             this.lblxyy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblxyy.Name = "lblxyy";
             this.lblxyy.Size = new System.Drawing.Size(62, 18);
@@ -936,7 +946,7 @@ namespace KTVProject
             // lblzong
             // 
             this.lblzong.AutoSize = true;
-            this.lblzong.Location = new System.Drawing.Point(444, 458);
+            this.lblzong.Location = new System.Drawing.Point(590, 741);
             this.lblzong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblzong.Name = "lblzong";
             this.lblzong.Size = new System.Drawing.Size(71, 18);
@@ -946,7 +956,7 @@ namespace KTVProject
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(418, 458);
+            this.label22.Location = new System.Drawing.Point(564, 741);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(17, 18);
@@ -956,7 +966,7 @@ namespace KTVProject
             // lblDang
             // 
             this.lblDang.AutoSize = true;
-            this.lblDang.Location = new System.Drawing.Point(342, 458);
+            this.lblDang.Location = new System.Drawing.Point(488, 741);
             this.lblDang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDang.Name = "lblDang";
             this.lblDang.Size = new System.Drawing.Size(71, 18);
@@ -966,7 +976,7 @@ namespace KTVProject
             // lblsyy
             // 
             this.lblsyy.AutoSize = true;
-            this.lblsyy.Location = new System.Drawing.Point(158, 453);
+            this.lblsyy.Location = new System.Drawing.Point(265, 741);
             this.lblsyy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblsyy.Name = "lblsyy";
             this.lblsyy.Size = new System.Drawing.Size(62, 18);
@@ -982,7 +992,7 @@ namespace KTVProject
             this.panel10.Location = new System.Drawing.Point(36, 52);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(711, 360);
+            this.panel10.Size = new System.Drawing.Size(1076, 636);
             this.panel10.TabIndex = 0;
             // 
             // panel12
@@ -990,10 +1000,10 @@ namespace KTVProject
             this.panel12.Controls.Add(this.label11);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Controls.Add(this.label13);
-            this.panel12.Location = new System.Drawing.Point(54, 177);
+            this.panel12.Location = new System.Drawing.Point(54, 336);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(598, 60);
+            this.panel12.Size = new System.Drawing.Size(849, 83);
             this.panel12.TabIndex = 3;
             // 
             // panel11
@@ -1001,36 +1011,38 @@ namespace KTVProject
             this.panel11.Controls.Add(this.label10);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Controls.Add(this.label7);
-            this.panel11.Location = new System.Drawing.Point(54, 268);
+            this.panel11.Location = new System.Drawing.Point(54, 480);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(598, 60);
+            this.panel11.Size = new System.Drawing.Size(849, 83);
             this.panel11.TabIndex = 0;
             // 
             // lblxiayiye
             // 
             this.lblxiayiye.AutoSize = true;
-            this.lblxiayiye.Location = new System.Drawing.Point(609, 959);
+            this.lblxiayiye.Location = new System.Drawing.Point(609, 984);
             this.lblxiayiye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblxiayiye.Name = "lblxiayiye";
             this.lblxiayiye.Size = new System.Drawing.Size(62, 18);
             this.lblxiayiye.TabIndex = 15;
             this.lblxiayiye.Text = "下一页";
+            this.lblxiayiye.Click += new System.EventHandler(this.lblxiayiye_Click);
             // 
             // lblshangyiye
             // 
             this.lblshangyiye.AutoSize = true;
-            this.lblshangyiye.Location = new System.Drawing.Point(185, 959);
+            this.lblshangyiye.Location = new System.Drawing.Point(185, 984);
             this.lblshangyiye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblshangyiye.Name = "lblshangyiye";
             this.lblshangyiye.Size = new System.Drawing.Size(62, 18);
             this.lblshangyiye.TabIndex = 14;
             this.lblshangyiye.Text = "上一页";
+            this.lblshangyiye.Click += new System.EventHandler(this.lblshangyiye_Click);
             // 
             // lblDangqianye
             // 
             this.lblDangqianye.AutoSize = true;
-            this.lblDangqianye.Location = new System.Drawing.Point(350, 959);
+            this.lblDangqianye.Location = new System.Drawing.Point(350, 984);
             this.lblDangqianye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDangqianye.Name = "lblDangqianye";
             this.lblDangqianye.Size = new System.Drawing.Size(62, 18);
@@ -1047,6 +1059,7 @@ namespace KTVProject
             this.lblNv.TabIndex = 2;
             this.lblNv.Tag = "2";
             this.lblNv.Text = "女";
+            this.lblNv.Click += new System.EventHandler(this.lblNv_Click);
             // 
             // lblNan
             // 
@@ -1058,6 +1071,7 @@ namespace KTVProject
             this.lblNan.TabIndex = 1;
             this.lblNan.Tag = "1";
             this.lblNan.Text = "男";
+            this.lblNan.Click += new System.EventHandler(this.lblNan_Click);
             // 
             // lblZuhe
             // 
@@ -1069,6 +1083,7 @@ namespace KTVProject
             this.lblZuhe.TabIndex = 3;
             this.lblZuhe.Tag = "3";
             this.lblZuhe.Text = "组合";
+            this.lblZuhe.Click += new System.EventHandler(this.lblZuhe_Click);
             // 
             // panel8
             // 
@@ -1076,7 +1091,7 @@ namespace KTVProject
             this.panel8.Controls.Add(this.lblNv);
             this.panel8.Controls.Add(this.lblNan);
             this.panel8.Controls.Add(this.lblAll);
-            this.panel8.Location = new System.Drawing.Point(167, 299);
+            this.panel8.Location = new System.Drawing.Point(30, 30);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(592, 72);
@@ -1092,11 +1107,12 @@ namespace KTVProject
             this.lblAll.TabIndex = 0;
             this.lblAll.Tag = "0";
             this.lblAll.Text = "全部";
+            this.lblAll.Click += new System.EventHandler(this.lblAll_Click);
             // 
             // lblZongYe
             // 
             this.lblZongYe.AutoSize = true;
-            this.lblZongYe.Location = new System.Drawing.Point(447, 959);
+            this.lblZongYe.Location = new System.Drawing.Point(447, 984);
             this.lblZongYe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblZongYe.Name = "lblZongYe";
             this.lblZongYe.Size = new System.Drawing.Size(62, 18);
@@ -1106,7 +1122,7 @@ namespace KTVProject
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(422, 959);
+            this.label8.Location = new System.Drawing.Point(422, 984);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(17, 18);
@@ -1117,7 +1133,8 @@ namespace KTVProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2337, 1050);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(2206, 1240);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel9);
