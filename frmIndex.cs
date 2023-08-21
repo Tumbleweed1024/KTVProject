@@ -828,14 +828,26 @@ namespace KTVProject
             //等待播放器准备就绪
             while (true)
             {
-                if(this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsReady && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsReady)
+                if((this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsReady && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsReady)&& ! paused)
                 {
                     this.awmp_mv.Ctlcontrols.play();
                     this.awmp_bz.Ctlcontrols.play();
                     break;
+                }else if((this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsReady && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsReady) && paused)
+                {
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("播放器状态异常");
                 }
             }
-            
+            ////如果在暂停状态则暂停
+            //if (paused)
+            //{
+            //    this.awmp_mv.Ctlcontrols.pause();
+            //    this.awmp_bz.Ctlcontrols.pause();
+            //}
         }
         //延时三秒关闭音量显示
         private void timerVolume_Tick(object sender, EventArgs e)
