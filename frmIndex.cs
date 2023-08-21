@@ -287,7 +287,6 @@ namespace KTVProject
             if (volume>=5)
             {
                 volume -= 5;
-                volume -= 5;
             }
             //按照静音和伴奏状态同步相应音量
             if (!(mute || accompany))
@@ -338,7 +337,6 @@ namespace KTVProject
             //更改音量
             if (volume <= 95)
             {
-                volume += 5;
                 volume += 5;
             }
             //按照静音和伴奏状态同步相应音量
@@ -622,7 +620,8 @@ namespace KTVProject
 
         private void panelNextMusic_MouseUp(object sender, MouseEventArgs e)
         {
-            this.awmp_mv.Ctlcontrols.next();
+            qiege();
+            this.labelSongCount.Text = musics.Count.ToString();
             this.panelNextMusic.BackgroundImage = Properties.Resources.切歌hover;
         }
         #endregion
@@ -1156,6 +1155,16 @@ namespace KTVProject
             string sql2 = "update Music set MusicViews='" + count2 + "' where MusicID='" + MusicID + "' ";
             DBHelper.GetExecuteNonQuery(sql2);//执行修改语句
             DBHelper.CloseConnection();
+        }
+        //切歌
+        public void qiege()
+        {
+            if (musics.Count > 0)
+            {
+                musics.RemoveAt(0);
+                play();
+                getydCount();
+            }
         }
         //已点
         private void pictureBox6_Click(object sender, EventArgs e)
