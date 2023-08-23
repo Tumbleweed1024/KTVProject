@@ -1115,9 +1115,9 @@ namespace KTVProject
             }
         }
         //点歌
-        public void diange(string songId)
+        public bool diange(string songId)
         {
-
+            bool accompanyTest = false;
             DBHelper.OpenConnection();
             //根据传过来的歌曲编号查询歌曲信息，并且添加到存放已点列表的集合中
             string sql = "select m.MusicID,m.MusicName,s.SingerName,m.MusicAccompanyPath,m.MusicMVPath from Music m,Singer s where MusicDisplay='True' and m.SingerID=s.SingerID and m.MusicID=" + songId;
@@ -1130,16 +1130,24 @@ namespace KTVProject
                 music.MusicAccompanyPath = reader["MusicAccompanyPath"].ToString();
                 music.MusicMVPath = reader["MusicMVPath"].ToString();
                 music.SingerName = reader["SingerName"].ToString();
-                musics.Add(music);//添加到集合
+                if (music.MusicAccompanyPath.Equals(""))
+                {
+                    MessageBox.Show("未找到该歌曲的伴奏，请检查数据库信息！");
+                }
+                else
+                {
+                    accompanyTest = true;
+                    musics.Add(music);//添加到集合
+                    getydCount();//每次点歌完对已点数目进行更新
+                    if (musics.Count == 1)
+                    {
+                        play();
+                    }
+                }
             }
             reader.Close();
             DBHelper.CloseConnection();
-            getydCount();//每次点歌完对已点数目进行更新
-
-            if (musics.Count == 1)
-            {
-                play();
-            }
+            return accompanyTest;
         }
 
         public string SongId = "";

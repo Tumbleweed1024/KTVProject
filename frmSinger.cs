@@ -44,6 +44,9 @@ namespace KTVProject
             this.getZong();
             //显示歌手
             showSinger();
+            jinyong();
+            //“全部”选项变红色
+            lblAll.ForeColor = Color.Red;
         }
         //MV全屏方法，通过底栏按钮调用
         public void mvDock(bool full)
@@ -60,12 +63,12 @@ namespace KTVProject
         //获取总页数
         public void getZong()
         {
-            string py = this.textBox1.Text;
+            string py = this.label21.Text;
             try
             {
                 DBHelper.OpenConnection();
                 string tiaojian = "";
-                if (py != string.Empty)
+                if (!py.Trim().Equals(""))
                 {
                     tiaojian += " and SingerAbbr like '%" + py + "%'";
                 }
@@ -110,7 +113,7 @@ namespace KTVProject
         //歌星分页显示
         public void showSinger()
         {
-            string py = this.textBox1.Text.Trim();
+            string py = this.label21.Text.Trim();
             try
             {
                 DBHelper.OpenConnection();
@@ -146,6 +149,15 @@ namespace KTVProject
                         this.panel1.Controls[i].Controls[0].Text = "";
                         ((PictureBox)(this.panel1.Controls[i].Controls[1])).Image = null;
                     }
+                    //如果没读到信息就把歌手框隐藏
+                    if (this.panel1.Controls[i].Controls[0].Text.Trim().Equals(""))
+                    {
+                        this.panel1.Controls[i].Visible = false;
+                    }
+                    else
+                    {
+                        this.panel1.Controls[i].Visible = true;
+                    }
                 }
                 reader.Close();
             }
@@ -170,6 +182,7 @@ namespace KTVProject
             else
             {
                 this.lblshangyiye.Enabled = true;
+                this.lblshangyiye.Cursor = Cursors.Hand;
             }
 
             if (page == zong)
@@ -179,6 +192,7 @@ namespace KTVProject
             else
             {
                 this.lblxiayiye.Enabled = true;
+                this.lblxiayiye.Cursor = Cursors.Hand;
             }
         }
         //歌手上一页
@@ -241,6 +255,7 @@ namespace KTVProject
         //全部
         private void lblAll_Click(object sender, EventArgs e)
         {
+            leixing = ((Control)sender).Tag.ToString();
             pageNow = 1;
             getZong();//获取总页数
             showSinger();
@@ -250,7 +265,7 @@ namespace KTVProject
         //显示歌曲
         public void showSong()
         {
-            string py = this.textBox1.Text;
+            string py = this.label21.Text;
             string tiaojian = "";
             try
             {
@@ -296,7 +311,7 @@ namespace KTVProject
             singerId = Convert.ToInt32(((Control)sender).Tag);
             this.panel9.Visible = true;
             this.panel9.BringToFront();
-            this.panel9.Dock = DockStyle.Fill;
+            //this.panel9.Dock = DockStyle.Fill;
             getSongZong();
             showSong();
             jinyong2();
@@ -313,6 +328,7 @@ namespace KTVProject
             else
             {
                 this.lblsyy.Enabled = true;
+                this.lblsyy.Cursor = Cursors.Hand;
             }
 
             if (page == pageZong1)
@@ -322,18 +338,19 @@ namespace KTVProject
             else
             {
                 this.lblxyy.Enabled = true;
+                this.lblxyy.Cursor = Cursors.Hand;
             }
         }
 
         //获取总页数歌曲
         public void getSongZong()
         {
-            string py = this.textBox1.Text.ToString();
+            string py = this.label21.Text.ToString();
             try
             {
                 DBHelper.OpenConnection();
                 string tiaojian = "";
-                if (py != string.Empty)
+                if (!py.Trim().Equals(""))
                 {
                     tiaojian += " and MusicAbbr like '" + py + "'";
                 }
@@ -364,61 +381,75 @@ namespace KTVProject
         {
 
             string songId = ((Label)sender).Tag.ToString();
-            frmindex.diange(songId);
-            frmindex.MusicID = songId;//将SongId传给主页SongId
-            frmindex.countjia();//执行增加点击次数
-            this.label17.Text = "已点";
-            //this.panel14.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+            if (frmindex.diange(songId))
+            {
+                frmindex.MusicID = songId;//将SongId传给主页SongId
+                frmindex.countjia();//执行增加点击次数
+                this.label17.Text = "已点";
+                //this.panel14.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+            }
         }
 
         private void label14_Click(object sender, EventArgs e)
         {
             string songId = ((Label)sender).Tag.ToString();
-            frmindex.diange(songId);
-            frmindex.MusicID = songId;//将SongId传给主页SongId
-            frmindex.countjia();//执行增加点击次数
-            this.label14.Text = "已点";
-            //this.panel13.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+            if (frmindex.diange(songId))
+            {
+                frmindex.MusicID = songId;//将SongId传给主页SongId
+                frmindex.countjia();//执行增加点击次数
+                this.label14.Text = "已点";
+                //this.panel13.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
             string songId = ((Label)sender).Tag.ToString();
-            frmindex.diange(songId);
-            frmindex.MusicID = songId;//将SongId传给主页SongId
-            frmindex.countjia();//执行增加点击次数
-            this.label11.Text = "已点";
-            //this.panel12.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+            if (frmindex.diange(songId))
+            {
+                frmindex.MusicID = songId;//将SongId传给主页SongId
+                frmindex.countjia();//执行增加点击次数
+                this.label11.Text = "已点";
+                //this.panel12.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
+            }
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
             string songId = ((Label)sender).Tag.ToString();
-            frmindex.diange(songId);
-            frmindex.MusicID = songId;//将SongId传给主页SongId
-            frmindex.countjia();//执行增加点击次数
-            this.label10.Text = "已点";
-            //this.panel11.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (this.textBox1.Text.Trim().Length == 0)
+            if (frmindex.diange(songId))
             {
-                return;
+                frmindex.MusicID = songId;//将SongId传给主页SongId
+                frmindex.countjia();//执行增加点击次数
+                this.label10.Text = "已点";
+                //this.panel11.BackgroundImage = Image.FromFile(@"G:\项目\Ktv项目1\图片\ttt1.png");
             }
-            this.textBox1.Text = this.textBox1.Text.Substring(0, this.textBox1.Text.Length - 1);
         }
 
         private void pictureBox29_Click(object sender, EventArgs e)
         {
-            this.textBox1.Text += ((PictureBox)sender).Tag.ToString();
+            this.label21.Text += ((PictureBox)sender).Tag.ToString();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void label21_TextChanged(object sender, EventArgs e)
         {
             getZong();
             showSinger();
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+            this.panel9.Visible = false;
+            this.panel9.SendToBack();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.label21.Text.Trim().Length == 0)
+            {
+                return;
+            }
+            this.label21.Text = this.label21.Text.Substring(0, this.label21.Text.Length - 1);
         }
     }
 }
