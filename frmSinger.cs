@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,7 +39,7 @@ namespace KTVProject
         {
             //MV置顶，防止无法全屏
             pn_mv.BringToFront();
-
+            //先不让歌曲显示
             this.panel9.Visible = false;
             //显示总数据
             this.getZong();
@@ -131,7 +132,7 @@ namespace KTVProject
 
                 if (!py.Trim().Equals(""))
                 {
-                    tiaojian += " and SingerAbbr like '" + py + "%'";
+                    tiaojian += " and SingerAbbr like '%" + py + "%'";
                 }
                 string sql = "select top " + pageSize + " SingerID,SingerName,SingerCoverPath from Singer where SingerDisplay='True' and SingerID not in(select top " + (pageSize * (pageNow - 1)) + " SingerID from Singer where SingerDisplay='True'" + tiaojian + ")" + tiaojian + "";
                 SqlDataReader reader = DBHelper.GetExecuteReader(sql);
@@ -313,6 +314,7 @@ namespace KTVProject
             this.panel9.BringToFront();
             //this.panel9.Dock = DockStyle.Fill;
             getSongZong();
+            this.label21.Text = string.Empty;
             showSong();
             jinyong2();
         }
@@ -450,6 +452,11 @@ namespace KTVProject
                 return;
             }
             this.label21.Text = this.label21.Text.Substring(0, this.label21.Text.Length - 1);
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.label21.Text = string.Empty;
         }
     }
 }

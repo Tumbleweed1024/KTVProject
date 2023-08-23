@@ -130,6 +130,84 @@
   <data name="StarKTVLOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StarKTVLOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_16gl_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_C" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_E" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-E.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_F" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_G" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-G.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_H" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-H.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_J" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-J.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_K" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-K.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-L.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_N" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-N.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_O" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-O.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_P" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-P.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_Q" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-Q.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_T" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-T.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_U" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-U.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_V" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-V.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_X" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16gl_Z" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16gl-Z.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="伴奏" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\伴奏.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +225,9 @@
   </data>
   <data name="切歌hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\切歌hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="删除" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\删除.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="剩余时间" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\剩余时间.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -204,6 +285,9 @@
   </data>
   <data name="播放hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\播放hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="操作_退格" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\操作-退格.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="暂停" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\暂停.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

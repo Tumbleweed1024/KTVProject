@@ -318,5 +318,89 @@
   <ItemGroup>
     <None Include="Resources\StarKTVLOGO - 副本.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-J.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-Q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\操作-退格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16gl-I.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
