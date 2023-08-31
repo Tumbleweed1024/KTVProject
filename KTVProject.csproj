@@ -53,6 +53,12 @@
     <Compile Include="frmIndex.Designer.cs">
       <DependentUpon>frmIndex.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJiushui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJiushui.Designer.cs">
+      <DependentUpon>frmJiushui.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSinger.cs">
       <SubType>Form</SubType>
     </Compile>

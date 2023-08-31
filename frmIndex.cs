@@ -820,8 +820,10 @@ namespace KTVProject
                 }
                 else
                 {
-                    this.awmp_mv.URL = @"D:\KTVData\LoadPlay\砂之惑星MV_降音量.mp4";
-                    this.awmp_bz.URL = @"D:\KTVData\LoadPlay\砂之惑星伴奏.mp3";
+                    this.awmp_mv.URL = @"D:\KTVData\LoadPlay\NGGYU.mp4";
+                    this.awmp_bz.URL = @"D:\KTVData\LoadPlay\NGGYU.mp3";
+                    //this.awmp_mv.URL = @"D:\KTVData\LoadPlay\砂之惑星MV_降音量.mp4";
+                    //this.awmp_bz.URL = @"D:\KTVData\LoadPlay\砂之惑星伴奏.mp3";
                     //this.awmp_mv.URL = @"D:\KTVData\LoadPlay\秘密人偶剧.mp4";
                     //this.awmp_bz.URL = @"D:\KTVData\LoadPlay\秘密人偶剧伴奏.wav";
             }
@@ -842,6 +844,9 @@ namespace KTVProject
                     MessageBox.Show("播放器状态异常");
                 }
             }
+            //刷新点歌列表
+            getZongRow();//调用获取集合总长度方法
+            showSong();
             ////如果在暂停状态则暂停
             //if (paused)
             //{
@@ -1067,27 +1072,59 @@ namespace KTVProject
             this.lbl_dqy.Text = 1.ToString();
             this.lbl_zys.Text = zong.ToString();
         }
-        //点歌  参数
+        //已点  参数
         public void showSong()
         {
-            for (int i = 0; i < this.panel10.Controls.Count; i++)
+            this.panel10.Controls[0].Controls[1].Enabled = true;
+            this.panel10.Controls[0].Controls[0].Enabled = true;
+            if (yidianpage == 1)
             {
-                int xiabiao = (yidianpage - 1) * rows + i;
-                if (xiabiao < musics.Count)
+                //禁止对当前播放歌曲进行操作
+                this.panel10.Controls[0].Controls[1].Enabled = false;
+                this.panel10.Controls[0].Controls[0].Enabled = false;
+
+                for (int i = 0; i < this.panel10.Controls.Count; i++)
                 {
-                    this.panel10.Controls[i].Controls[1].Text = "置顶";
-                    this.panel10.Controls[i].Controls[0].Text = "删除";
-                    this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].SingerName;
-                    this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
-                    this.panel10.Controls[i].Controls[0].Tag = xiabiao.ToString();
-                    this.panel10.Controls[i].Controls[1].Tag = xiabiao.ToString();
+                    int xiabiao = (yidianpage - 1) * rows + i;
+                    if (xiabiao < musics.Count)
+                    {
+                        this.panel10.Controls[i].Controls[1].Text = "置顶";
+                        this.panel10.Controls[i].Controls[0].Text = "删除";
+                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].SingerName;
+                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
+                        this.panel10.Controls[i].Controls[0].Tag = xiabiao.ToString();
+                        this.panel10.Controls[i].Controls[1].Tag = xiabiao.ToString();
+                    }
+                    else
+                    {
+                        this.panel10.Controls[i].Controls[2].Text = "";
+                        this.panel10.Controls[i].Controls[1].Text = "";
+                        this.panel10.Controls[i].Controls[0].Text = "";
+                        this.panel10.Controls[i].Controls[2].Text = "";
+                    }
                 }
-                else
+            }
+            else
+            {
+                for (int i = 0; i < this.panel10.Controls.Count; i++)
                 {
-                    this.panel10.Controls[i].Controls[2].Text = "";
-                    this.panel10.Controls[i].Controls[1].Text = "";
-                    this.panel10.Controls[i].Controls[0].Text = "";
-                    this.panel10.Controls[i].Controls[2].Text = "";
+                    int xiabiao = (yidianpage - 1) * rows + i;
+                    if (xiabiao < musics.Count)
+                    {
+                        this.panel10.Controls[i].Controls[1].Text = "置顶";
+                        this.panel10.Controls[i].Controls[0].Text = "删除";
+                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].SingerName;
+                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
+                        this.panel10.Controls[i].Controls[0].Tag = xiabiao.ToString();
+                        this.panel10.Controls[i].Controls[1].Tag = xiabiao.ToString();
+                    }
+                    else
+                    {
+                        this.panel10.Controls[i].Controls[2].Text = "";
+                        this.panel10.Controls[i].Controls[1].Text = "";
+                        this.panel10.Controls[i].Controls[0].Text = "";
+                        this.panel10.Controls[i].Controls[2].Text = "";
+                    }
                 }
             }
         }
@@ -1139,6 +1176,9 @@ namespace KTVProject
                     accompanyTest = true;
                     musics.Add(music);//添加到集合
                     getydCount();//每次点歌完对已点数目进行更新
+                    //刷新点歌列表
+                    getZongRow();//调用获取集合总长度方法
+                    showSong();
                     if (musics.Count == 1)
                     {
                         play();
@@ -1186,20 +1226,6 @@ namespace KTVProject
                 getydCount();
             }
         }
-        //已点
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            if (this.pn_yidian.Visible == false)
-            {
-                this.pn_yidian.Visible = true;
-            }
-            else
-            {
-                this.pn_yidian.Visible = false;
-            }
-            getZongRow();
-            showSong();
-        }
         //下一页
         private void label22_Click(object sender, EventArgs e)
         {
@@ -1220,7 +1246,7 @@ namespace KTVProject
         private void label14_Click(object sender, EventArgs e)
         {
             string xiabiao = ((Label)sender).Tag.ToString();
-            MessageBox.Show(xiabiao);
+            //MessageBox.Show(xiabiao);
             musics.RemoveAt(Convert.ToInt32(xiabiao));
 
             //重新刷新
@@ -1232,6 +1258,49 @@ namespace KTVProject
         {
             string xiabiao = ((Label)sender).Tag.ToString();
             Music music = musics[Convert.ToInt32(xiabiao)];
+            musics.RemoveAt(Convert.ToInt32(xiabiao));
+            musics.Insert(1, music);
+            //重新刷新
+            getZongRow();//调用获取集合总长度方法
+            showSong();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            string xiabiao = ((Label)sender).Tag.ToString();
+            Music music = musics[Convert.ToInt32(xiabiao)];
+            musics.RemoveAt(Convert.ToInt32(xiabiao));
+            musics.Insert(1, music);
+            //重新刷新
+            getZongRow();//调用获取集合总长度方法
+            showSong();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            string xiabiao = ((Label)sender).Tag.ToString();
+            Music music = musics[Convert.ToInt32(xiabiao)];
+            musics.RemoveAt(Convert.ToInt32(xiabiao));
+            musics.Insert(1, music);
+            //重新刷新
+            getZongRow();//调用获取集合总长度方法
+            showSong();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            string xiabiao = ((Label)sender).Tag.ToString();
+            Music music = musics[Convert.ToInt32(xiabiao)];
+            musics.RemoveAt(Convert.ToInt32(xiabiao));
+            musics.Insert(1, music);
+            //重新刷新
+            getZongRow();//调用获取集合总长度方法
+            showSong();
+        }
+        //已点列表加载时调用禁用上下页的方法
+        private void pn_yidian_Paint(object sender, PaintEventArgs e)
+        {
+            jinyong();
         }
     }
 }
