@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -820,10 +821,10 @@ namespace KTVProject
                 }
                 else
                 {
-                    this.awmp_mv.URL = @"D:\KTVData\LoadPlay\NGGYU.mp4";
-                    this.awmp_bz.URL = @"D:\KTVData\LoadPlay\NGGYU.mp3";
-                    //this.awmp_mv.URL = @"D:\KTVData\LoadPlay\砂之惑星MV_降音量.mp4";
-                    //this.awmp_bz.URL = @"D:\KTVData\LoadPlay\砂之惑星伴奏.mp3";
+                    //this.awmp_mv.URL = @"D:\KTVData\LoadPlay\NGGYU.mp4";
+                    //this.awmp_bz.URL = @"D:\KTVData\LoadPlay\NGGYU.mp3";
+                    this.awmp_mv.URL = @"D:\KTVData\LoadPlay\砂之惑星MV_降音量.mp4";
+                    this.awmp_bz.URL = @"D:\KTVData\LoadPlay\砂之惑星伴奏.mp3";
                     //this.awmp_mv.URL = @"D:\KTVData\LoadPlay\秘密人偶剧.mp4";
                     //this.awmp_bz.URL = @"D:\KTVData\LoadPlay\秘密人偶剧伴奏.wav";
             }
@@ -1069,7 +1070,8 @@ namespace KTVProject
             {
                 zong = (count / rows) + 1;
             }
-            this.lbl_dqy.Text = 1.ToString();
+            //this.lbl_dqy.Text = 1.ToString();
+            this.lbl_dqy.Text = Convert.ToString(yidianpage);
             this.lbl_zys.Text = zong.ToString();
         }
         //已点  参数
@@ -1082,56 +1084,45 @@ namespace KTVProject
                 //禁止对当前播放歌曲进行操作
                 this.panel10.Controls[0].Controls[1].Enabled = false;
                 this.panel10.Controls[0].Controls[0].Enabled = false;
-
-                for (int i = 0; i < this.panel10.Controls.Count; i++)
+            }
+            int pageup = 0;
+            for (int i = 0; i < this.panel10.Controls.Count; i++)
+            {
+                int xiabiao = (yidianpage - 1) * rows + i;
+                if (xiabiao < musics.Count)
                 {
-                    int xiabiao = (yidianpage - 1) * rows + i;
-                    if (xiabiao < musics.Count)
-                    {
-                        this.panel10.Controls[i].Controls[1].Text = "置顶";
-                        this.panel10.Controls[i].Controls[0].Text = "删除";
-                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].SingerName;
-                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
-                        this.panel10.Controls[i].Controls[0].Tag = xiabiao.ToString();
-                        this.panel10.Controls[i].Controls[1].Tag = xiabiao.ToString();
-                    }
-                    else
-                    {
-                        this.panel10.Controls[i].Controls[2].Text = "";
-                        this.panel10.Controls[i].Controls[1].Text = "";
-                        this.panel10.Controls[i].Controls[0].Text = "";
-                        this.panel10.Controls[i].Controls[2].Text = "";
-                    }
+                    this.panel10.Controls[i].Controls[2].Visible = true;
+                    this.panel10.Controls[i].Controls[1].Visible = true;
+                    this.panel10.Controls[i].Controls[0].Visible = true;
+                    this.panel10.Controls[i].Controls[2].Visible = true;
+                    this.panel10.Controls[i].Controls[1].Text = "置顶";
+                    this.panel10.Controls[i].Controls[0].Text = "删除";
+                    this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].SingerName;
+                    this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
+                    this.panel10.Controls[i].Controls[0].Tag = xiabiao.ToString();
+                    this.panel10.Controls[i].Controls[1].Tag = xiabiao.ToString();
+                }
+                else
+                {
+                    this.panel10.Controls[i].Controls[2].Visible = false;
+                    this.panel10.Controls[i].Controls[1].Visible = false;
+                    this.panel10.Controls[i].Controls[0].Visible = false;
+                    this.panel10.Controls[i].Controls[2].Visible = false;
+                    pageup++;
                 }
             }
-            else
+            if(pageup >= this.panel10.Controls.Count && yidianpage != 1)
             {
-                for (int i = 0; i < this.panel10.Controls.Count; i++)
-                {
-                    int xiabiao = (yidianpage - 1) * rows + i;
-                    if (xiabiao < musics.Count)
-                    {
-                        this.panel10.Controls[i].Controls[1].Text = "置顶";
-                        this.panel10.Controls[i].Controls[0].Text = "删除";
-                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].SingerName;
-                        this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
-                        this.panel10.Controls[i].Controls[0].Tag = xiabiao.ToString();
-                        this.panel10.Controls[i].Controls[1].Tag = xiabiao.ToString();
-                    }
-                    else
-                    {
-                        this.panel10.Controls[i].Controls[2].Text = "";
-                        this.panel10.Controls[i].Controls[1].Text = "";
-                        this.panel10.Controls[i].Controls[0].Text = "";
-                        this.panel10.Controls[i].Controls[2].Text = "";
-                    }
-                }
+                yidianpage--;
+                showSong();
+                this.lbl_dqy.Text = yidianpage.ToString();
+                jinyong();
             }
         }
         //上下页禁用方法
         public void jinyong()
         {
-            yidianpage = int.Parse(this.lbl_dqy.Text);
+            //yidianpage = int.Parse(this.lbl_dqy.Text);
             zong = int.Parse(this.lbl_zys.Text);
             if (yidianpage == 1)
             {

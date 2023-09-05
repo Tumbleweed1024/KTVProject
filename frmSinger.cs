@@ -18,7 +18,30 @@ namespace KTVProject
         public frmSinger()
         {
             InitializeComponent();
+            //缓存机制，防止加载闪烁
+            this.DoubleBuffered = true;//设置本窗体
+            SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true); // 禁止擦除背景.
+            SetStyle(ControlStyles.DoubleBuffer, true); // 双缓冲
         }
+        #region 防止闪屏
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x0014) // 禁掉清除背景消息
+                return;
+
+            base.WndProc(ref m);
+        }
+        #endregion
         //歌手名单集合
         List<Singers> ls = new List<Singers>();
         //歌星名单当前页
@@ -430,6 +453,7 @@ namespace KTVProject
 
         private void pictureBox29_Click(object sender, EventArgs e)
         {
+            pageNow = 1;
             this.label21.Text += ((PictureBox)sender).Tag.ToString();
         }
 
