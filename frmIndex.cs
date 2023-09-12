@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,11 @@ namespace KTVProject
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.AllPaintingInWmPaint, true); // 禁止擦除背景.
             SetStyle(ControlStyles.DoubleBuffer, true); // 双缓冲
+            //隐藏主界面控件，截图用
+            //for (int i = 0; i < panelIndex.Controls.Count; i++)
+            //{
+            //    panelIndex.Controls[i].Visible = false;
+            //}
         }
         #region 防止闪屏
         protected override CreateParams CreateParams
@@ -62,6 +68,10 @@ namespace KTVProject
         int yidianpage = 1;
         int rows = 4;
         int zong = 0;
+        //房间号
+        int roomId;
+        //主机名
+        string hostName;
         //主窗体加载
         private void frmIndex_Load(object sender, EventArgs e)
         {
@@ -179,11 +189,20 @@ namespace KTVProject
                     }
                 }
             }
+            //同步剩余时间
+            updateTimeMinute();
             //归位滚动条
             this.panelScrollText1.Left = this.panelScroll.Width;
             this.panelScrollText2.Left = this.panelScroll.Width;
             //播放
             play();
+            //获取主机名
+            hostName = SystemInformation.ComputerName;
+            //获取房间ID
+            DBHelper.OpenConnection();
+            string sql = "SELECT RoomID FROM Room WHERE HostName = '" + hostName + "'";
+            roomId = DBHelper.GetExecuteScalar(sql);
+            DBHelper.CloseConnection();
         }
 
         #region 鼠标动作
@@ -923,17 +942,7 @@ namespace KTVProject
             {
                 play();
             }
-            //同步剩余时间
-            if (!this.labelCountDown.Text.Equals("10"))
-            {
-                this.labelCountDown.Text = "10";
-            }
-            ////减时间
-            //minute++;
-            //if(minute >= 60)
-            //{
-            //    this.labelCountDown.Text = Convert.ToString(Convert.ToInt32(this.labelCountDown.Text) - 1);
-            //}
+            
             //余额不足十分钟标为红色
             if (this.labelCountDown.Text.Length < 2)
             {
@@ -979,10 +988,51 @@ namespace KTVProject
             {
                 this.labelSongCount.Left = 19 - ((this.labelSongCount.Width - 41) / 2);
             }
+            //同步剩余时间
+            updateTimeMinute();
         }
+        //同步剩余时间
 
-        //返回首页
-        private void toIndex()
+        private void updateTimeMinute()
+        {
+            DBHelper.OpenConnection();
+            string sql = "SELECT RoomCloseTime FROM Room WHERE RoomID = " + roomId + "";
+            SqlDataReader reader = DBHelper.GetExecuteReader(sql);
+            if (reader.Read())
+            {
+                string readRoomCloseTime = reader["RoomCloseTime"].ToString();
+                reader.Close();
+                if (!readRoomCloseTime.Equals(string.Empty))
+                {
+                    DateTime RoomCloseTime = DateTime.Parse(readRoomCloseTime);
+                    if (DateTime.Now >= RoomCloseTime)
+                    {
+                        //过期就初始化房间状态和时间数据
+                        string sql2 = "UPDATE Room SET RoomStatus = 0 WHERE RoomID =" + roomId;
+                        DBHelper.GetExecuteNonQuery(sql2);
+                        string sql3 = "UPDATE Room SET RoomCloseTime = NULL WHERE RoomID =" + roomId;
+                        DBHelper.GetExecuteNonQuery(sql3);
+                        string sql4 = "UPDATE Room SET RoomTimeMinutes = NULL WHERE RoomID =" + roomId;
+                        DBHelper.GetExecuteNonQuery(sql4);
+                        //然后退出
+                        reader.Close();
+                        DBHelper.CloseConnection();
+                        Close();
+                    }
+                    else
+                    {
+                        int countDown = ((int)(RoomCloseTime - DateTime.Now).TotalMinutes)+1;
+                        if (!this.labelCountDown.Text.Equals(countDown))
+                        {
+                            this.labelCountDown.Text = Convert.ToString(countDown);
+                        }
+                    }
+                }
+            }
+            DBHelper.CloseConnection();
+        }
+    //返回首页
+    private void toIndex()
         {
             //改变首页布尔值
             index = true;
@@ -1293,5 +1343,6 @@ namespace KTVProject
         {
             jinyong();
         }
+
     }
 }

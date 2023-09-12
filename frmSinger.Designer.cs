@@ -29,6 +29,7 @@ namespace KTVProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinger));
             this.label8 = new System.Windows.Forms.Label();
             this.lblxiayiye = new System.Windows.Forms.Label();
             this.pn_mv = new System.Windows.Forms.Panel();
@@ -171,6 +172,7 @@ namespace KTVProject
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.Location = new System.Drawing.Point(582, 1044);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -182,6 +184,7 @@ namespace KTVProject
             // lblxiayiye
             // 
             this.lblxiayiye.AutoSize = true;
+            this.lblxiayiye.BackColor = System.Drawing.Color.Transparent;
             this.lblxiayiye.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblxiayiye.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblxiayiye.Location = new System.Drawing.Point(796, 1044);
@@ -194,6 +197,7 @@ namespace KTVProject
             // 
             // pn_mv
             // 
+            this.pn_mv.BackColor = System.Drawing.Color.Transparent;
             this.pn_mv.Location = new System.Drawing.Point(1205, 39);
             this.pn_mv.Margin = new System.Windows.Forms.Padding(4);
             this.pn_mv.Name = "pn_mv";
@@ -203,6 +207,7 @@ namespace KTVProject
             // lblshangyiye
             // 
             this.lblshangyiye.AutoSize = true;
+            this.lblshangyiye.BackColor = System.Drawing.Color.Transparent;
             this.lblshangyiye.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblshangyiye.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblshangyiye.Location = new System.Drawing.Point(301, 1044);
@@ -227,6 +232,7 @@ namespace KTVProject
             // 
             // panel9
             // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.label20);
             this.panel9.Controls.Add(this.lblxyy);
             this.panel9.Controls.Add(this.lblzong);
@@ -498,6 +504,7 @@ namespace KTVProject
             // 
             // lblZongYe
             // 
+            this.lblZongYe.BackColor = System.Drawing.Color.Transparent;
             this.lblZongYe.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblZongYe.Location = new System.Drawing.Point(617, 1044);
             this.lblZongYe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -509,7 +516,7 @@ namespace KTVProject
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -544,6 +551,7 @@ namespace KTVProject
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -558,7 +566,7 @@ namespace KTVProject
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox6);
@@ -593,7 +601,7 @@ namespace KTVProject
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
@@ -628,7 +636,7 @@ namespace KTVProject
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox4);
@@ -663,7 +671,7 @@ namespace KTVProject
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
@@ -698,7 +706,7 @@ namespace KTVProject
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -733,6 +741,7 @@ namespace KTVProject
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.lblZuhe);
             this.panel8.Controls.Add(this.lblNv);
             this.panel8.Controls.Add(this.lblNan);
@@ -797,6 +806,7 @@ namespace KTVProject
             // 
             // lblDangqianye
             // 
+            this.lblDangqianye.BackColor = System.Drawing.Color.Transparent;
             this.lblDangqianye.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblDangqianye.Location = new System.Drawing.Point(480, 1044);
             this.lblDangqianye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -1206,6 +1216,7 @@ namespace KTVProject
             // 
             // panel15
             // 
+            this.panel15.BackColor = System.Drawing.Color.Transparent;
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.pictureBox8);
             this.panel15.Controls.Add(this.pictureBox7);
@@ -1273,6 +1284,7 @@ namespace KTVProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(2206, 1240);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel1);

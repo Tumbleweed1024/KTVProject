@@ -35,7 +35,6 @@ namespace KTVProject
             this.panelToIndex = new System.Windows.Forms.Panel();
             this.panelNextMusic = new System.Windows.Forms.Panel();
             this.panelFullScreen = new System.Windows.Forms.Panel();
-            this.awmp_bz = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelAccompany = new System.Windows.Forms.Panel();
             this.panelMute = new System.Windows.Forms.Panel();
             this.panelReplay = new System.Windows.Forms.Panel();
@@ -85,7 +84,6 @@ namespace KTVProject
             this.panelCenter = new System.Windows.Forms.Panel();
             this.panelIndex = new System.Windows.Forms.Panel();
             this.panelMV = new System.Windows.Forms.Panel();
-            this.awmp_mv = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelItem = new System.Windows.Forms.Panel();
             this.panelMusicType = new System.Windows.Forms.Panel();
             this.panelTopList = new System.Windows.Forms.Panel();
@@ -97,8 +95,9 @@ namespace KTVProject
             this.timerVolume = new System.Windows.Forms.Timer(this.components);
             this.timer1s = new System.Windows.Forms.Timer(this.components);
             this.timerScorll = new System.Windows.Forms.Timer(this.components);
+            this.awmp_mv = new AxWMPLib.AxWindowsMediaPlayer();
+            this.awmp_bz = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).BeginInit();
             this.panelTop.SuspendLayout();
             this.panelCountdown.SuspendLayout();
             this.panelScroll.SuspendLayout();
@@ -116,8 +115,9 @@ namespace KTVProject
             this.panelCenter.SuspendLayout();
             this.panelIndex.SuspendLayout();
             this.panelMV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).BeginInit();
             this.panelVolume.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBottom
@@ -182,16 +182,6 @@ namespace KTVProject
             this.panelFullScreen.MouseEnter += new System.EventHandler(this.panelFullScreen_MouseEnter);
             this.panelFullScreen.MouseLeave += new System.EventHandler(this.panelFullScreen_MouseLeave);
             this.panelFullScreen.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelFullScreen_MouseUp);
-            // 
-            // awmp_bz
-            // 
-            this.awmp_bz.Enabled = true;
-            this.awmp_bz.Location = new System.Drawing.Point(2511, 171);
-            this.awmp_bz.Name = "awmp_bz";
-            this.awmp_bz.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_bz.OcxState")));
-            this.awmp_bz.Size = new System.Drawing.Size(36, 36);
-            this.awmp_bz.TabIndex = 1;
-            this.awmp_bz.Visible = false;
             // 
             // panelAccompany
             // 
@@ -764,16 +754,6 @@ namespace KTVProject
             this.panelMV.Size = new System.Drawing.Size(1152, 648);
             this.panelMV.TabIndex = 2;
             // 
-            // awmp_mv
-            // 
-            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.awmp_mv.Enabled = true;
-            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
-            this.awmp_mv.Name = "awmp_mv";
-            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
-            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
-            this.awmp_mv.TabIndex = 0;
-            // 
             // panelItem
             // 
             this.panelItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -894,6 +874,26 @@ namespace KTVProject
             this.timerScorll.Enabled = true;
             this.timerScorll.Tick += new System.EventHandler(this.timerScorll_Tick);
             // 
+            // awmp_mv
+            // 
+            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.awmp_mv.Enabled = true;
+            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
+            this.awmp_mv.Name = "awmp_mv";
+            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
+            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
+            this.awmp_mv.TabIndex = 0;
+            // 
+            // awmp_bz
+            // 
+            this.awmp_bz.Enabled = true;
+            this.awmp_bz.Location = new System.Drawing.Point(2511, 171);
+            this.awmp_bz.Name = "awmp_bz";
+            this.awmp_bz.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_bz.OcxState")));
+            this.awmp_bz.Size = new System.Drawing.Size(36, 36);
+            this.awmp_bz.TabIndex = 1;
+            this.awmp_bz.Visible = false;
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -911,7 +911,6 @@ namespace KTVProject
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmIndex_Load);
             this.panelBottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelCountdown.ResumeLayout(false);
@@ -933,9 +932,10 @@ namespace KTVProject
             this.panelCenter.ResumeLayout(false);
             this.panelIndex.ResumeLayout(false);
             this.panelMV.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).EndInit();
             this.panelVolume.ResumeLayout(false);
             this.panelVolume.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).EndInit();
             this.ResumeLayout(false);
 
         }
