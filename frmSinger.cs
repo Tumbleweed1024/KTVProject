@@ -69,8 +69,8 @@ namespace KTVProject
             //显示歌手
             showSinger();
             jinyong();
-            //“全部”选项变红色
-            lblAll.ForeColor = Color.Red;
+            //“全部”选项变蓝色
+            lblAll.ForeColor = Color.RoyalBlue;
         }
         //MV全屏方法，通过底栏按钮调用
         public void mvDock(bool full)
@@ -243,7 +243,7 @@ namespace KTVProject
             {
                 c.Parent.Controls[i].ForeColor = Color.Black;
             }
-            c.ForeColor = Color.Red;
+            c.ForeColor = Color.RoyalBlue;
         }
 
         //男

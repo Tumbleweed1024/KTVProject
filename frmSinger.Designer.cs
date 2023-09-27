@@ -29,7 +29,6 @@ namespace KTVProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinger));
             this.label8 = new System.Windows.Forms.Label();
             this.lblxiayiye = new System.Windows.Forms.Label();
             this.pn_mv = new System.Windows.Forms.Panel();
@@ -517,7 +516,7 @@ namespace KTVProject
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -567,7 +566,7 @@ namespace KTVProject
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -602,7 +601,7 @@ namespace KTVProject
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -637,7 +636,7 @@ namespace KTVProject
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -672,7 +671,7 @@ namespace KTVProject
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -707,7 +706,7 @@ namespace KTVProject
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1284,7 +1283,7 @@ namespace KTVProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::KTVProject.Properties.Resources.中间背景;
             this.ClientSize = new System.Drawing.Size(2206, 1240);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel1);

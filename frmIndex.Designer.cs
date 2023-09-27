@@ -58,6 +58,25 @@ namespace KTVProject
             this.labelSongCount = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFill = new System.Windows.Forms.Panel();
+            this.panelCenter = new System.Windows.Forms.Panel();
+            this.panelIndex = new System.Windows.Forms.Panel();
+            this.panelMV = new System.Windows.Forms.Panel();
+            this.panelItem = new System.Windows.Forms.Panel();
+            this.panelMusicType = new System.Windows.Forms.Panel();
+            this.panelTopList = new System.Windows.Forms.Panel();
+            this.panelSinger = new System.Windows.Forms.Panel();
+            this.panelVolume = new System.Windows.Forms.Panel();
+            this.labelVolumnValue = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.p_show = new System.Windows.Forms.Panel();
+            this.timerVolume = new System.Windows.Forms.Timer(this.components);
+            this.timer1s = new System.Windows.Forms.Timer(this.components);
+            this.timerScorll = new System.Windows.Forms.Timer(this.components);
+            this.awmp_mv = new AxWMPLib.AxWindowsMediaPlayer();
+            this.awmp_bz = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.labelRead = new System.Windows.Forms.Label();
             this.pn_yidian = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.lbl_zys = new System.Windows.Forms.Label();
@@ -81,22 +100,36 @@ namespace KTVProject
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelCenter = new System.Windows.Forms.Panel();
-            this.panelIndex = new System.Windows.Forms.Panel();
-            this.panelMV = new System.Windows.Forms.Panel();
-            this.panelItem = new System.Windows.Forms.Panel();
-            this.panelMusicType = new System.Windows.Forms.Panel();
-            this.panelTopList = new System.Windows.Forms.Panel();
-            this.panelSinger = new System.Windows.Forms.Panel();
-            this.panelVolume = new System.Windows.Forms.Panel();
-            this.labelVolumnValue = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.p_show = new System.Windows.Forms.Panel();
-            this.timerVolume = new System.Windows.Forms.Timer(this.components);
-            this.timer1s = new System.Windows.Forms.Timer(this.components);
-            this.timerScorll = new System.Windows.Forms.Timer(this.components);
-            this.awmp_mv = new AxWMPLib.AxWindowsMediaPlayer();
-            this.awmp_bz = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelBottom.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelCountdown.SuspendLayout();
@@ -106,18 +139,49 @@ namespace KTVProject
             this.panelPlayList.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelFill.SuspendLayout();
-            this.pn_yidian.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panelCenter.SuspendLayout();
             this.panelIndex.SuspendLayout();
             this.panelMV.SuspendLayout();
             this.panelVolume.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).BeginInit();
+            this.panel15.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.pn_yidian.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBottom
@@ -468,6 +532,222 @@ namespace KTVProject
             this.panelFill.Size = new System.Drawing.Size(2560, 1286);
             this.panelFill.TabIndex = 2;
             // 
+            // panelCenter
+            // 
+            this.panelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCenter.Controls.Add(this.panelIndex);
+            this.panelCenter.Controls.Add(this.panelVolume);
+            this.panelCenter.Controls.Add(this.p_show);
+            this.panelCenter.Location = new System.Drawing.Point(179, 23);
+            this.panelCenter.Name = "panelCenter";
+            this.panelCenter.Size = new System.Drawing.Size(2208, 1242);
+            this.panelCenter.TabIndex = 0;
+            // 
+            // panelIndex
+            // 
+            this.panelIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelIndex.Controls.Add(this.panel15);
+            this.panelIndex.Controls.Add(this.panelMV);
+            this.panelIndex.Controls.Add(this.panelItem);
+            this.panelIndex.Controls.Add(this.panelMusicType);
+            this.panelIndex.Controls.Add(this.panelTopList);
+            this.panelIndex.Controls.Add(this.panelSinger);
+            this.panelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelIndex.Location = new System.Drawing.Point(0, 0);
+            this.panelIndex.Name = "panelIndex";
+            this.panelIndex.Size = new System.Drawing.Size(2206, 1240);
+            this.panelIndex.TabIndex = 0;
+            // 
+            // panelMV
+            // 
+            this.panelMV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMV.Controls.Add(this.awmp_mv);
+            this.panelMV.Location = new System.Drawing.Point(1039, 15);
+            this.panelMV.Name = "panelMV";
+            this.panelMV.Size = new System.Drawing.Size(1152, 648);
+            this.panelMV.TabIndex = 2;
+            // 
+            // panelItem
+            // 
+            this.panelItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelItem.Location = new System.Drawing.Point(1040, 692);
+            this.panelItem.Name = "panelItem";
+            this.panelItem.Size = new System.Drawing.Size(507, 250);
+            this.panelItem.TabIndex = 5;
+            this.panelItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseDown);
+            this.panelItem.MouseEnter += new System.EventHandler(this.panelItem_MouseEnter);
+            this.panelItem.MouseLeave += new System.EventHandler(this.panelItem_MouseLeave);
+            this.panelItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseUp);
+            // 
+            // panelMusicType
+            // 
+            this.panelMusicType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMusicType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMusicType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMusicType.Location = new System.Drawing.Point(1040, 971);
+            this.panelMusicType.Name = "panelMusicType";
+            this.panelMusicType.Size = new System.Drawing.Size(507, 250);
+            this.panelMusicType.TabIndex = 4;
+            this.panelMusicType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseDown);
+            this.panelMusicType.MouseEnter += new System.EventHandler(this.panelMusicType_MouseEnter);
+            this.panelMusicType.MouseLeave += new System.EventHandler(this.panelMusicType_MouseLeave);
+            this.panelMusicType.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseUp);
+            // 
+            // panelTopList
+            // 
+            this.panelTopList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTopList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTopList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelTopList.Location = new System.Drawing.Point(2157, 1212);
+            this.panelTopList.Name = "panelTopList";
+            this.panelTopList.Size = new System.Drawing.Size(484, 1199);
+            this.panelTopList.TabIndex = 1;
+            this.panelTopList.Visible = false;
+            this.panelTopList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseDown);
+            this.panelTopList.MouseEnter += new System.EventHandler(this.panelTopList_MouseEnter);
+            this.panelTopList.MouseLeave += new System.EventHandler(this.panelTopList_MouseLeave);
+            this.panelTopList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseUp);
+            // 
+            // panelSinger
+            // 
+            this.panelSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelSinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSinger.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSinger.Location = new System.Drawing.Point(15, 16);
+            this.panelSinger.Name = "panelSinger";
+            this.panelSinger.Size = new System.Drawing.Size(538, 1206);
+            this.panelSinger.TabIndex = 0;
+            this.panelSinger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseDown);
+            this.panelSinger.MouseEnter += new System.EventHandler(this.panelSinger_MouseEnter);
+            this.panelSinger.MouseLeave += new System.EventHandler(this.panelSinger_MouseLeave);
+            this.panelSinger.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseUp);
+            // 
+            // panelVolume
+            // 
+            this.panelVolume.Controls.Add(this.labelVolumnValue);
+            this.panelVolume.Controls.Add(this.label1);
+            this.panelVolume.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panelVolume.Location = new System.Drawing.Point(1805, 10);
+            this.panelVolume.Name = "panelVolume";
+            this.panelVolume.Size = new System.Drawing.Size(389, 84);
+            this.panelVolume.TabIndex = 2;
+            this.panelVolume.Visible = false;
+            // 
+            // labelVolumnValue
+            // 
+            this.labelVolumnValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelVolumnValue.AutoSize = true;
+            this.labelVolumnValue.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVolumnValue.ForeColor = System.Drawing.Color.White;
+            this.labelVolumnValue.Location = new System.Drawing.Point(162, 3);
+            this.labelVolumnValue.Name = "labelVolumnValue";
+            this.labelVolumnValue.Size = new System.Drawing.Size(149, 75);
+            this.labelVolumnValue.TabIndex = 2;
+            this.labelVolumnValue.Text = "NUL";
+            this.labelVolumnValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(369, 75);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "音量：       %";
+            // 
+            // p_show
+            // 
+            this.p_show.Location = new System.Drawing.Point(16, 16);
+            this.p_show.Name = "p_show";
+            this.p_show.Size = new System.Drawing.Size(32, 32);
+            this.p_show.TabIndex = 5;
+            // 
+            // timerVolume
+            // 
+            this.timerVolume.Interval = 3000;
+            this.timerVolume.Tick += new System.EventHandler(this.timerVolume_Tick);
+            // 
+            // timer1s
+            // 
+            this.timer1s.Enabled = true;
+            this.timer1s.Interval = 1000;
+            this.timer1s.Tick += new System.EventHandler(this.timer1s_Tick);
+            // 
+            // timerScorll
+            // 
+            this.timerScorll.Enabled = true;
+            this.timerScorll.Tick += new System.EventHandler(this.timerScorll_Tick);
+            // 
+            // awmp_mv
+            // 
+            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.awmp_mv.Enabled = true;
+            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
+            this.awmp_mv.Name = "awmp_mv";
+            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
+            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
+            this.awmp_mv.TabIndex = 0;
+            // 
+            // awmp_bz
+            // 
+            this.awmp_bz.Enabled = true;
+            this.awmp_bz.Location = new System.Drawing.Point(2511, 171);
+            this.awmp_bz.Name = "awmp_bz";
+            this.awmp_bz.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_bz.OcxState")));
+            this.awmp_bz.Size = new System.Drawing.Size(36, 36);
+            this.awmp_bz.TabIndex = 1;
+            this.awmp_bz.Visible = false;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel15.Controls.Add(this.label4);
+            this.panel15.Controls.Add(this.panel17);
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Location = new System.Drawing.Point(1579, 692);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(612, 529);
+            this.panel15.TabIndex = 18;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel17.Controls.Add(this.labelRead);
+            this.panel17.Location = new System.Drawing.Point(21, 19);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(459, 72);
+            this.panel17.TabIndex = 3;
+            // 
+            // labelRead
+            // 
+            this.labelRead.BackColor = System.Drawing.Color.Transparent;
+            this.labelRead.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRead.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRead.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelRead.Location = new System.Drawing.Point(0, 0);
+            this.labelRead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRead.Name = "labelRead";
+            this.labelRead.Size = new System.Drawing.Size(459, 72);
+            this.labelRead.TabIndex = 2;
+            this.labelRead.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // pn_yidian
             // 
             this.pn_yidian.BackColor = System.Drawing.Color.Transparent;
@@ -714,185 +994,446 @@ namespace KTVProject
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panelCenter
+            // panel16
             // 
-            this.panelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCenter.Controls.Add(this.panelIndex);
-            this.panelCenter.Controls.Add(this.panelVolume);
-            this.panelCenter.Controls.Add(this.p_show);
-            this.panelCenter.Location = new System.Drawing.Point(179, 23);
-            this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(2208, 1242);
-            this.panelCenter.TabIndex = 0;
+            this.panel16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel16.BackgroundImage")));
+            this.panel16.Controls.Add(this.pictureBox8);
+            this.panel16.Controls.Add(this.pictureBox20);
+            this.panel16.Controls.Add(this.pictureBox7);
+            this.panel16.Controls.Add(this.pictureBox11);
+            this.panel16.Controls.Add(this.pictureBox26);
+            this.panel16.Controls.Add(this.pictureBox14);
+            this.panel16.Controls.Add(this.pictureBox25);
+            this.panel16.Controls.Add(this.pictureBox13);
+            this.panel16.Controls.Add(this.pictureBox19);
+            this.panel16.Controls.Add(this.pictureBox12);
+            this.panel16.Controls.Add(this.pictureBox24);
+            this.panel16.Controls.Add(this.pictureBox15);
+            this.panel16.Controls.Add(this.pictureBox18);
+            this.panel16.Controls.Add(this.pictureBox16);
+            this.panel16.Controls.Add(this.pictureBox23);
+            this.panel16.Controls.Add(this.pictureBox17);
+            this.panel16.Controls.Add(this.pictureBox21);
+            this.panel16.Controls.Add(this.pictureBox22);
+            this.panel16.Controls.Add(this.pictureBox27);
+            this.panel16.Controls.Add(this.pictureBox28);
+            this.panel16.Controls.Add(this.pictureBox29);
+            this.panel16.Controls.Add(this.pictureBox30);
+            this.panel16.Controls.Add(this.pictureBox31);
+            this.panel16.Controls.Add(this.pictureBox32);
+            this.panel16.Controls.Add(this.pictureBox33);
+            this.panel16.Controls.Add(this.pictureBox34);
+            this.panel16.Controls.Add(this.pictureBox35);
+            this.panel16.Controls.Add(this.pictureBox36);
+            this.panel16.Location = new System.Drawing.Point(21, 112);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(569, 401);
+            this.panel16.TabIndex = 0;
             // 
-            // panelIndex
+            // pictureBox8
             // 
-            this.panelIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelIndex.Controls.Add(this.panelMV);
-            this.panelIndex.Controls.Add(this.panelItem);
-            this.panelIndex.Controls.Add(this.panelMusicType);
-            this.panelIndex.Controls.Add(this.panelTopList);
-            this.panelIndex.Controls.Add(this.panelSinger);
-            this.panelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelIndex.Location = new System.Drawing.Point(0, 0);
-            this.panelIndex.Name = "panelIndex";
-            this.panelIndex.Size = new System.Drawing.Size(2206, 1240);
-            this.panelIndex.TabIndex = 0;
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = global::KTVProject.Properties.Resources.删除;
+            this.pictureBox8.Location = new System.Drawing.Point(498, 322);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 144;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "";
+            this.pictureBox8.Click += new System.EventHandler(this.clearClick);
             // 
-            // panelMV
+            // pictureBox20
             // 
-            this.panelMV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMV.Controls.Add(this.awmp_mv);
-            this.panelMV.Location = new System.Drawing.Point(1039, 15);
-            this.panelMV.Name = "panelMV";
-            this.panelMV.Size = new System.Drawing.Size(1152, 648);
-            this.panelMV.TabIndex = 2;
+            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox20.Image = global::KTVProject.Properties.Resources._16gl_S;
+            this.pictureBox20.Location = new System.Drawing.Point(18, 246);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 134;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.Tag = "S";
+            this.pictureBox20.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // panelItem
+            // pictureBox7
             // 
-            this.panelItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelItem.Location = new System.Drawing.Point(1040, 692);
-            this.panelItem.Name = "panelItem";
-            this.panelItem.Size = new System.Drawing.Size(507, 250);
-            this.panelItem.TabIndex = 5;
-            this.panelItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseDown);
-            this.panelItem.MouseEnter += new System.EventHandler(this.panelItem_MouseEnter);
-            this.panelItem.MouseLeave += new System.EventHandler(this.panelItem_MouseLeave);
-            this.panelItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseUp);
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::KTVProject.Properties.Resources.操作_退格;
+            this.pictureBox7.Location = new System.Drawing.Point(402, 322);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 143;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "";
+            this.pictureBox7.Click += new System.EventHandler(this.removeClick);
             // 
-            // panelMusicType
+            // pictureBox11
             // 
-            this.panelMusicType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMusicType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMusicType.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMusicType.Location = new System.Drawing.Point(1040, 971);
-            this.panelMusicType.Name = "panelMusicType";
-            this.panelMusicType.Size = new System.Drawing.Size(507, 250);
-            this.panelMusicType.TabIndex = 4;
-            this.panelMusicType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseDown);
-            this.panelMusicType.MouseEnter += new System.EventHandler(this.panelMusicType_MouseEnter);
-            this.panelMusicType.MouseLeave += new System.EventHandler(this.panelMusicType_MouseLeave);
-            this.panelMusicType.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseUp);
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = global::KTVProject.Properties.Resources._16gl_G;
+            this.pictureBox11.Location = new System.Drawing.Point(18, 94);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 129;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Tag = "G";
+            this.pictureBox11.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // panelTopList
+            // pictureBox26
             // 
-            this.panelTopList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTopList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTopList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelTopList.Location = new System.Drawing.Point(2157, 1212);
-            this.panelTopList.Name = "panelTopList";
-            this.panelTopList.Size = new System.Drawing.Size(484, 1199);
-            this.panelTopList.TabIndex = 1;
-            this.panelTopList.Visible = false;
-            this.panelTopList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseDown);
-            this.panelTopList.MouseEnter += new System.EventHandler(this.panelTopList_MouseEnter);
-            this.panelTopList.MouseLeave += new System.EventHandler(this.panelTopList_MouseLeave);
-            this.panelTopList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseUp);
+            this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox26.Image = global::KTVProject.Properties.Resources._16gl_Y;
+            this.pictureBox26.Location = new System.Drawing.Point(498, 246);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 132;
+            this.pictureBox26.TabStop = false;
+            this.pictureBox26.Tag = "Y";
+            this.pictureBox26.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // panelSinger
+            // pictureBox14
             // 
-            this.panelSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelSinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSinger.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSinger.Location = new System.Drawing.Point(15, 16);
-            this.panelSinger.Name = "panelSinger";
-            this.panelSinger.Size = new System.Drawing.Size(538, 1206);
-            this.panelSinger.TabIndex = 0;
-            this.panelSinger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseDown);
-            this.panelSinger.MouseEnter += new System.EventHandler(this.panelSinger_MouseEnter);
-            this.panelSinger.MouseLeave += new System.EventHandler(this.panelSinger_MouseLeave);
-            this.panelSinger.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseUp);
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox14.Image = global::KTVProject.Properties.Resources._16gl_M;
+            this.pictureBox14.Location = new System.Drawing.Point(18, 170);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 133;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Tag = "M";
+            this.pictureBox14.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // panelVolume
+            // pictureBox25
             // 
-            this.panelVolume.Controls.Add(this.labelVolumnValue);
-            this.panelVolume.Controls.Add(this.label1);
-            this.panelVolume.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panelVolume.Location = new System.Drawing.Point(1805, 10);
-            this.panelVolume.Name = "panelVolume";
-            this.panelVolume.Size = new System.Drawing.Size(389, 84);
-            this.panelVolume.TabIndex = 2;
-            this.panelVolume.Visible = false;
+            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox25.Image = global::KTVProject.Properties.Resources._16gl_V;
+            this.pictureBox25.Location = new System.Drawing.Point(210, 246);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 130;
+            this.pictureBox25.TabStop = false;
+            this.pictureBox25.Tag = "V";
+            this.pictureBox25.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // labelVolumnValue
+            // pictureBox13
             // 
-            this.labelVolumnValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelVolumnValue.AutoSize = true;
-            this.labelVolumnValue.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVolumnValue.ForeColor = System.Drawing.Color.White;
-            this.labelVolumnValue.Location = new System.Drawing.Point(162, 3);
-            this.labelVolumnValue.Name = "labelVolumnValue";
-            this.labelVolumnValue.Size = new System.Drawing.Size(149, 75);
-            this.labelVolumnValue.TabIndex = 2;
-            this.labelVolumnValue.Text = "NUL";
-            this.labelVolumnValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::KTVProject.Properties.Resources._16gl_J;
+            this.pictureBox13.Location = new System.Drawing.Point(306, 94);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 131;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "J";
+            this.pictureBox13.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // label1
+            // pictureBox19
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 75);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "音量：       %";
+            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox19.Image = global::KTVProject.Properties.Resources._16gl_P;
+            this.pictureBox19.Location = new System.Drawing.Point(306, 170);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 138;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Tag = "P";
+            this.pictureBox19.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // p_show
+            // pictureBox12
             // 
-            this.p_show.Location = new System.Drawing.Point(16, 16);
-            this.p_show.Name = "p_show";
-            this.p_show.Size = new System.Drawing.Size(32, 32);
-            this.p_show.TabIndex = 5;
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox12.Image = global::KTVProject.Properties.Resources._16gl_C;
+            this.pictureBox12.Location = new System.Drawing.Point(210, 18);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 139;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Tag = "C";
+            this.pictureBox12.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // timerVolume
+            // pictureBox24
             // 
-            this.timerVolume.Interval = 3000;
-            this.timerVolume.Tick += new System.EventHandler(this.timerVolume_Tick);
+            this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox24.Image = global::KTVProject.Properties.Resources._16gl_X;
+            this.pictureBox24.Location = new System.Drawing.Point(402, 246);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 140;
+            this.pictureBox24.TabStop = false;
+            this.pictureBox24.Tag = "X";
+            this.pictureBox24.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // timer1s
+            // pictureBox15
             // 
-            this.timer1s.Enabled = true;
-            this.timer1s.Interval = 1000;
-            this.timer1s.Tick += new System.EventHandler(this.timer1s_Tick);
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox15.Image = global::KTVProject.Properties.Resources._16gl_L;
+            this.pictureBox15.Location = new System.Drawing.Point(498, 94);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 135;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.Tag = "L";
+            this.pictureBox15.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // timerScorll
+            // pictureBox18
             // 
-            this.timerScorll.Enabled = true;
-            this.timerScorll.Tick += new System.EventHandler(this.timerScorll_Tick);
+            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox18.Image = global::KTVProject.Properties.Resources._16gl_R;
+            this.pictureBox18.Location = new System.Drawing.Point(498, 170);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 136;
+            this.pictureBox18.TabStop = false;
+            this.pictureBox18.Tag = "R";
+            this.pictureBox18.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // awmp_mv
+            // pictureBox16
             // 
-            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.awmp_mv.Enabled = true;
-            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
-            this.awmp_mv.Name = "awmp_mv";
-            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
-            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
-            this.awmp_mv.TabIndex = 0;
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox16.Image = global::KTVProject.Properties.Resources._16gl_F;
+            this.pictureBox16.Location = new System.Drawing.Point(498, 18);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 137;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Tag = "F";
+            this.pictureBox16.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // awmp_bz
+            // pictureBox23
             // 
-            this.awmp_bz.Enabled = true;
-            this.awmp_bz.Location = new System.Drawing.Point(2511, 171);
-            this.awmp_bz.Name = "awmp_bz";
-            this.awmp_bz.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_bz.OcxState")));
-            this.awmp_bz.Size = new System.Drawing.Size(36, 36);
-            this.awmp_bz.TabIndex = 1;
-            this.awmp_bz.Visible = false;
+            this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox23.Image = global::KTVProject.Properties.Resources._16gl_U;
+            this.pictureBox23.Location = new System.Drawing.Point(114, 322);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox23.TabIndex = 120;
+            this.pictureBox23.TabStop = false;
+            this.pictureBox23.Tag = "U";
+            this.pictureBox23.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox17.Image = global::KTVProject.Properties.Resources._16gl_I;
+            this.pictureBox17.Location = new System.Drawing.Point(210, 94);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 121;
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Tag = "I";
+            this.pictureBox17.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox21.Image = global::KTVProject.Properties.Resources._16gl_O;
+            this.pictureBox21.Location = new System.Drawing.Point(210, 170);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 122;
+            this.pictureBox21.TabStop = false;
+            this.pictureBox21.Tag = "O";
+            this.pictureBox21.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox22.Image = global::KTVProject.Properties.Resources._16gl_B;
+            this.pictureBox22.Location = new System.Drawing.Point(114, 18);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 117;
+            this.pictureBox22.TabStop = false;
+            this.pictureBox22.Tag = "B";
+            this.pictureBox22.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox27.Image = global::KTVProject.Properties.Resources._16gl_W;
+            this.pictureBox27.Location = new System.Drawing.Point(306, 246);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox27.TabIndex = 118;
+            this.pictureBox27.TabStop = false;
+            this.pictureBox27.Tag = "W";
+            this.pictureBox27.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox28.Image = global::KTVProject.Properties.Resources._16gl_K;
+            this.pictureBox28.Location = new System.Drawing.Point(402, 94);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox28.TabIndex = 119;
+            this.pictureBox28.TabStop = false;
+            this.pictureBox28.Tag = "K";
+            this.pictureBox28.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox29.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox29.Image = global::KTVProject.Properties.Resources._16gl_Q;
+            this.pictureBox29.Location = new System.Drawing.Point(402, 170);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox29.TabIndex = 126;
+            this.pictureBox29.TabStop = false;
+            this.pictureBox29.Tag = "Q";
+            this.pictureBox29.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox30
+            // 
+            this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox30.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox30.Image = global::KTVProject.Properties.Resources._16gl_D;
+            this.pictureBox30.Location = new System.Drawing.Point(306, 18);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox30.TabIndex = 127;
+            this.pictureBox30.TabStop = false;
+            this.pictureBox30.Tag = "D";
+            this.pictureBox30.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox31.Image = global::KTVProject.Properties.Resources._16gl_T;
+            this.pictureBox31.Location = new System.Drawing.Point(114, 246);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox31.TabIndex = 128;
+            this.pictureBox31.TabStop = false;
+            this.pictureBox31.Tag = "T";
+            this.pictureBox31.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox32.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox32.Image = global::KTVProject.Properties.Resources._16gl_H;
+            this.pictureBox32.Location = new System.Drawing.Point(114, 94);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox32.TabIndex = 123;
+            this.pictureBox32.TabStop = false;
+            this.pictureBox32.Tag = "H";
+            this.pictureBox32.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox33.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox33.Image = global::KTVProject.Properties.Resources._16gl_N;
+            this.pictureBox33.Location = new System.Drawing.Point(114, 170);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox33.TabIndex = 124;
+            this.pictureBox33.TabStop = false;
+            this.pictureBox33.Tag = "N";
+            this.pictureBox33.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox34.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox34.Image = global::KTVProject.Properties.Resources._16gl_A;
+            this.pictureBox34.Location = new System.Drawing.Point(18, 18);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox34.TabIndex = 125;
+            this.pictureBox34.TabStop = false;
+            this.pictureBox34.Tag = "A";
+            this.pictureBox34.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox35.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox35.Image = global::KTVProject.Properties.Resources._16gl_E;
+            this.pictureBox35.Location = new System.Drawing.Point(402, 18);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox35.TabIndex = 141;
+            this.pictureBox35.TabStop = false;
+            this.pictureBox35.Tag = "E";
+            this.pictureBox35.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox36.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox36.Image = global::KTVProject.Properties.Resources._16gl_Z;
+            this.pictureBox36.Location = new System.Drawing.Point(18, 322);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox36.TabIndex = 142;
+            this.pictureBox36.TabStop = false;
+            this.pictureBox36.Tag = "Z";
+            this.pictureBox36.Click += new System.EventHandler(this.keyboardClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 20F);
+            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label4.Image = global::KTVProject.Properties.Resources._20白色;
+            this.label4.Location = new System.Drawing.Point(486, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 52);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "搜索";
             // 
             // frmIndex
             // 
@@ -922,13 +1463,6 @@ namespace KTVProject
             this.panelPlayList.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelFill.ResumeLayout(false);
-            this.pn_yidian.ResumeLayout(false);
-            this.pn_yidian.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.panelCenter.ResumeLayout(false);
             this.panelIndex.ResumeLayout(false);
             this.panelMV.ResumeLayout(false);
@@ -936,6 +1470,45 @@ namespace KTVProject
             this.panelVolume.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.pn_yidian.ResumeLayout(false);
+            this.pn_yidian.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1008,5 +1581,38 @@ namespace KTVProject
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label labelRead;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.PictureBox pictureBox29;
+        private System.Windows.Forms.PictureBox pictureBox30;
+        private System.Windows.Forms.PictureBox pictureBox31;
+        private System.Windows.Forms.PictureBox pictureBox32;
+        private System.Windows.Forms.PictureBox pictureBox33;
+        private System.Windows.Forms.PictureBox pictureBox34;
+        private System.Windows.Forms.PictureBox pictureBox35;
+        private System.Windows.Forms.PictureBox pictureBox36;
+        private System.Windows.Forms.Label label4;
     }
 }

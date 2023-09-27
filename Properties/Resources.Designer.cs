@@ -323,6 +323,16 @@ namespace KTVProject.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap _20白色 {
+            get {
+                object obj = ResourceManager.GetObject("_20白色", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap indexBg {
             get {
                 object obj = ResourceManager.GetObject("indexBg", resourceCulture);
@@ -356,6 +366,16 @@ namespace KTVProject.Properties {
         internal static System.Drawing.Bitmap StarKTVLOGO {
             get {
                 object obj = ResourceManager.GetObject("StarKTVLOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 中间背景 {
+            get {
+                object obj = ResourceManager.GetObject("中间背景", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

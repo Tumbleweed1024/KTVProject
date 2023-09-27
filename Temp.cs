@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace KTVProject
 {
-    public partial class frmJiushui : Form
+    public partial class Temp : Form
     {
-        public frmJiushui()
+        public Temp()
         {
             InitializeComponent();
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

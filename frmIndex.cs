@@ -49,6 +49,7 @@ namespace KTVProject
         }
         #endregion
         private frmSinger fs;
+        private frmItem fi;
         public List<Music> musics = new List<Music>();//存放已点的曲目
         //控制静音
         private bool mute = false;
@@ -62,8 +63,6 @@ namespace KTVProject
         private bool fullScreen = false;
         //控制首页按钮是否生效
         private bool index = true;
-        //分钟计时器
-        private int minute = 0;
         //已点
         int yidianpage = 1;
         int rows = 4;
@@ -72,6 +71,8 @@ namespace KTVProject
         int roomId;
         //主机名
         string hostName;
+        //当前窗口（用于大屏按钮检查当前的板块）
+        string noIndex;
         //主窗体加载
         private void frmIndex_Load(object sender, EventArgs e)
         {
@@ -616,7 +617,17 @@ namespace KTVProject
             }
             if (!index)
             {
-                fs.mvDock(!fullScreen);
+                switch (noIndex)
+                {
+                    case "fs":
+                        fs.mvDock(!fullScreen);
+                        break;
+                    case "fi":
+                        fi.mvDock(!fullScreen);
+                        break;
+                    default:
+                        break;
+                }
             }
             fullScreen = !fullScreen;
         }
@@ -758,6 +769,7 @@ namespace KTVProject
         private void panelItem_MouseUp(object sender, MouseEventArgs e)
         {
             this.panelItem.BackgroundImage = Properties.Resources.酒水零食hover;
+            item();
         }
         #endregion
 
@@ -948,8 +960,6 @@ namespace KTVProject
             {
                 this.labelCountDown.ForeColor = Color.Red;
             }
-            //检查是否还有余额
-
             //替换滚动条歌名
             if (musics.Count > 0)
             {
@@ -991,21 +1001,22 @@ namespace KTVProject
             //同步剩余时间
             updateTimeMinute();
         }
-        //同步剩余时间
+        //同步剩余时间，过期关闭该窗口
 
         private void updateTimeMinute()
         {
             DBHelper.OpenConnection();
-            string sql = "SELECT RoomCloseTime FROM Room WHERE RoomID = " + roomId + "";
+            string sql = "SELECT RoomCloseTime,RoomStatus FROM Room WHERE RoomID = " + roomId + "";
             SqlDataReader reader = DBHelper.GetExecuteReader(sql);
             if (reader.Read())
             {
                 string readRoomCloseTime = reader["RoomCloseTime"].ToString();
+                int readRoomStatus = Convert.ToInt32(reader["RoomStatus"]);
                 reader.Close();
                 if (!readRoomCloseTime.Equals(string.Empty))
                 {
                     DateTime RoomCloseTime = DateTime.Parse(readRoomCloseTime);
-                    if (DateTime.Now >= RoomCloseTime)
+                    if (DateTime.Now >= RoomCloseTime || readRoomStatus == 0)
                     {
                         //过期就初始化房间状态和时间数据
                         string sql2 = "UPDATE Room SET RoomStatus = 0 WHERE RoomID =" + roomId;
@@ -1027,6 +1038,19 @@ namespace KTVProject
                             this.labelCountDown.Text = Convert.ToString(countDown);
                         }
                     }
+                }else if (readRoomStatus == 0)
+                {
+                    //过期就初始化房间状态和时间数据
+                    string sql2 = "UPDATE Room SET RoomStatus = 0 WHERE RoomID =" + roomId;
+                    DBHelper.GetExecuteNonQuery(sql2);
+                    string sql3 = "UPDATE Room SET RoomCloseTime = NULL WHERE RoomID =" + roomId;
+                    DBHelper.GetExecuteNonQuery(sql3);
+                    string sql4 = "UPDATE Room SET RoomTimeMinutes = NULL WHERE RoomID =" + roomId;
+                    DBHelper.GetExecuteNonQuery(sql4);
+                    //然后退出
+                    reader.Close();
+                    DBHelper.CloseConnection();
+                    Close();
                 }
             }
             DBHelper.CloseConnection();
@@ -1047,6 +1071,7 @@ namespace KTVProject
         {
             //改变首页布尔值
             index = false;
+            noIndex = "fs";
             //第一步清空
             this.p_show.Controls.Clear();
             //创建点歌窗体对象
@@ -1060,6 +1085,29 @@ namespace KTVProject
             this.p_show.Controls.Add(fs);
             fs.Dock = DockStyle.Fill;
             fs.Show();
+            this.p_show.Dock = DockStyle.Fill;
+            this.panelIndex.Visible = false;
+            this.p_show.Visible = true;
+        }
+        //酒水页
+        private void item()
+        {
+            //改变首页布尔值
+            index = false;
+            noIndex = "fi";
+            //第一步清空
+            this.p_show.Controls.Clear();
+            //创建点歌窗体对象
+            fi = new frmItem();
+            //把当前窗体mv传给点歌窗体
+            fi.TopLevel = true;
+            fi.pn_mv.Controls.Add(this.awmp_mv);
+            this.awmp_mv.Dock = DockStyle.Fill;
+            fi.frmindex = this;
+            fi.TopLevel = false;
+            this.p_show.Controls.Add(fi);
+            fi.Dock = DockStyle.Fill;
+            fi.Show();
             this.p_show.Dock = DockStyle.Fill;
             this.panelIndex.Visible = false;
             this.p_show.Visible = true;
@@ -1343,6 +1391,22 @@ namespace KTVProject
         {
             jinyong();
         }
-
+        //键盘
+        private void keyboardClick(object sender, EventArgs e)
+        {
+            this.labelRead.Text += ((PictureBox)sender).Tag.ToString();
+        }
+        private void removeClick(object sender, EventArgs e)
+        {
+            if (this.labelRead.Text.Trim().Length == 0)
+            {
+                return;
+            }
+            this.labelRead.Text = this.labelRead.Text.Substring(0, this.labelRead.Text.Length - 1);
+        }
+        private void clearClick(object sender, EventArgs e)
+        {
+            this.labelRead.Text = string.Empty;
+        }
     }
 }
