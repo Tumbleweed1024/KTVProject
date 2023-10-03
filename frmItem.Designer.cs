@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmItem));
             this.label8 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -111,11 +112,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblzongjia = new System.Windows.Forms.Label();
             this.pn_mv = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -194,12 +190,13 @@
             // 
             // panel14
             // 
+            this.panel14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel14.BackgroundImage")));
             this.panel14.Controls.Add(this.label42);
             this.panel14.Controls.Add(this.label44);
             this.panel14.Controls.Add(this.textBox4);
             this.panel14.Controls.Add(this.label45);
             this.panel14.Controls.Add(this.label46);
-            this.panel14.Location = new System.Drawing.Point(4, 182);
+            this.panel14.Location = new System.Drawing.Point(4, 212);
             this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(792, 73);
@@ -237,12 +234,13 @@
             // 
             // panel15
             // 
+            this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
             this.panel15.Controls.Add(this.label47);
             this.panel15.Controls.Add(this.label49);
             this.panel15.Controls.Add(this.textBox5);
             this.panel15.Controls.Add(this.label50);
             this.panel15.Controls.Add(this.label51);
-            this.panel15.Location = new System.Drawing.Point(4, 94);
+            this.panel15.Location = new System.Drawing.Point(4, 109);
             this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(792, 73);
@@ -373,6 +371,7 @@
             // 
             // panel16
             // 
+            this.panel16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel16.BackgroundImage")));
             this.panel16.Controls.Add(this.label52);
             this.panel16.Controls.Add(this.label54);
             this.panel16.Controls.Add(this.textBox6);
@@ -415,6 +414,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
             this.panel10.Controls.Add(this.panel16);
             this.panel10.Controls.Add(this.panel15);
             this.panel10.Controls.Add(this.panel14);
@@ -424,17 +424,18 @@
             this.panel10.Location = new System.Drawing.Point(1364, 514);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(800, 526);
+            this.panel10.Size = new System.Drawing.Size(800, 602);
             this.panel10.TabIndex = 6;
             // 
             // panel13
             // 
+            this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
             this.panel13.Controls.Add(this.label36);
             this.panel13.Controls.Add(this.label39);
             this.panel13.Controls.Add(this.textBox3);
             this.panel13.Controls.Add(this.label40);
             this.panel13.Controls.Add(this.label41);
-            this.panel13.Location = new System.Drawing.Point(4, 270);
+            this.panel13.Location = new System.Drawing.Point(4, 315);
             this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(792, 73);
@@ -511,12 +512,13 @@
             // 
             // panel12
             // 
+            this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
             this.panel12.Controls.Add(this.label31);
             this.panel12.Controls.Add(this.label33);
             this.panel12.Controls.Add(this.textBox2);
             this.panel12.Controls.Add(this.label34);
             this.panel12.Controls.Add(this.label35);
-            this.panel12.Location = new System.Drawing.Point(4, 358);
+            this.panel12.Location = new System.Drawing.Point(4, 418);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(792, 73);
@@ -593,12 +595,13 @@
             // 
             // panel11
             // 
+            this.panel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel11.BackgroundImage")));
             this.panel11.Controls.Add(this.label30);
             this.panel11.Controls.Add(this.label28);
             this.panel11.Controls.Add(this.textBox1);
             this.panel11.Controls.Add(this.label26);
             this.panel11.Controls.Add(this.label27);
-            this.panel11.Location = new System.Drawing.Point(4, 446);
+            this.panel11.Location = new System.Drawing.Point(4, 521);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(792, 73);
@@ -774,6 +777,7 @@
             // 
             // panel8
             // 
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel8.Controls.Add(this.label20);
             this.panel8.Controls.Add(this.label21);
@@ -787,6 +791,7 @@
             // 
             // panel7
             // 
+            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.label18);
@@ -859,6 +864,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel7);
@@ -873,6 +879,7 @@
             // 
             // panel9
             // 
+            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel9.Controls.Add(this.label23);
             this.panel9.Controls.Add(this.label24);
@@ -909,6 +916,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label15);
@@ -969,6 +977,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label12);
@@ -1029,6 +1038,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label11);
@@ -1162,6 +1172,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -1195,7 +1206,7 @@
             this.lblzongjia.Padding = new System.Windows.Forms.Padding(8);
             this.lblzongjia.Size = new System.Drawing.Size(345, 63);
             this.lblzongjia.TabIndex = 8;
-            this.lblzongjia.Text = "label57";
+            this.lblzongjia.Text = "购物车还没有商品";
             this.lblzongjia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pn_mv
@@ -1207,80 +1218,15 @@
             this.pn_mv.Size = new System.Drawing.Size(800, 450);
             this.pn_mv.TabIndex = 10;
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(1955, 1053);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(107, 39);
-            this.label29.TabIndex = 11;
-            this.label29.Text = "下一页";
-            // 
-            // label32
-            // 
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label32.Location = new System.Drawing.Point(1782, 1047);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(139, 51);
-            this.label32.TabIndex = 10;
-            this.label32.Text = "label4";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label37.Location = new System.Drawing.Point(1752, 1053);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(30, 39);
-            this.label37.TabIndex = 9;
-            this.label37.Text = "/";
-            // 
-            // label43
-            // 
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label43.Location = new System.Drawing.Point(1605, 1047);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(139, 51);
-            this.label43.TabIndex = 8;
-            this.label43.Text = "label2";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Transparent;
-            this.label48.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label48.Location = new System.Drawing.Point(1472, 1053);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(107, 39);
-            this.label48.TabIndex = 7;
-            this.label48.Text = "上一页";
-            // 
             // frmItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KTVProject.Properties.Resources.中间背景;
             this.ClientSize = new System.Drawing.Size(2206, 1240);
-            this.Controls.Add(this.label29);
             this.Controls.Add(this.pn_mv);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label37);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.label43);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label48);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblzongjia);
@@ -1416,10 +1362,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblzongjia;
         public System.Windows.Forms.Panel pn_mv;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label48;
     }
 }

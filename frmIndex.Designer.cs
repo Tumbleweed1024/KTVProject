@@ -35,6 +35,7 @@ namespace KTVProject
             this.panelToIndex = new System.Windows.Forms.Panel();
             this.panelNextMusic = new System.Windows.Forms.Panel();
             this.panelFullScreen = new System.Windows.Forms.Panel();
+            this.awmp_bz = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelAccompany = new System.Windows.Forms.Panel();
             this.panelMute = new System.Windows.Forms.Panel();
             this.panelReplay = new System.Windows.Forms.Panel();
@@ -58,25 +59,6 @@ namespace KTVProject
             this.labelSongCount = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFill = new System.Windows.Forms.Panel();
-            this.panelCenter = new System.Windows.Forms.Panel();
-            this.panelIndex = new System.Windows.Forms.Panel();
-            this.panelMV = new System.Windows.Forms.Panel();
-            this.panelItem = new System.Windows.Forms.Panel();
-            this.panelMusicType = new System.Windows.Forms.Panel();
-            this.panelTopList = new System.Windows.Forms.Panel();
-            this.panelSinger = new System.Windows.Forms.Panel();
-            this.panelVolume = new System.Windows.Forms.Panel();
-            this.labelVolumnValue = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.p_show = new System.Windows.Forms.Panel();
-            this.timerVolume = new System.Windows.Forms.Timer(this.components);
-            this.timer1s = new System.Windows.Forms.Timer(this.components);
-            this.timerScorll = new System.Windows.Forms.Timer(this.components);
-            this.awmp_mv = new AxWMPLib.AxWindowsMediaPlayer();
-            this.awmp_bz = new AxWMPLib.AxWindowsMediaPlayer();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.labelRead = new System.Windows.Forms.Label();
             this.pn_yidian = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.lbl_zys = new System.Windows.Forms.Label();
@@ -100,6 +82,66 @@ namespace KTVProject
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panelCenter = new System.Windows.Forms.Panel();
+            this.panelIndex = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.labelRead = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
@@ -129,8 +171,21 @@ namespace KTVProject
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panelMV = new System.Windows.Forms.Panel();
+            this.awmp_mv = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panelItem = new System.Windows.Forms.Panel();
+            this.panelMusicType = new System.Windows.Forms.Panel();
+            this.panelTopList = new System.Windows.Forms.Panel();
+            this.panelSinger = new System.Windows.Forms.Panel();
+            this.panelVolume = new System.Windows.Forms.Panel();
+            this.labelVolumnValue = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.p_show = new System.Windows.Forms.Panel();
+            this.timerVolume = new System.Windows.Forms.Timer(this.components);
+            this.timer1s = new System.Windows.Forms.Timer(this.components);
+            this.timerScorll = new System.Windows.Forms.Timer(this.components);
             this.panelBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).BeginInit();
             this.panelTop.SuspendLayout();
             this.panelCountdown.SuspendLayout();
             this.panelScroll.SuspendLayout();
@@ -139,20 +194,30 @@ namespace KTVProject
             this.panelPlayList.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelFill.SuspendLayout();
-            this.panelCenter.SuspendLayout();
-            this.panelIndex.SuspendLayout();
-            this.panelMV.SuspendLayout();
-            this.panelVolume.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).BeginInit();
-            this.panel15.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.pn_yidian.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panelCenter.SuspendLayout();
+            this.panelIndex.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -182,6 +247,9 @@ namespace KTVProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            this.panelMV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).BeginInit();
+            this.panelVolume.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBottom
@@ -246,6 +314,16 @@ namespace KTVProject
             this.panelFullScreen.MouseEnter += new System.EventHandler(this.panelFullScreen_MouseEnter);
             this.panelFullScreen.MouseLeave += new System.EventHandler(this.panelFullScreen_MouseLeave);
             this.panelFullScreen.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelFullScreen_MouseUp);
+            // 
+            // awmp_bz
+            // 
+            this.awmp_bz.Enabled = true;
+            this.awmp_bz.Location = new System.Drawing.Point(2511, 171);
+            this.awmp_bz.Name = "awmp_bz";
+            this.awmp_bz.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_bz.OcxState")));
+            this.awmp_bz.Size = new System.Drawing.Size(36, 36);
+            this.awmp_bz.TabIndex = 1;
+            this.awmp_bz.Visible = false;
             // 
             // panelAccompany
             // 
@@ -532,222 +610,6 @@ namespace KTVProject
             this.panelFill.Size = new System.Drawing.Size(2560, 1286);
             this.panelFill.TabIndex = 2;
             // 
-            // panelCenter
-            // 
-            this.panelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCenter.Controls.Add(this.panelIndex);
-            this.panelCenter.Controls.Add(this.panelVolume);
-            this.panelCenter.Controls.Add(this.p_show);
-            this.panelCenter.Location = new System.Drawing.Point(179, 23);
-            this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(2208, 1242);
-            this.panelCenter.TabIndex = 0;
-            // 
-            // panelIndex
-            // 
-            this.panelIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelIndex.Controls.Add(this.panel15);
-            this.panelIndex.Controls.Add(this.panelMV);
-            this.panelIndex.Controls.Add(this.panelItem);
-            this.panelIndex.Controls.Add(this.panelMusicType);
-            this.panelIndex.Controls.Add(this.panelTopList);
-            this.panelIndex.Controls.Add(this.panelSinger);
-            this.panelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelIndex.Location = new System.Drawing.Point(0, 0);
-            this.panelIndex.Name = "panelIndex";
-            this.panelIndex.Size = new System.Drawing.Size(2206, 1240);
-            this.panelIndex.TabIndex = 0;
-            // 
-            // panelMV
-            // 
-            this.panelMV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMV.Controls.Add(this.awmp_mv);
-            this.panelMV.Location = new System.Drawing.Point(1039, 15);
-            this.panelMV.Name = "panelMV";
-            this.panelMV.Size = new System.Drawing.Size(1152, 648);
-            this.panelMV.TabIndex = 2;
-            // 
-            // panelItem
-            // 
-            this.panelItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelItem.Location = new System.Drawing.Point(1040, 692);
-            this.panelItem.Name = "panelItem";
-            this.panelItem.Size = new System.Drawing.Size(507, 250);
-            this.panelItem.TabIndex = 5;
-            this.panelItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseDown);
-            this.panelItem.MouseEnter += new System.EventHandler(this.panelItem_MouseEnter);
-            this.panelItem.MouseLeave += new System.EventHandler(this.panelItem_MouseLeave);
-            this.panelItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseUp);
-            // 
-            // panelMusicType
-            // 
-            this.panelMusicType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMusicType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMusicType.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMusicType.Location = new System.Drawing.Point(1040, 971);
-            this.panelMusicType.Name = "panelMusicType";
-            this.panelMusicType.Size = new System.Drawing.Size(507, 250);
-            this.panelMusicType.TabIndex = 4;
-            this.panelMusicType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseDown);
-            this.panelMusicType.MouseEnter += new System.EventHandler(this.panelMusicType_MouseEnter);
-            this.panelMusicType.MouseLeave += new System.EventHandler(this.panelMusicType_MouseLeave);
-            this.panelMusicType.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseUp);
-            // 
-            // panelTopList
-            // 
-            this.panelTopList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTopList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTopList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelTopList.Location = new System.Drawing.Point(2157, 1212);
-            this.panelTopList.Name = "panelTopList";
-            this.panelTopList.Size = new System.Drawing.Size(484, 1199);
-            this.panelTopList.TabIndex = 1;
-            this.panelTopList.Visible = false;
-            this.panelTopList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseDown);
-            this.panelTopList.MouseEnter += new System.EventHandler(this.panelTopList_MouseEnter);
-            this.panelTopList.MouseLeave += new System.EventHandler(this.panelTopList_MouseLeave);
-            this.panelTopList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseUp);
-            // 
-            // panelSinger
-            // 
-            this.panelSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelSinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSinger.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSinger.Location = new System.Drawing.Point(15, 16);
-            this.panelSinger.Name = "panelSinger";
-            this.panelSinger.Size = new System.Drawing.Size(538, 1206);
-            this.panelSinger.TabIndex = 0;
-            this.panelSinger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseDown);
-            this.panelSinger.MouseEnter += new System.EventHandler(this.panelSinger_MouseEnter);
-            this.panelSinger.MouseLeave += new System.EventHandler(this.panelSinger_MouseLeave);
-            this.panelSinger.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseUp);
-            // 
-            // panelVolume
-            // 
-            this.panelVolume.Controls.Add(this.labelVolumnValue);
-            this.panelVolume.Controls.Add(this.label1);
-            this.panelVolume.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panelVolume.Location = new System.Drawing.Point(1805, 10);
-            this.panelVolume.Name = "panelVolume";
-            this.panelVolume.Size = new System.Drawing.Size(389, 84);
-            this.panelVolume.TabIndex = 2;
-            this.panelVolume.Visible = false;
-            // 
-            // labelVolumnValue
-            // 
-            this.labelVolumnValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelVolumnValue.AutoSize = true;
-            this.labelVolumnValue.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVolumnValue.ForeColor = System.Drawing.Color.White;
-            this.labelVolumnValue.Location = new System.Drawing.Point(162, 3);
-            this.labelVolumnValue.Name = "labelVolumnValue";
-            this.labelVolumnValue.Size = new System.Drawing.Size(149, 75);
-            this.labelVolumnValue.TabIndex = 2;
-            this.labelVolumnValue.Text = "NUL";
-            this.labelVolumnValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 75);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "音量：       %";
-            // 
-            // p_show
-            // 
-            this.p_show.Location = new System.Drawing.Point(16, 16);
-            this.p_show.Name = "p_show";
-            this.p_show.Size = new System.Drawing.Size(32, 32);
-            this.p_show.TabIndex = 5;
-            // 
-            // timerVolume
-            // 
-            this.timerVolume.Interval = 3000;
-            this.timerVolume.Tick += new System.EventHandler(this.timerVolume_Tick);
-            // 
-            // timer1s
-            // 
-            this.timer1s.Enabled = true;
-            this.timer1s.Interval = 1000;
-            this.timer1s.Tick += new System.EventHandler(this.timer1s_Tick);
-            // 
-            // timerScorll
-            // 
-            this.timerScorll.Enabled = true;
-            this.timerScorll.Tick += new System.EventHandler(this.timerScorll_Tick);
-            // 
-            // awmp_mv
-            // 
-            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.awmp_mv.Enabled = true;
-            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
-            this.awmp_mv.Name = "awmp_mv";
-            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
-            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
-            this.awmp_mv.TabIndex = 0;
-            // 
-            // awmp_bz
-            // 
-            this.awmp_bz.Enabled = true;
-            this.awmp_bz.Location = new System.Drawing.Point(2511, 171);
-            this.awmp_bz.Name = "awmp_bz";
-            this.awmp_bz.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_bz.OcxState")));
-            this.awmp_bz.Size = new System.Drawing.Size(36, 36);
-            this.awmp_bz.TabIndex = 1;
-            this.awmp_bz.Visible = false;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Transparent;
-            this.panel15.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
-            this.panel15.Controls.Add(this.label4);
-            this.panel15.Controls.Add(this.panel17);
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(1579, 692);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(612, 529);
-            this.panel15.TabIndex = 18;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
-            this.panel17.Controls.Add(this.labelRead);
-            this.panel17.Location = new System.Drawing.Point(21, 19);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(459, 72);
-            this.panel17.TabIndex = 3;
-            // 
-            // labelRead
-            // 
-            this.labelRead.BackColor = System.Drawing.Color.Transparent;
-            this.labelRead.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelRead.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRead.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelRead.Location = new System.Drawing.Point(0, 0);
-            this.labelRead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelRead.Name = "labelRead";
-            this.labelRead.Size = new System.Drawing.Size(459, 72);
-            this.labelRead.TabIndex = 2;
-            this.labelRead.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // pn_yidian
             // 
             this.pn_yidian.BackColor = System.Drawing.Color.Transparent;
@@ -994,8 +856,748 @@ namespace KTVProject
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panelCenter
+            // 
+            this.panelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCenter.Controls.Add(this.panelIndex);
+            this.panelCenter.Controls.Add(this.panelVolume);
+            this.panelCenter.Controls.Add(this.p_show);
+            this.panelCenter.Location = new System.Drawing.Point(179, 23);
+            this.panelCenter.Name = "panelCenter";
+            this.panelCenter.Size = new System.Drawing.Size(2208, 1242);
+            this.panelCenter.TabIndex = 0;
+            // 
+            // panelIndex
+            // 
+            this.panelIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelIndex.Controls.Add(this.label19);
+            this.panelIndex.Controls.Add(this.panel2);
+            this.panelIndex.Controls.Add(this.panel15);
+            this.panelIndex.Controls.Add(this.panelMV);
+            this.panelIndex.Controls.Add(this.panelItem);
+            this.panelIndex.Controls.Add(this.panelMusicType);
+            this.panelIndex.Controls.Add(this.panelTopList);
+            this.panelIndex.Controls.Add(this.panelSinger);
+            this.panelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelIndex.Location = new System.Drawing.Point(0, 0);
+            this.panelIndex.Name = "panelIndex";
+            this.panelIndex.Size = new System.Drawing.Size(2206, 1240);
+            this.panelIndex.TabIndex = 0;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label19.Location = new System.Drawing.Point(564, 25);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(465, 36);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "歌曲点击榜";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel23);
+            this.panel2.Controls.Add(this.panel22);
+            this.panel2.Controls.Add(this.panel21);
+            this.panel2.Controls.Add(this.panel20);
+            this.panel2.Controls.Add(this.panel19);
+            this.panel2.Controls.Add(this.panel18);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(560, 74);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(473, 1148);
+            this.panel2.TabIndex = 19;
+            // 
+            // panel23
+            // 
+            this.panel23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel23.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel23.Controls.Add(this.label57);
+            this.panel23.Controls.Add(this.label58);
+            this.panel23.Controls.Add(this.label59);
+            this.panel23.Location = new System.Drawing.Point(4, 1065);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(465, 73);
+            this.panel23.TabIndex = 7;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label57.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label57.Location = new System.Drawing.Point(380, 18);
+            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(71, 36);
+            this.label57.TabIndex = 6;
+            this.label57.Text = "点歌";
+            this.label57.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label58
+            // 
+            this.label58.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label58.Location = new System.Drawing.Point(69, 15);
+            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(309, 42);
+            this.label58.TabIndex = 5;
+            this.label58.Text = "歌曲名";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label59
+            // 
+            this.label59.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label59.Location = new System.Drawing.Point(14, 15);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(52, 42);
+            this.label59.TabIndex = 4;
+            this.label59.Text = "13";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel22
+            // 
+            this.panel22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel22.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel22.Controls.Add(this.label54);
+            this.panel22.Controls.Add(this.label55);
+            this.panel22.Controls.Add(this.label56);
+            this.panel22.Location = new System.Drawing.Point(4, 977);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(465, 73);
+            this.panel22.TabIndex = 7;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label54.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label54.Location = new System.Drawing.Point(380, 18);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(71, 36);
+            this.label54.TabIndex = 6;
+            this.label54.Text = "点歌";
+            this.label54.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label55
+            // 
+            this.label55.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label55.Location = new System.Drawing.Point(69, 15);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(309, 42);
+            this.label55.TabIndex = 5;
+            this.label55.Text = "歌曲名";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label56
+            // 
+            this.label56.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label56.Location = new System.Drawing.Point(14, 15);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(52, 42);
+            this.label56.TabIndex = 4;
+            this.label56.Text = "12";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel21
+            // 
+            this.panel21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel21.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel21.Controls.Add(this.label51);
+            this.panel21.Controls.Add(this.label52);
+            this.panel21.Controls.Add(this.label53);
+            this.panel21.Location = new System.Drawing.Point(4, 889);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(465, 73);
+            this.panel21.TabIndex = 8;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label51.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label51.Location = new System.Drawing.Point(380, 18);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(71, 36);
+            this.label51.TabIndex = 6;
+            this.label51.Text = "点歌";
+            this.label51.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label52
+            // 
+            this.label52.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label52.Location = new System.Drawing.Point(69, 15);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(309, 42);
+            this.label52.TabIndex = 5;
+            this.label52.Text = "歌曲名";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label53
+            // 
+            this.label53.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label53.Location = new System.Drawing.Point(14, 15);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(52, 42);
+            this.label53.TabIndex = 4;
+            this.label53.Text = "11";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel20
+            // 
+            this.panel20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel20.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel20.Controls.Add(this.label48);
+            this.panel20.Controls.Add(this.label49);
+            this.panel20.Controls.Add(this.label50);
+            this.panel20.Location = new System.Drawing.Point(4, 801);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(465, 73);
+            this.panel20.TabIndex = 7;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label48.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label48.Location = new System.Drawing.Point(380, 18);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(71, 36);
+            this.label48.TabIndex = 6;
+            this.label48.Text = "点歌";
+            this.label48.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label49
+            // 
+            this.label49.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label49.Location = new System.Drawing.Point(69, 15);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(309, 42);
+            this.label49.TabIndex = 5;
+            this.label49.Text = "歌曲名";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label50
+            // 
+            this.label50.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label50.Location = new System.Drawing.Point(14, 15);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(52, 42);
+            this.label50.TabIndex = 4;
+            this.label50.Text = "10";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel19
+            // 
+            this.panel19.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel19.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel19.Controls.Add(this.label45);
+            this.panel19.Controls.Add(this.label46);
+            this.panel19.Controls.Add(this.label47);
+            this.panel19.Location = new System.Drawing.Point(4, 713);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(465, 73);
+            this.panel19.TabIndex = 7;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label45.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label45.Location = new System.Drawing.Point(380, 18);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(71, 36);
+            this.label45.TabIndex = 6;
+            this.label45.Text = "点歌";
+            this.label45.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label46
+            // 
+            this.label46.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label46.Location = new System.Drawing.Point(69, 15);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(309, 42);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "歌曲名";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label47
+            // 
+            this.label47.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label47.Location = new System.Drawing.Point(14, 15);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(52, 42);
+            this.label47.TabIndex = 4;
+            this.label47.Text = "9";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel18
+            // 
+            this.panel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel18.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel18.Controls.Add(this.label42);
+            this.panel18.Controls.Add(this.label43);
+            this.panel18.Controls.Add(this.label44);
+            this.panel18.Location = new System.Drawing.Point(4, 625);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(465, 73);
+            this.panel18.TabIndex = 7;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label42.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label42.Location = new System.Drawing.Point(380, 18);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(71, 36);
+            this.label42.TabIndex = 6;
+            this.label42.Text = "点歌";
+            this.label42.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label43.Location = new System.Drawing.Point(69, 15);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(309, 42);
+            this.label43.TabIndex = 5;
+            this.label43.Text = "歌曲名";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label44.Location = new System.Drawing.Point(14, 15);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(52, 42);
+            this.label44.TabIndex = 4;
+            this.label44.Text = "8";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel9.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel9.Controls.Add(this.label39);
+            this.panel9.Controls.Add(this.label40);
+            this.panel9.Controls.Add(this.label41);
+            this.panel9.Location = new System.Drawing.Point(4, 537);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(465, 73);
+            this.panel9.TabIndex = 7;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label39.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label39.Location = new System.Drawing.Point(380, 18);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(71, 36);
+            this.label39.TabIndex = 6;
+            this.label39.Text = "点歌";
+            this.label39.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label40
+            // 
+            this.label40.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label40.Location = new System.Drawing.Point(69, 15);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(309, 42);
+            this.label40.TabIndex = 5;
+            this.label40.Text = "歌曲名";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label41.Location = new System.Drawing.Point(14, 15);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(52, 42);
+            this.label41.TabIndex = 4;
+            this.label41.Text = "7";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel8.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel8.Controls.Add(this.label36);
+            this.panel8.Controls.Add(this.label37);
+            this.panel8.Controls.Add(this.label38);
+            this.panel8.Location = new System.Drawing.Point(4, 449);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(465, 73);
+            this.panel8.TabIndex = 7;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label36.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label36.Location = new System.Drawing.Point(380, 18);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(71, 36);
+            this.label36.TabIndex = 6;
+            this.label36.Text = "点歌";
+            this.label36.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label37
+            // 
+            this.label37.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label37.Location = new System.Drawing.Point(69, 15);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(309, 42);
+            this.label37.TabIndex = 5;
+            this.label37.Text = "歌曲名";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label38
+            // 
+            this.label38.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label38.Location = new System.Drawing.Point(14, 15);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(52, 42);
+            this.label38.TabIndex = 4;
+            this.label38.Text = "6";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel7.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel7.Controls.Add(this.label33);
+            this.panel7.Controls.Add(this.label34);
+            this.panel7.Controls.Add(this.label35);
+            this.panel7.Location = new System.Drawing.Point(4, 361);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(465, 73);
+            this.panel7.TabIndex = 7;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label33.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label33.Location = new System.Drawing.Point(380, 18);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(71, 36);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "点歌";
+            this.label33.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label34
+            // 
+            this.label34.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label34.Location = new System.Drawing.Point(69, 15);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(309, 42);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "歌曲名";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label35
+            // 
+            this.label35.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label35.Location = new System.Drawing.Point(14, 15);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(52, 42);
+            this.label35.TabIndex = 4;
+            this.label35.Text = "5";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel6.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel6.Controls.Add(this.label30);
+            this.panel6.Controls.Add(this.label31);
+            this.panel6.Controls.Add(this.label32);
+            this.panel6.Location = new System.Drawing.Point(4, 273);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(465, 73);
+            this.panel6.TabIndex = 7;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label30.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.Location = new System.Drawing.Point(380, 18);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(71, 36);
+            this.label30.TabIndex = 6;
+            this.label30.Text = "点歌";
+            this.label30.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label31
+            // 
+            this.label31.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label31.Location = new System.Drawing.Point(69, 15);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(309, 42);
+            this.label31.TabIndex = 5;
+            this.label31.Text = "歌曲名";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label32.Location = new System.Drawing.Point(14, 15);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(52, 42);
+            this.label32.TabIndex = 4;
+            this.label32.Text = "4";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel5.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel5.Controls.Add(this.label27);
+            this.panel5.Controls.Add(this.label28);
+            this.panel5.Controls.Add(this.label29);
+            this.panel5.Location = new System.Drawing.Point(4, 185);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(465, 73);
+            this.panel5.TabIndex = 7;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label27.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label27.Location = new System.Drawing.Point(380, 18);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(71, 36);
+            this.label27.TabIndex = 6;
+            this.label27.Text = "点歌";
+            this.label27.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label28.Location = new System.Drawing.Point(69, 15);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(309, 42);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "歌曲名";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label29
+            // 
+            this.label29.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label29.Location = new System.Drawing.Point(14, 15);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(52, 42);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "3";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel4.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.label26);
+            this.panel4.Location = new System.Drawing.Point(4, 97);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(465, 73);
+            this.panel4.TabIndex = 7;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label24.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label24.Location = new System.Drawing.Point(380, 18);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(71, 36);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "点歌";
+            this.label24.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label25.Location = new System.Drawing.Point(69, 15);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(309, 42);
+            this.label25.TabIndex = 5;
+            this.label25.Text = "歌曲名";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label26
+            // 
+            this.label26.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label26.Location = new System.Drawing.Point(14, 15);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(52, 42);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "2";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel3.Controls.Add(this.label23);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Location = new System.Drawing.Point(4, 9);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(465, 73);
+            this.panel3.TabIndex = 3;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label23.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label23.Location = new System.Drawing.Point(380, 18);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(71, 36);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "点歌";
+            this.label23.Click += new System.EventHandler(this.diange_Click);
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.Location = new System.Drawing.Point(69, 15);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(309, 42);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "歌曲名";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(14, 15);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(52, 42);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "1";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
+            this.panel15.Controls.Add(this.label4);
+            this.panel15.Controls.Add(this.panel17);
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Location = new System.Drawing.Point(1619, 669);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(572, 553);
+            this.panel15.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 20F);
+            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label4.Image = global::KTVProject.Properties.Resources._20白色;
+            this.label4.Location = new System.Drawing.Point(446, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 52);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "搜索";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // panel17
+            // 
+            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel17.Controls.Add(this.labelRead);
+            this.panel17.Location = new System.Drawing.Point(18, 16);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(412, 72);
+            this.panel17.TabIndex = 3;
+            // 
+            // labelRead
+            // 
+            this.labelRead.BackColor = System.Drawing.Color.Transparent;
+            this.labelRead.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRead.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRead.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelRead.Location = new System.Drawing.Point(0, 0);
+            this.labelRead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRead.Name = "labelRead";
+            this.labelRead.Size = new System.Drawing.Size(412, 72);
+            this.labelRead.TabIndex = 2;
+            this.labelRead.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel16
             // 
+            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel16.BackgroundImage")));
             this.panel16.Controls.Add(this.pictureBox8);
             this.panel16.Controls.Add(this.pictureBox20);
@@ -1025,10 +1627,10 @@ namespace KTVProject
             this.panel16.Controls.Add(this.pictureBox34);
             this.panel16.Controls.Add(this.pictureBox35);
             this.panel16.Controls.Add(this.pictureBox36);
-            this.panel16.Location = new System.Drawing.Point(21, 112);
+            this.panel16.Location = new System.Drawing.Point(16, 104);
             this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(569, 401);
+            this.panel16.Size = new System.Drawing.Size(540, 430);
             this.panel16.TabIndex = 0;
             // 
             // pictureBox8
@@ -1036,7 +1638,7 @@ namespace KTVProject
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::KTVProject.Properties.Resources.删除;
-            this.pictureBox8.Location = new System.Drawing.Point(498, 322);
+            this.pictureBox8.Location = new System.Drawing.Point(466, 350);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(57, 60);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1050,7 +1652,7 @@ namespace KTVProject
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox20.Image = global::KTVProject.Properties.Resources._16gl_S;
-            this.pictureBox20.Location = new System.Drawing.Point(18, 246);
+            this.pictureBox20.Location = new System.Drawing.Point(18, 267);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(57, 60);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1064,7 +1666,7 @@ namespace KTVProject
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::KTVProject.Properties.Resources.操作_退格;
-            this.pictureBox7.Location = new System.Drawing.Point(402, 322);
+            this.pictureBox7.Location = new System.Drawing.Point(377, 350);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(57, 60);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1078,7 +1680,7 @@ namespace KTVProject
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = global::KTVProject.Properties.Resources._16gl_G;
-            this.pictureBox11.Location = new System.Drawing.Point(18, 94);
+            this.pictureBox11.Location = new System.Drawing.Point(18, 101);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(57, 60);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1092,7 +1694,7 @@ namespace KTVProject
             this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox26.Image = global::KTVProject.Properties.Resources._16gl_Y;
-            this.pictureBox26.Location = new System.Drawing.Point(498, 246);
+            this.pictureBox26.Location = new System.Drawing.Point(18, 350);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(57, 60);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1106,7 +1708,7 @@ namespace KTVProject
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox14.Image = global::KTVProject.Properties.Resources._16gl_M;
-            this.pictureBox14.Location = new System.Drawing.Point(18, 170);
+            this.pictureBox14.Location = new System.Drawing.Point(18, 184);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(57, 60);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1120,7 +1722,7 @@ namespace KTVProject
             this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox25.Image = global::KTVProject.Properties.Resources._16gl_V;
-            this.pictureBox25.Location = new System.Drawing.Point(210, 246);
+            this.pictureBox25.Location = new System.Drawing.Point(288, 267);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(57, 60);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1134,7 +1736,7 @@ namespace KTVProject
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox13.Image = global::KTVProject.Properties.Resources._16gl_J;
-            this.pictureBox13.Location = new System.Drawing.Point(306, 94);
+            this.pictureBox13.Location = new System.Drawing.Point(288, 101);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(57, 60);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1148,7 +1750,7 @@ namespace KTVProject
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox19.Image = global::KTVProject.Properties.Resources._16gl_P;
-            this.pictureBox19.Location = new System.Drawing.Point(306, 170);
+            this.pictureBox19.Location = new System.Drawing.Point(288, 184);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(57, 60);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1162,7 +1764,7 @@ namespace KTVProject
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Image = global::KTVProject.Properties.Resources._16gl_C;
-            this.pictureBox12.Location = new System.Drawing.Point(210, 18);
+            this.pictureBox12.Location = new System.Drawing.Point(199, 18);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(57, 60);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1176,7 +1778,7 @@ namespace KTVProject
             this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox24.Image = global::KTVProject.Properties.Resources._16gl_X;
-            this.pictureBox24.Location = new System.Drawing.Point(402, 246);
+            this.pictureBox24.Location = new System.Drawing.Point(466, 267);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(57, 60);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1190,7 +1792,7 @@ namespace KTVProject
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox15.Image = global::KTVProject.Properties.Resources._16gl_L;
-            this.pictureBox15.Location = new System.Drawing.Point(498, 94);
+            this.pictureBox15.Location = new System.Drawing.Point(466, 101);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(57, 60);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1204,7 +1806,7 @@ namespace KTVProject
             this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox18.Image = global::KTVProject.Properties.Resources._16gl_R;
-            this.pictureBox18.Location = new System.Drawing.Point(498, 170);
+            this.pictureBox18.Location = new System.Drawing.Point(466, 184);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(57, 60);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1218,7 +1820,7 @@ namespace KTVProject
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox16.Image = global::KTVProject.Properties.Resources._16gl_F;
-            this.pictureBox16.Location = new System.Drawing.Point(498, 18);
+            this.pictureBox16.Location = new System.Drawing.Point(466, 18);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(57, 60);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1232,7 +1834,7 @@ namespace KTVProject
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox23.Image = global::KTVProject.Properties.Resources._16gl_U;
-            this.pictureBox23.Location = new System.Drawing.Point(114, 322);
+            this.pictureBox23.Location = new System.Drawing.Point(199, 267);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(57, 60);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1246,7 +1848,7 @@ namespace KTVProject
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox17.Image = global::KTVProject.Properties.Resources._16gl_I;
-            this.pictureBox17.Location = new System.Drawing.Point(210, 94);
+            this.pictureBox17.Location = new System.Drawing.Point(199, 101);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(57, 60);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1260,7 +1862,7 @@ namespace KTVProject
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox21.Image = global::KTVProject.Properties.Resources._16gl_O;
-            this.pictureBox21.Location = new System.Drawing.Point(210, 170);
+            this.pictureBox21.Location = new System.Drawing.Point(199, 184);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(57, 60);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1274,7 +1876,7 @@ namespace KTVProject
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox22.Image = global::KTVProject.Properties.Resources._16gl_B;
-            this.pictureBox22.Location = new System.Drawing.Point(114, 18);
+            this.pictureBox22.Location = new System.Drawing.Point(110, 18);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(57, 60);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1288,7 +1890,7 @@ namespace KTVProject
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox27.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox27.Image = global::KTVProject.Properties.Resources._16gl_W;
-            this.pictureBox27.Location = new System.Drawing.Point(306, 246);
+            this.pictureBox27.Location = new System.Drawing.Point(377, 267);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(57, 60);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1302,7 +1904,7 @@ namespace KTVProject
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox28.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox28.Image = global::KTVProject.Properties.Resources._16gl_K;
-            this.pictureBox28.Location = new System.Drawing.Point(402, 94);
+            this.pictureBox28.Location = new System.Drawing.Point(377, 101);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(57, 60);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1316,7 +1918,7 @@ namespace KTVProject
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox29.Image = global::KTVProject.Properties.Resources._16gl_Q;
-            this.pictureBox29.Location = new System.Drawing.Point(402, 170);
+            this.pictureBox29.Location = new System.Drawing.Point(377, 184);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(57, 60);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1330,7 +1932,7 @@ namespace KTVProject
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox30.Image = global::KTVProject.Properties.Resources._16gl_D;
-            this.pictureBox30.Location = new System.Drawing.Point(306, 18);
+            this.pictureBox30.Location = new System.Drawing.Point(288, 18);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(57, 60);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1344,7 +1946,7 @@ namespace KTVProject
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox31.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox31.Image = global::KTVProject.Properties.Resources._16gl_T;
-            this.pictureBox31.Location = new System.Drawing.Point(114, 246);
+            this.pictureBox31.Location = new System.Drawing.Point(110, 267);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(57, 60);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1358,7 +1960,7 @@ namespace KTVProject
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox32.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox32.Image = global::KTVProject.Properties.Resources._16gl_H;
-            this.pictureBox32.Location = new System.Drawing.Point(114, 94);
+            this.pictureBox32.Location = new System.Drawing.Point(110, 101);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(57, 60);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1372,7 +1974,7 @@ namespace KTVProject
             this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox33.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox33.Image = global::KTVProject.Properties.Resources._16gl_N;
-            this.pictureBox33.Location = new System.Drawing.Point(114, 170);
+            this.pictureBox33.Location = new System.Drawing.Point(110, 184);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(57, 60);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1388,7 +1990,7 @@ namespace KTVProject
             this.pictureBox34.Image = global::KTVProject.Properties.Resources._16gl_A;
             this.pictureBox34.Location = new System.Drawing.Point(18, 18);
             this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox34.Size = new System.Drawing.Size(60, 60);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 125;
             this.pictureBox34.TabStop = false;
@@ -1400,7 +2002,7 @@ namespace KTVProject
             this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox35.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox35.Image = global::KTVProject.Properties.Resources._16gl_E;
-            this.pictureBox35.Location = new System.Drawing.Point(402, 18);
+            this.pictureBox35.Location = new System.Drawing.Point(377, 18);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(57, 60);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1414,7 +2016,7 @@ namespace KTVProject
             this.pictureBox36.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox36.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox36.Image = global::KTVProject.Properties.Resources._16gl_Z;
-            this.pictureBox36.Location = new System.Drawing.Point(18, 322);
+            this.pictureBox36.Location = new System.Drawing.Point(110, 350);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(57, 60);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1423,17 +2025,145 @@ namespace KTVProject
             this.pictureBox36.Tag = "Z";
             this.pictureBox36.Click += new System.EventHandler(this.keyboardClick);
             // 
-            // label4
+            // panelMV
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 20F);
-            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label4.Image = global::KTVProject.Properties.Resources._20白色;
-            this.label4.Location = new System.Drawing.Point(486, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 52);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "搜索";
+            this.panelMV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMV.Controls.Add(this.awmp_mv);
+            this.panelMV.Location = new System.Drawing.Point(1039, 15);
+            this.panelMV.Name = "panelMV";
+            this.panelMV.Size = new System.Drawing.Size(1152, 648);
+            this.panelMV.TabIndex = 2;
+            // 
+            // awmp_mv
+            // 
+            this.awmp_mv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.awmp_mv.Enabled = true;
+            this.awmp_mv.Location = new System.Drawing.Point(0, 0);
+            this.awmp_mv.Name = "awmp_mv";
+            this.awmp_mv.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("awmp_mv.OcxState")));
+            this.awmp_mv.Size = new System.Drawing.Size(1150, 646);
+            this.awmp_mv.TabIndex = 0;
+            // 
+            // panelItem
+            // 
+            this.panelItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelItem.Location = new System.Drawing.Point(1040, 669);
+            this.panelItem.Name = "panelItem";
+            this.panelItem.Size = new System.Drawing.Size(575, 272);
+            this.panelItem.TabIndex = 5;
+            this.panelItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseDown);
+            this.panelItem.MouseEnter += new System.EventHandler(this.panelItem_MouseEnter);
+            this.panelItem.MouseLeave += new System.EventHandler(this.panelItem_MouseLeave);
+            this.panelItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelItem_MouseUp);
+            // 
+            // panelMusicType
+            // 
+            this.panelMusicType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMusicType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMusicType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMusicType.Location = new System.Drawing.Point(1040, 950);
+            this.panelMusicType.Name = "panelMusicType";
+            this.panelMusicType.Size = new System.Drawing.Size(575, 272);
+            this.panelMusicType.TabIndex = 4;
+            this.panelMusicType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseDown);
+            this.panelMusicType.MouseEnter += new System.EventHandler(this.panelMusicType_MouseEnter);
+            this.panelMusicType.MouseLeave += new System.EventHandler(this.panelMusicType_MouseLeave);
+            this.panelMusicType.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMusicType_MouseUp);
+            // 
+            // panelTopList
+            // 
+            this.panelTopList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTopList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTopList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelTopList.Location = new System.Drawing.Point(2157, 1212);
+            this.panelTopList.Name = "panelTopList";
+            this.panelTopList.Size = new System.Drawing.Size(484, 1199);
+            this.panelTopList.TabIndex = 1;
+            this.panelTopList.Visible = false;
+            this.panelTopList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseDown);
+            this.panelTopList.MouseEnter += new System.EventHandler(this.panelTopList_MouseEnter);
+            this.panelTopList.MouseLeave += new System.EventHandler(this.panelTopList_MouseLeave);
+            this.panelTopList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTopList_MouseUp);
+            // 
+            // panelSinger
+            // 
+            this.panelSinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelSinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSinger.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSinger.Location = new System.Drawing.Point(15, 16);
+            this.panelSinger.Name = "panelSinger";
+            this.panelSinger.Size = new System.Drawing.Size(538, 1206);
+            this.panelSinger.TabIndex = 0;
+            this.panelSinger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseDown);
+            this.panelSinger.MouseEnter += new System.EventHandler(this.panelSinger_MouseEnter);
+            this.panelSinger.MouseLeave += new System.EventHandler(this.panelSinger_MouseLeave);
+            this.panelSinger.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSinger_MouseUp);
+            // 
+            // panelVolume
+            // 
+            this.panelVolume.Controls.Add(this.labelVolumnValue);
+            this.panelVolume.Controls.Add(this.label1);
+            this.panelVolume.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panelVolume.Location = new System.Drawing.Point(1805, 10);
+            this.panelVolume.Name = "panelVolume";
+            this.panelVolume.Size = new System.Drawing.Size(389, 84);
+            this.panelVolume.TabIndex = 2;
+            this.panelVolume.Visible = false;
+            // 
+            // labelVolumnValue
+            // 
+            this.labelVolumnValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelVolumnValue.AutoSize = true;
+            this.labelVolumnValue.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVolumnValue.ForeColor = System.Drawing.Color.White;
+            this.labelVolumnValue.Location = new System.Drawing.Point(162, 3);
+            this.labelVolumnValue.Name = "labelVolumnValue";
+            this.labelVolumnValue.Size = new System.Drawing.Size(149, 75);
+            this.labelVolumnValue.TabIndex = 2;
+            this.labelVolumnValue.Text = "NUL";
+            this.labelVolumnValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(369, 75);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "音量：       %";
+            // 
+            // p_show
+            // 
+            this.p_show.Location = new System.Drawing.Point(16, 16);
+            this.p_show.Name = "p_show";
+            this.p_show.Size = new System.Drawing.Size(32, 32);
+            this.p_show.TabIndex = 5;
+            // 
+            // timerVolume
+            // 
+            this.timerVolume.Interval = 3000;
+            this.timerVolume.Tick += new System.EventHandler(this.timerVolume_Tick);
+            // 
+            // timer1s
+            // 
+            this.timer1s.Enabled = true;
+            this.timer1s.Interval = 1000;
+            this.timer1s.Tick += new System.EventHandler(this.timer1s_Tick);
+            // 
+            // timerScorll
+            // 
+            this.timerScorll.Enabled = true;
+            this.timerScorll.Tick += new System.EventHandler(this.timerScorll_Tick);
             // 
             // frmIndex
             // 
@@ -1452,6 +2182,7 @@ namespace KTVProject
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmIndex_Load);
             this.panelBottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelCountdown.ResumeLayout(false);
@@ -1463,16 +2194,6 @@ namespace KTVProject
             this.panelPlayList.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelFill.ResumeLayout(false);
-            this.panelCenter.ResumeLayout(false);
-            this.panelIndex.ResumeLayout(false);
-            this.panelMV.ResumeLayout(false);
-            this.panelVolume.ResumeLayout(false);
-            this.panelVolume.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).EndInit();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel17.ResumeLayout(false);
             this.pn_yidian.ResumeLayout(false);
             this.pn_yidian.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -1480,6 +2201,38 @@ namespace KTVProject
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panelCenter.ResumeLayout(false);
+            this.panelIndex.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel17.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
@@ -1509,6 +2262,10 @@ namespace KTVProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            this.panelMV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).EndInit();
+            this.panelVolume.ResumeLayout(false);
+            this.panelVolume.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1614,5 +2371,59 @@ namespace KTVProject
         private System.Windows.Forms.PictureBox pictureBox35;
         private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label19;
     }
 }

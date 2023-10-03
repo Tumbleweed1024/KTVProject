@@ -50,6 +50,8 @@ namespace KTVProject
         #endregion
         private frmSinger fs;
         private frmItem fi;
+        private frmMusicType fmt;
+        private frmMusicTop fmtp;
         public List<Music> musics = new List<Music>();//存放已点的曲目
         //控制静音
         private bool mute = false;
@@ -131,6 +133,8 @@ namespace KTVProject
             //禁止MV右键菜单
             this.awmp_mv.enableContextMenu = false;
             this.awmp_mv.settings.volume = volume;
+            //MV置顶，防止无法全屏
+            panelMV.BringToFront();
             //静音伴奏
             this.awmp_bz.settings.mute = true;
             //禁止自动播放
@@ -408,6 +412,7 @@ namespace KTVProject
         private void panelSearch_MouseUp(object sender, MouseEventArgs e)
         {
             this.panelSearch.BackgroundImage = Properties.Resources.点歌hover;
+            musicTop(string.Empty);
         }
         #endregion
 
@@ -625,6 +630,12 @@ namespace KTVProject
                     case "fi":
                         fi.mvDock(!fullScreen);
                         break;
+                    case "fmt":
+                        fmt.mvDock(!fullScreen);
+                        break;
+                    case "fmtp":
+                        fmtp.mvDock(!fullScreen);
+                        break;
                     default:
                         break;
                 }
@@ -702,7 +713,7 @@ namespace KTVProject
         private void panelSinger_MouseUp(object sender, MouseEventArgs e)
         {
             this.panelSinger.BackgroundImage = Properties.Resources.歌手hover;
-            singer();
+            singer(string.Empty);
         }
         #endregion
 
@@ -747,6 +758,7 @@ namespace KTVProject
         private void panelMusicType_MouseUp(object sender, MouseEventArgs e)
         {
             this.panelMusicType.BackgroundImage = Properties.Resources.歌曲分类hover;
+            musicType(string.Empty);
         }
         #endregion
 
@@ -844,8 +856,28 @@ namespace KTVProject
         //播放歌曲
         public void play()
         {
+            //刷新已点
+            if (!index)
+            {
+                switch (noIndex)
+                {
+                    case "fs":
+                        fs.showSong();
+                        break;
+                    case "fmt":
+                        fmt.showMusic();
+                        break;
+                    case "fmtp":
+                        fmtp.showMusic();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            showSong();
+            showTopSong();
             //无歌曲默认放歌
-                if (musics.Count > 0)
+            if (musics.Count > 0)
                 {
                     this.awmp_mv.URL = musics[0].MusicMVPath;
                     this.awmp_bz.URL = musics[0].MusicAccompanyPath;
@@ -952,6 +984,10 @@ namespace KTVProject
             //连续播放
             if (this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsStopped && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
+                if (musics.Count>0)
+                {
+                    musics.RemoveAt(0);
+                }
                 play();
             }
             
@@ -1060,14 +1096,14 @@ namespace KTVProject
         {
             //改变首页布尔值
             index = true;
-
+            noIndex = "";
             this.p_show.Controls.Clear();
             this.p_show.Visible = false;
             this.panelIndex.Visible = true;
             this.panelMV.Controls.Add(this.awmp_mv);
         }
         //歌手页
-        private void singer()
+        public void singer(string singerId)
         {
             //改变首页布尔值
             index = false;
@@ -1084,30 +1120,90 @@ namespace KTVProject
             fs.TopLevel = false;
             this.p_show.Controls.Add(fs);
             fs.Dock = DockStyle.Fill;
+            
             fs.Show();
+            if (!singerId.Equals(string.Empty))
+            {
+                fs.openMusic(singerId);
+            }
             this.p_show.Dock = DockStyle.Fill;
             this.panelIndex.Visible = false;
             this.p_show.Visible = true;
         }
         //酒水页
-        private void item()
+        public void item()
         {
             //改变首页布尔值
             index = false;
             noIndex = "fi";
             //第一步清空
             this.p_show.Controls.Clear();
-            //创建点歌窗体对象
+            //创建窗体对象
             fi = new frmItem();
-            //把当前窗体mv传给点歌窗体
+            //把当前窗体mv传给窗体
             fi.TopLevel = true;
             fi.pn_mv.Controls.Add(this.awmp_mv);
             this.awmp_mv.Dock = DockStyle.Fill;
             fi.frmindex = this;
             fi.TopLevel = false;
+            fi.roomId = this.roomId;
             this.p_show.Controls.Add(fi);
             fi.Dock = DockStyle.Fill;
             fi.Show();
+            this.p_show.Dock = DockStyle.Fill;
+            this.panelIndex.Visible = false;
+            this.p_show.Visible = true;
+        }
+        //歌曲分类点歌页
+        public void musicType(string typeId)
+        {
+            //改变首页布尔值
+            index = false;
+            noIndex = "fmt";
+            //第一步清空
+            this.p_show.Controls.Clear();
+            //创建窗体对象
+            fmt = new frmMusicType();
+            //把当前窗体mv传给窗体
+            fmt.TopLevel = true;
+            fmt.pn_mv.Controls.Add(this.awmp_mv);
+            this.awmp_mv.Dock = DockStyle.Fill;
+            fmt.frmindex = this;
+            fmt.TopLevel = false;
+            this.p_show.Controls.Add(fmt);
+            fmt.Dock = DockStyle.Fill;
+            fmt.Show();
+            if (!typeId.Equals(string.Empty))
+            {
+                fmt.openType(typeId);
+            }
+            this.p_show.Dock = DockStyle.Fill;
+            this.panelIndex.Visible = false;
+            this.p_show.Visible = true;
+        }
+        //歌曲榜单点歌页
+        public void musicTop(string abbr)
+        {
+            //改变首页布尔值
+            index = false;
+            noIndex = "fmtp";
+            //第一步清空
+            this.p_show.Controls.Clear();
+            //创建窗体对象
+            fmtp = new frmMusicTop();
+            //把当前窗体mv传给窗体
+            fmtp.TopLevel = true;
+            fmtp.pn_mv.Controls.Add(this.awmp_mv);
+            this.awmp_mv.Dock = DockStyle.Fill;
+            fmtp.frmindex = this;
+            fmtp.TopLevel = false;
+            this.p_show.Controls.Add(fmtp);
+            fmtp.Dock = DockStyle.Fill;
+            fmtp.Show();
+            if (!abbr.Equals(string.Empty))
+            {
+                fmtp.openAbbr(abbr);
+            }
             this.p_show.Dock = DockStyle.Fill;
             this.panelIndex.Visible = false;
             this.p_show.Visible = true;
@@ -1216,6 +1312,7 @@ namespace KTVProject
                 this.lbl_dqy.Text = yidianpage.ToString();
                 jinyong();
             }
+            showTopSong();
         }
         //上下页禁用方法
         public void jinyong()
@@ -1256,25 +1353,40 @@ namespace KTVProject
                 music.MusicAccompanyPath = reader["MusicAccompanyPath"].ToString();
                 music.MusicMVPath = reader["MusicMVPath"].ToString();
                 music.SingerName = reader["SingerName"].ToString();
+                reader.Close();
                 if (music.MusicAccompanyPath.Equals(""))
                 {
                     MessageBox.Show("未找到该歌曲的伴奏，请检查数据库信息！");
                 }
                 else
                 {
-                    accompanyTest = true;
-                    musics.Add(music);//添加到集合
-                    getydCount();//每次点歌完对已点数目进行更新
-                    //刷新点歌列表
-                    getZongRow();//调用获取集合总长度方法
-                    showSong();
-                    if (musics.Count == 1)
+                    bool reAddMusic = false;
+                    foreach (var item1 in musics)
                     {
-                        play();
+                        if (item1.MusicID == music.MusicID)
+                        {
+                            reAddMusic = true;
+                        }
+                    }
+                    if (reAddMusic)
+                    {
+                        MessageBox.Show("已经点过这首歌了！");
+                    }
+                    else
+                    {
+                        accompanyTest = true;
+                        musics.Add(music);//添加到集合
+                        getydCount();//每次点歌完对已点数目进行更新
+                                     //刷新点歌列表
+                        getZongRow();//调用获取集合总长度方法
+                        showSong();
+                        if (musics.Count == 1)
+                        {
+                            play();
+                        }
                     }
                 }
             }
-            reader.Close();
             DBHelper.CloseConnection();
             return accompanyTest;
         }
@@ -1394,6 +1506,10 @@ namespace KTVProject
         //键盘
         private void keyboardClick(object sender, EventArgs e)
         {
+            if (labelRead.Text.Length>10)
+            {
+                return;
+            }
             this.labelRead.Text += ((PictureBox)sender).Tag.ToString();
         }
         private void removeClick(object sender, EventArgs e)
@@ -1407,6 +1523,65 @@ namespace KTVProject
         private void clearClick(object sender, EventArgs e)
         {
             this.labelRead.Text = string.Empty;
+        }
+        //显示歌曲
+        public void showTopSong()
+        {
+            string tiaojian = panel2.Controls.Count.ToString();
+            try
+            {
+                DBHelper.OpenConnection();
+                string sql = "select top " + tiaojian + " MusicID,MusicName,'点歌' as dg, MusicID  from Music as m where m.MusicDisplay='True' order by MusicViews desc";
+                SqlDataReader reader = DBHelper.GetExecuteReader(sql);
+                for (int i = this.panel2.Controls.Count-1; i >= 0; i--)
+                {
+                    if (reader.Read())
+                    {
+                        this.panel2.Controls[i].Controls[1].Text = reader["MusicName"].ToString();
+                        this.panel2.Controls[i].Controls[0].Text = reader["dg"].ToString();
+                        this.panel2.Controls[i].Controls[0].Tag = reader["MusicID"].ToString();
+                    }
+                    else
+                    {
+                        this.panel2.Controls[i].Controls[1].Text = "";
+                        this.panel2.Controls[i].Controls[0].Text = "";
+                        this.panel2.Controls[i].Controls[0].Tag = 0;
+                    }
+                    foreach (var item1 in musics)
+                    {
+                        if (item1.MusicID == Convert.ToInt32(this.panel2.Controls[i].Controls[0].Tag))
+                        {
+                            this.panel2.Controls[i].Controls[0].Text = "已点";
+                        }
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                DBHelper.CloseConnection();
+            }
+        }
+
+        private void diange_Click(object sender, EventArgs e)
+        {
+            string songId = ((Label)sender).Tag.ToString();
+            if (diange(songId))
+            {
+                MusicID = songId;//将SongId传给主页SongId
+                countjia();//执行增加点击次数
+                ((Label)sender).Text = "已点";
+            }
+        }
+        //点击直接搜索（跳转到榜单页面）
+        private void label4_Click(object sender, EventArgs e)
+        {
+            musicTop(labelRead.Text);
+            labelRead.Text = string.Empty;
         }
     }
 }

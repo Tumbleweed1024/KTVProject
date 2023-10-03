@@ -141,6 +141,7 @@ namespace KTVProject
             try
             {
                 DBHelper.OpenConnection();
+                DBHelper2.OpenConnection();
                 string tiaojian = "";
 
                 if (!leixing.Equals("0"))
@@ -163,10 +164,24 @@ namespace KTVProject
                 {
                     if (reader.Read())
                     {
-                        //0表示歌手名称，1表示图像
-                        this.panel1.Controls[i].Controls[0].Text = reader["SingerName"].ToString();
-                        ((PictureBox)(this.panel1.Controls[i].Controls[1])).Image = Image.FromFile(reader["SingerCoverPath"].ToString());
-                        this.panel1.Controls[i].Controls[1].Tag = reader["SingerID"].ToString();
+                        string singerID = reader["SingerID"].ToString();
+                        //没有歌曲的歌手禁用
+                        string sql2 = "select Count(*) from Music WHERE SingerID = " + singerID;
+                        if (DBHelper2.GetExecuteScalar(sql2)>0)
+                        {
+                            //0表示歌手名称，1表示图像
+                            this.panel1.Controls[i].Controls[0].Text = reader["SingerName"].ToString();
+                            ((PictureBox)(this.panel1.Controls[i].Controls[1])).Image = Image.FromFile(reader["SingerCoverPath"].ToString());
+                            this.panel1.Controls[i].Controls[1].Tag = singerID;
+                            this.panel1.Controls[i].Enabled = true;
+                        }
+                        else
+                        {
+                            this.panel1.Controls[i].Controls[0].Text = reader["SingerName"].ToString()+"(暂无歌曲)";
+                            ((PictureBox)(this.panel1.Controls[i].Controls[1])).Image = Image.FromFile(reader["SingerCoverPath"].ToString());
+                            this.panel1.Controls[i].Controls[1].Tag = singerID;
+                            this.panel1.Controls[i].Enabled = false;
+                        }
                     }
                     else
                     {
@@ -192,6 +207,7 @@ namespace KTVProject
             finally
             {
                 DBHelper.CloseConnection();
+                DBHelper2.CloseConnection();
             }
         }
         //歌手上下页禁用
@@ -316,9 +332,24 @@ namespace KTVProject
                         this.panel10.Controls[i].Controls[0].Text = "";
                         this.panel10.Controls[i].Controls[2].Tag = 0;
                     }
+                    foreach (var item1 in frmindex.musics)
+                    {
+                        if (item1.MusicID == Convert.ToInt32(this.panel10.Controls[i].Controls[0].Tag))
+                        {
+                            this.panel10.Controls[i].Controls[0].Text = "已点";
+                        }
+                    }
+                    //如果没读到信息就把歌框隐藏
+                    if (this.panel10.Controls[i].Controls[2].Text.Trim().Equals(""))
+                    {
+                        this.panel10.Controls[i].Visible = false;
+                    }
+                    else
+                    {
+                        this.panel10.Controls[i].Visible = true;
+                    }
                 }
                 reader.Close();
-
             }
             catch (Exception ex)
             {
@@ -334,7 +365,19 @@ namespace KTVProject
         {
             singerId = Convert.ToInt32(((Control)sender).Tag);
             this.panel9.Visible = true;
-            this.panel9.BringToFront();
+            this.panel1.SendToBack();
+            //this.panel9.Dock = DockStyle.Fill;
+            getSongZong();
+            this.label21.Text = string.Empty;
+            showSong();
+            jinyong2();
+        }
+        //远程调用歌手
+        public void openMusic(string rSingerId)
+        {
+            singerId = Convert.ToInt32(rSingerId);
+            this.panel9.Visible = true;
+            this.panel1.SendToBack();
             //this.panel9.Dock = DockStyle.Fill;
             getSongZong();
             this.label21.Text = string.Empty;
@@ -453,12 +496,18 @@ namespace KTVProject
 
         private void pictureBox29_Click(object sender, EventArgs e)
         {
-            pageNow = 1;
+            if (label21.Text.Length > 15)
+            {
+                return;
+            }
             this.label21.Text += ((PictureBox)sender).Tag.ToString();
+            pageNow = 1;
         }
 
         private void label21_TextChanged(object sender, EventArgs e)
         {
+
+            pageNow = 1;
             getZong();
             showSinger();
         }

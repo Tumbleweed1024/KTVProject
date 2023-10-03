@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHelper2.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="DingDan.cs" />
     <Compile Include="frmIndex.cs">
@@ -65,6 +66,18 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusicTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusicTop.Designer.cs">
+      <DependentUpon>frmMusicTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusicType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusicType.Designer.cs">
+      <DependentUpon>frmMusicType.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSinger.cs">
       <SubType>Form</SubType>
@@ -90,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusicTop.resx">
+      <DependentUpon>frmMusicTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusicType.resx">
+      <DependentUpon>frmMusicType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinger.resx">
       <DependentUpon>frmSinger.cs</DependentUpon>

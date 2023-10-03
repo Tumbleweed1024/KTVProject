@@ -58,6 +58,7 @@ namespace KTVProject
         int pageSize = 6;
         int zong = 0;
         string leixing = "4";
+        public int roomId = 0;
         //加载
         private void frmjiushui_Load(object sender, EventArgs e)
         {
@@ -131,6 +132,7 @@ namespace KTVProject
                         this.panel3.Controls[i].Controls[3].Tag = reader["ItemName"].ToString();
                         this.panel3.Controls[i].Controls[2].Text = reader["ItemName"].ToString();
                         this.panel3.Controls[i].Controls[1].Text = reader["ItemPrices"].ToString();
+                        this.panel3.Controls[i].Visible = true;
                     }
                     else
                     {
@@ -138,6 +140,7 @@ namespace KTVProject
                         this.panel3.Controls[i].Controls[1].Text = "";
                         this.panel3.Controls[i].Controls[2].Text = "";
                         ((PictureBox)(this.panel3.Controls[i].Controls[3])).Image = null;
+                        this.panel3.Controls[i].Visible = false;
                     }
                 }
                 reader.Close();
@@ -241,14 +244,14 @@ namespace KTVProject
             this.lbl_dqy.Text = pageNow.ToString();
             jinyong();
         }
-        List<DingDan> js = new List<DingDan>();
+        //List<DingDan> js = new List<DingDan>();
         
-        //DingDan[] js = new DingDan[6];
+        DingDan[] js = new DingDan[6];
         string JiushuiName;
         public int fangfa(string name)
         {
             int index = -1;
-            for (int i = 0; i < js.Count; i++)
+            for (int i = 0; i < js.Length; i++)
             {
                 if (js[i] != null && js[i].JiushuiName.Equals(name))
                 {
@@ -275,7 +278,11 @@ namespace KTVProject
                     jsdb.Jiushuidianjia = Convert.ToInt32(sdr["ItemPrices"]);
                     jsdb.Jiushuitype = Convert.ToInt32(sdr["ItemTypeID"]);
                     jsdb.JiushuiImg = sdr["ItemImagePath"].ToString();
-                    jsdb.JiushuiConut = Convert.ToInt32(this.textBox6.Text);
+                    jsdb.JiushuiConut = 1;
+                    if (jsdb.JiushuiConut == 0)
+                    {
+                        jsdb.JiushuiConut = 1;
+                    }
                     jsdb.Jiushuizongjia = jsdb.Jiushuidianjia * jsdb.JiushuiConut;
                     return jsdb;
                 }
@@ -293,22 +300,22 @@ namespace KTVProject
         //将订单往集合中添加
         public void fz(DingDan s)
         {
-            //for (int i = 0; i < js.Count; i++)
-            //{
-            //    if (js[i] == null)
-            //    {
-            //        js[i] = s;
-            //        break;
-            //    }
-            //    // MessageBox.Show(js[i].JiushuiName);
-            //}
-            js.Add(s);
+            for (int i = 0; i < js.Length; i++)
+            {
+                if (js[i] == null)
+                {
+                    js[i] = s;
+                    break;
+                }
+                // MessageBox.Show(js[i].JiushuiName);
+            }
+            //js.Add(s);
         }
         public void bangding()
         {
             for (int i = 0; i < this.panel10.Controls.Count; i++)
             {
-                if (js.Count > i)
+                if (js[i] != null)
                 {
 
                     //this.panel10.Controls[i].Controls[1].Text = js[i].JiushuiName.ToString();
@@ -332,13 +339,13 @@ namespace KTVProject
 
                 }
             }
-            if (js.Count <= 0)
+            button1.Enabled = false;
+            for (int i = 0; i < js.Length; i++)
             {
-                button1.Enabled = false;
-            }
-            else
-            {
-                button1.Enabled = true;
+                if (js[i]!=null)
+                {
+                    button1.Enabled = true;
+                }
             }
         }
         //获得总价
@@ -346,7 +353,7 @@ namespace KTVProject
         public void zongjia()
         {
             zongjiage = 0;
-            for (int i = 0; i < js.Count; i++)
+            for (int i = 0; i < js.Length; i++)
             {
                 if (js[i] != null)
                 {
@@ -364,18 +371,35 @@ namespace KTVProject
         {
             if (((PictureBox)sender).Tag != null)
             {
+                bool isNull = false;
+                for (int i = 0; i < this.panel10.Controls.Count; i++)
+                {
+                    if (js[i] == null)
+                    {
+                        isNull = true;
+                    }
+                }
                 JiushuiName = ((PictureBox)sender).Tag.ToString();
                 int liang = fangfa(JiushuiName);
                 if (liang < 0)
                 {
-                    DingDan jsdb = xiangdd();//点击图片进行下单
-                    fz(jsdb);
+                    //检查还有没有空位
+                    if (isNull)
+                    {
+                        DingDan jsdb = xiangdd();//点击图片进行下单
+                        fz(jsdb);
+                    }
+                    else
+                    {
+                        MessageBox.Show("购物车已满，请先进行结算！");
+                    }
                 }
                 else
                 {
                     js[liang].JiushuiConut++;
                     js[liang].Jiushuizongjia = js[liang].Jiushuidianjia * js[liang].JiushuiConut;
                 }
+                
             }
             bangding();
             zongjia();
@@ -435,7 +459,7 @@ namespace KTVProject
         private void label41_Click(object sender, EventArgs e)
         {
             int liang = Convert.ToInt32(this.textBox3.Text);
-            this.textBox4.Text = (liang + 1).ToString();
+            this.textBox3.Text = (liang + 1).ToString();
         }
 
         private void label40_Click(object sender, EventArgs e)
@@ -482,7 +506,7 @@ namespace KTVProject
         {
             string name = ((Control)sender).Tag.ToString();
             //MessageBox.Show(name);
-            for (int i = 0; i < js.Count; i++)
+            for (int i = 0; i < js.Length; i++)
             {
                 if (js[i] != null)
                 {
@@ -493,7 +517,18 @@ namespace KTVProject
                     }
                 }
             }
+            //如果减少到0就删除这一项并重排数组
+            int jIndex = fangfa(name);
+            if (js[jIndex].JiushuiConut==0)
+            {
+                for(int i = jIndex; i<js.Length-1; i++)
+                {
+                    js[i] = js[i + 1];
+                }
+                js[js.Length - 1] = null;
+            }
             zongjia();
+            bangding();
         }
         //下单结算
         private void button1_Click(object sender, EventArgs e)
@@ -505,23 +540,22 @@ namespace KTVProject
             try
             {
                 DBHelper.OpenConnection();
-                for (int i = 0; i < js.Count; i++)
+                for (int i = 0; i < this.panel10.Controls.Count; i++)
                 {
                     if (js[i] != null)
                     {
-                        string sql = "insert into ItemShopList(ItemsName,ItemsCount,ItemsPrice,ItemsPriceSum)Values('" + js[i].JiushuiName + "'," + js[i].JiushuiConut + "," + js[i].Jiushuidianjia + "," + js[i].Jiushuizongjia + ")";
+                        String shopTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        string sql = "insert into ItemShopList values("+roomId+ ",'"+ js[i].JiushuiName + "'," + js[i].JiushuiConut + "," + js[i].Jiushuidianjia + "," + js[i].Jiushuizongjia + ",'未结算','"+ shopTime +"')";
                         DBHelper.GetExecuteNonQuery(sql);
                     }
-
                 }
-                int zhongjia = Convert.ToInt32(this.lblzongjia.Text);
-                string sql2 = "insert into ItemShopList(ItemsName,ItemsPriceSum)Values('总价','" + zhongjia + "')";
-                int row = DBHelper.GetExecuteNonQuery(sql2);
-                if (row != 0)
+                MessageBox.Show("结算完成");
+                for (int i = 0;i < this.panel10.Controls.Count; i++)
                 {
-                    MessageBox.Show("结算提交成功");
+                    js[i] = null;
                 }
-
+                lblzongjia.Text = "购物车没有商品";
+                bangding();
             }
             catch (Exception es)
             {

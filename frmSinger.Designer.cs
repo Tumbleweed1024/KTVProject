@@ -29,6 +29,7 @@ namespace KTVProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinger));
             this.label8 = new System.Windows.Forms.Label();
             this.lblxiayiye = new System.Windows.Forms.Label();
             this.pn_mv = new System.Windows.Forms.Panel();
@@ -232,6 +233,7 @@ namespace KTVProject
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
             this.panel9.Controls.Add(this.label20);
             this.panel9.Controls.Add(this.lblxyy);
             this.panel9.Controls.Add(this.lblzong);
@@ -307,6 +309,7 @@ namespace KTVProject
             // 
             // panel10
             // 
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
             this.panel10.Controls.Add(this.panel14);
             this.panel10.Controls.Add(this.panel13);
             this.panel10.Controls.Add(this.panel12);
@@ -516,6 +519,7 @@ namespace KTVProject
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -551,6 +555,7 @@ namespace KTVProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -566,6 +571,7 @@ namespace KTVProject
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox6);
@@ -601,6 +607,7 @@ namespace KTVProject
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
@@ -636,6 +643,7 @@ namespace KTVProject
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox4);
@@ -671,6 +679,7 @@ namespace KTVProject
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
@@ -706,6 +715,7 @@ namespace KTVProject
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -817,6 +827,7 @@ namespace KTVProject
             // 
             // panel16
             // 
+            this.panel16.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
             this.panel16.Controls.Add(this.pictureBox20);
             this.panel16.Controls.Add(this.pictureBox11);
             this.panel16.Controls.Add(this.pictureBox26);
@@ -843,7 +854,7 @@ namespace KTVProject
             this.panel16.Controls.Add(this.pictureBox34);
             this.panel16.Controls.Add(this.pictureBox35);
             this.panel16.Controls.Add(this.pictureBox36);
-            this.panel16.Location = new System.Drawing.Point(54, 96);
+            this.panel16.Location = new System.Drawing.Point(97, 96);
             this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(767, 345);
@@ -1216,15 +1227,15 @@ namespace KTVProject
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Transparent;
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.BackgroundImage = global::KTVProject.Properties.Resources._20白色;
             this.panel15.Controls.Add(this.pictureBox8);
             this.panel15.Controls.Add(this.pictureBox7);
             this.panel15.Controls.Add(this.panel17);
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(1253, 647);
+            this.panel15.Location = new System.Drawing.Point(1205, 624);
             this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(864, 475);
+            this.panel15.Size = new System.Drawing.Size(960, 498);
             this.panel15.TabIndex = 16;
             // 
             // pictureBox8
@@ -1232,7 +1243,7 @@ namespace KTVProject
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::KTVProject.Properties.Resources.删除;
-            this.pictureBox8.Location = new System.Drawing.Point(737, 27);
+            this.pictureBox8.Location = new System.Drawing.Point(780, 29);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(57, 60);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1246,7 +1257,7 @@ namespace KTVProject
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::KTVProject.Properties.Resources.操作_退格;
-            this.pictureBox7.Location = new System.Drawing.Point(664, 27);
+            this.pictureBox7.Location = new System.Drawing.Point(707, 29);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(57, 60);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1259,7 +1270,7 @@ namespace KTVProject
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
             this.panel17.Controls.Add(this.label21);
-            this.panel17.Location = new System.Drawing.Point(80, 27);
+            this.panel17.Location = new System.Drawing.Point(123, 29);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(568, 60);
             this.panel17.TabIndex = 3;
@@ -1453,8 +1464,8 @@ namespace KTVProject
         private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
+        public System.Windows.Forms.Label label21;
     }
 }
