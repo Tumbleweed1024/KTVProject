@@ -23,9 +23,9 @@ namespace KTVProject
             set { jiushuiConut = value; }
         }
 
-        private int jiushuidianjia;
+        private double jiushuidianjia;
 
-        public int Jiushuidianjia
+        public double Jiushuidianjia
         {
             get { return jiushuidianjia; }
             set { jiushuidianjia = value; }
@@ -44,9 +44,9 @@ namespace KTVProject
             get { return jiushuiImg; }
             set { jiushuiImg = value; }
         }
-        private int jiushuizongjia;
+        private double jiushuizongjia;
 
-        public int Jiushuizongjia
+        public double Jiushuizongjia
         {
             get { return jiushuizongjia; }
             set { jiushuizongjia = value; }

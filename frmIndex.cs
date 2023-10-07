@@ -1271,27 +1271,25 @@ namespace KTVProject
         //已点  参数
         public void showSong()
         {
-            this.panel10.Controls[0].Controls[1].Enabled = true;
-            this.panel10.Controls[0].Controls[0].Enabled = true;
+            this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[1].Enabled = true;
+            this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[0].Enabled = true;
             if (yidianpage == 1)
             {
                 //禁止对当前播放歌曲进行操作
-                this.panel10.Controls[0].Controls[1].Enabled = false;
-                this.panel10.Controls[0].Controls[0].Enabled = false;
+                this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[1].Enabled = false;
+                this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[0].Enabled = false;
             }
             int pageup = 0;
-            for (int i = 0; i < this.panel10.Controls.Count; i++)
+            for (int i = this.panel10.Controls.Count-1; i >=0; i--)
             {
-                int xiabiao = (yidianpage - 1) * rows + i;
+                int xiabiao = (yidianpage - 1) * rows + this.panel10.Controls.Count - 1-i;
                 if (xiabiao < musics.Count)
                 {
                     this.panel10.Controls[i].Controls[2].Visible = true;
                     this.panel10.Controls[i].Controls[1].Visible = true;
                     this.panel10.Controls[i].Controls[0].Visible = true;
-                    this.panel10.Controls[i].Controls[2].Visible = true;
                     this.panel10.Controls[i].Controls[1].Text = "置顶";
                     this.panel10.Controls[i].Controls[0].Text = "删除";
-                    this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].SingerName;
                     this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
                     this.panel10.Controls[i].Controls[0].Tag = xiabiao.ToString();
                     this.panel10.Controls[i].Controls[1].Tag = xiabiao.ToString();
@@ -1301,7 +1299,6 @@ namespace KTVProject
                     this.panel10.Controls[i].Controls[2].Visible = false;
                     this.panel10.Controls[i].Controls[1].Visible = false;
                     this.panel10.Controls[i].Controls[0].Visible = false;
-                    this.panel10.Controls[i].Controls[2].Visible = false;
                     pageup++;
                 }
             }
@@ -1319,7 +1316,7 @@ namespace KTVProject
         {
             //yidianpage = int.Parse(this.lbl_dqy.Text);
             zong = int.Parse(this.lbl_zys.Text);
-            if (yidianpage == 1)
+            if (yidianpage <= 1)
             {
                 this.label18.Enabled = false;
             }
@@ -1328,7 +1325,7 @@ namespace KTVProject
                 this.label18.Enabled = true;
             }
 
-            if (yidianpage == zong)
+            if (yidianpage >= zong)
             {
                 this.label22.Enabled = false;
             }
@@ -1340,6 +1337,29 @@ namespace KTVProject
         //点歌
         public bool diange(string songId)
         {
+            //刷新已点
+            if (!index)
+            {
+                switch (noIndex)
+                {
+                    case "fs":
+                        fs.showSong();
+                        break;
+                    case "fmt":
+                        fmt.showMusic();
+                        break;
+                    case "fmtp":
+                        fmtp.showMusic();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                showSong();
+                showTopSong() ;
+            }
             bool accompanyTest = false;
             DBHelper.OpenConnection();
             //根据传过来的歌曲编号查询歌曲信息，并且添加到存放已点列表的集合中

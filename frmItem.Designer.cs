@@ -207,7 +207,7 @@
             this.label45.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("宋体", 20F);
-            this.label45.ForeColor = System.Drawing.Color.White;
+            this.label45.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label45.Location = new System.Drawing.Point(519, 16);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
@@ -222,7 +222,7 @@
             this.label46.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("宋体", 20F);
-            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label46.Location = new System.Drawing.Point(706, 16);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
@@ -290,7 +290,7 @@
             this.label50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("宋体", 20F);
-            this.label50.ForeColor = System.Drawing.Color.White;
+            this.label50.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label50.Location = new System.Drawing.Point(519, 16);
             this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
@@ -305,7 +305,7 @@
             this.label51.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("宋体", 20F);
-            this.label51.ForeColor = System.Drawing.Color.White;
+            this.label51.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label51.Location = new System.Drawing.Point(706, 16);
             this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
@@ -335,7 +335,7 @@
             this.label55.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("宋体", 20F);
-            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label55.Location = new System.Drawing.Point(519, 16);
             this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
@@ -388,7 +388,7 @@
             this.label56.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("宋体", 20F);
-            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label56.Location = new System.Drawing.Point(706, 16);
             this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label56.Name = "label56";
@@ -485,7 +485,7 @@
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("宋体", 20F);
-            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label40.Location = new System.Drawing.Point(519, 16);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
@@ -500,7 +500,7 @@
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("宋体", 20F);
-            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label41.Location = new System.Drawing.Point(706, 16);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
@@ -568,7 +568,7 @@
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("宋体", 20F);
-            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label34.Location = new System.Drawing.Point(519, 16);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
@@ -583,7 +583,7 @@
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("宋体", 20F);
-            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label35.Location = new System.Drawing.Point(706, 16);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
@@ -651,7 +651,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("宋体", 20F);
-            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label26.Location = new System.Drawing.Point(519, 16);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
@@ -666,7 +666,7 @@
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("宋体", 20F);
-            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label27.Location = new System.Drawing.Point(706, 16);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";

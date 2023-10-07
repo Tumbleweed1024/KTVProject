@@ -67,9 +67,9 @@ namespace KTVProject
         //刷新一下
         public void reload()
         {
-            DBHelper.OpenConnection();
+            DBHelperLogin2.OpenConnection();
             string sql = "SELECT RoomID FROM Room WHERE HostName = '" + hostName + "'";
-            roomId = DBHelper.GetExecuteScalar(sql);
+            roomId = DBHelperLogin2.GetExecuteScalar(sql);
             if (roomId != 0)
             {
                 label1.Text = "包厢编号：" + roomId.ToString();
@@ -85,7 +85,7 @@ namespace KTVProject
                 panel1.Visible = true;
             }
             string sql2 = "SELECT RoomStatus FROM Room WHERE RoomID = " + roomId + "";
-            roomStatus = DBHelper.GetExecuteScalar(sql2);
+            roomStatus = DBHelperLogin2.GetExecuteScalar(sql2);
             if (roomStatus == 0)
             {
                 label4.Text = "包厢已关闭";
@@ -107,15 +107,15 @@ namespace KTVProject
                 button2.Visible = true;
                 reloadTime();
             }
-            DBHelper.CloseConnection();
+            DBHelperLogin2.CloseConnection();
         }
         //确定房间是否过期
         public bool reloadTime()
         {
             bool end = false;
-            DBHelper.OpenConnection();
+            DBHelperLogin3.OpenConnection();
             string sql = "SELECT RoomCloseTime,RoomStatus FROM Room WHERE RoomID = " + roomId + "";
-            SqlDataReader reader = DBHelper.GetExecuteReader(sql);
+            SqlDataReader reader = DBHelperLogin3.GetExecuteReader(sql);
             if(reader.Read())
             {
                 string readRoomCloseTime = reader["RoomCloseTime"].ToString();
@@ -128,11 +128,11 @@ namespace KTVProject
                     {
                         //过期就初始化房间状态和时间数据
                         string sql2 = "UPDATE Room SET RoomStatus = 0 WHERE RoomID =" + roomId;
-                        DBHelper.GetExecuteNonQuery(sql2);
+                        DBHelperLogin3.GetExecuteNonQuery(sql2);
                         string sql3 = "UPDATE Room SET RoomCloseTime = NULL WHERE RoomID =" + roomId;
-                        DBHelper.GetExecuteNonQuery(sql3);
+                        DBHelperLogin3.GetExecuteNonQuery(sql3);
                         string sql4 = "UPDATE Room SET RoomTimeMinutes = NULL WHERE RoomID =" + roomId;
-                        DBHelper.GetExecuteNonQuery(sql4);
+                        DBHelperLogin3.GetExecuteNonQuery(sql4);
                     }
                     else
                     {
@@ -141,7 +141,7 @@ namespace KTVProject
                 }
                 else { end = true; }
             }
-            DBHelper.CloseConnection();
+            DBHelperLogin3.CloseConnection();
             return end;
         }
         private void button1_Click(object sender, EventArgs e)
@@ -193,6 +193,5 @@ namespace KTVProject
         {
             reload();
         }
-
     }
 }

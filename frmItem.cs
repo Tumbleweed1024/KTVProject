@@ -275,7 +275,7 @@ namespace KTVProject
                 {
                     jsdb = new DingDan();
                     jsdb.JiushuiName = sdr["ItemName"].ToString();
-                    jsdb.Jiushuidianjia = Convert.ToInt32(sdr["ItemPrices"]);
+                    jsdb.Jiushuidianjia = Convert.ToDouble(sdr["ItemPrices"]);
                     jsdb.Jiushuitype = Convert.ToInt32(sdr["ItemTypeID"]);
                     jsdb.JiushuiImg = sdr["ItemImagePath"].ToString();
                     jsdb.JiushuiConut = 1;
@@ -349,7 +349,7 @@ namespace KTVProject
             }
         }
         //获得总价
-        int zongjiage = 0;
+        double zongjiage = 0;
         public void zongjia()
         {
             zongjiage = 0;
