@@ -366,6 +366,8 @@ namespace KTVProject
             singerId = Convert.ToInt32(((Control)sender).Tag);
             this.panel9.Visible = true;
             this.panel1.SendToBack();
+            this.panel9.BringToFront();
+            this.pn_mv.BringToFront();
             //this.panel9.Dock = DockStyle.Fill;
             getSongZong();
             this.label21.Text = string.Empty;
@@ -378,6 +380,8 @@ namespace KTVProject
             singerId = Convert.ToInt32(rSingerId);
             this.panel9.Visible = true;
             this.panel1.SendToBack();
+            this.panel9.BringToFront();
+            this.pn_mv.BringToFront();
             //this.panel9.Dock = DockStyle.Fill;
             getSongZong();
             this.label21.Text = string.Empty;
