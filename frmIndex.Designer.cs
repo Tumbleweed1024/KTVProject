@@ -66,18 +66,6 @@ namespace KTVProject
             this.lbl_dqy = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panelCenter = new System.Windows.Forms.Panel();
             this.panelIndex = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
@@ -180,10 +168,22 @@ namespace KTVProject
             this.timerVolume = new System.Windows.Forms.Timer(this.components);
             this.timer1s = new System.Windows.Forms.Timer(this.components);
             this.timerScorll = new System.Windows.Forms.Timer(this.components);
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
             this.panelBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.awmp_bz)).BeginInit();
             this.panelTop.SuspendLayout();
@@ -196,9 +196,6 @@ namespace KTVProject
             this.panelFill.SuspendLayout();
             this.pn_yidian.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panelCenter.SuspendLayout();
             this.panelIndex.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -249,7 +246,10 @@ namespace KTVProject
             this.panelMV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).BeginInit();
             this.panelVolume.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel24.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBottom
@@ -678,141 +678,15 @@ namespace KTVProject
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.panel14);
-            this.panel10.Controls.Add(this.panel13);
             this.panel10.Controls.Add(this.panel12);
-            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.panel13);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Controls.Add(this.panel24);
             this.panel10.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel10.Location = new System.Drawing.Point(21, 17);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(821, 366);
             this.panel10.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label11);
-            this.panel13.Controls.Add(this.label12);
-            this.panel13.Controls.Add(this.label13);
-            this.panel13.Location = new System.Drawing.Point(10, 190);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(800, 76);
-            this.panel13.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(674, 8);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 61);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "label11";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(495, 8);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 61);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "label12";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(3, 8);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(461, 61);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "label13";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.label8);
-            this.panel12.Controls.Add(this.label9);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Location = new System.Drawing.Point(10, 101);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(800, 76);
-            this.panel12.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(674, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 61);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "label8";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(495, 8);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 61);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "label9";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(3, 8);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(461, 61);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "label10";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label3);
-            this.panel11.Controls.Add(this.label6);
-            this.panel11.Controls.Add(this.label7);
-            this.panel11.Location = new System.Drawing.Point(10, 12);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(800, 76);
-            this.panel11.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(674, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 61);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(495, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 61);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "label6";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(3, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(461, 61);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "label7";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelCenter
             // 
@@ -2123,15 +1997,99 @@ namespace KTVProject
             this.timerScorll.Enabled = true;
             this.timerScorll.Tick += new System.EventHandler(this.timerScorll_Tick);
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label8);
+            this.panel12.Controls.Add(this.label9);
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Location = new System.Drawing.Point(10, 6);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(800, 76);
+            this.panel12.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(674, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 61);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "label8";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(495, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 61);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "label9";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(3, 8);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(461, 61);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "label10";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.label11);
+            this.panel13.Controls.Add(this.label12);
+            this.panel13.Controls.Add(this.label13);
+            this.panel13.Location = new System.Drawing.Point(10, 99);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(800, 76);
+            this.panel13.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(674, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(123, 61);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "label11";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label11.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(495, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(123, 61);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "label12";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(3, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(461, 61);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "label13";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel14
             // 
             this.panel14.Controls.Add(this.label14);
             this.panel14.Controls.Add(this.label15);
             this.panel14.Controls.Add(this.label16);
-            this.panel14.Location = new System.Drawing.Point(10, 279);
+            this.panel14.Location = new System.Drawing.Point(10, 192);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(800, 76);
-            this.panel14.TabIndex = 7;
+            this.panel14.TabIndex = 6;
             // 
             // label14
             // 
@@ -2153,7 +2111,7 @@ namespace KTVProject
             this.label15.TabIndex = 1;
             this.label15.Text = "label15";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label15.Click += new System.EventHandler(this.label6_Click);
+            this.label15.Click += new System.EventHandler(this.label9_Click);
             // 
             // label16
             // 
@@ -2164,6 +2122,48 @@ namespace KTVProject
             this.label16.TabIndex = 0;
             this.label16.Text = "label16";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.label60);
+            this.panel24.Controls.Add(this.label61);
+            this.panel24.Controls.Add(this.label62);
+            this.panel24.Location = new System.Drawing.Point(10, 285);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(800, 76);
+            this.panel24.TabIndex = 6;
+            // 
+            // label60
+            // 
+            this.label60.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label60.Location = new System.Drawing.Point(674, 8);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(123, 61);
+            this.label60.TabIndex = 2;
+            this.label60.Text = "label60";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label60.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label61
+            // 
+            this.label61.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label61.Location = new System.Drawing.Point(495, 8);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(123, 61);
+            this.label61.TabIndex = 1;
+            this.label61.Text = "label61";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label61.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label62
+            // 
+            this.label62.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label62.Location = new System.Drawing.Point(3, 8);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(461, 61);
+            this.label62.TabIndex = 0;
+            this.label62.Text = "label62";
+            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmIndex
             // 
@@ -2197,9 +2197,6 @@ namespace KTVProject
             this.pn_yidian.ResumeLayout(false);
             this.pn_yidian.PerformLayout();
             this.panel10.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.panelCenter.ResumeLayout(false);
             this.panelIndex.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -2265,7 +2262,10 @@ namespace KTVProject
             ((System.ComponentModel.ISupportInitialize)(this.awmp_mv)).EndInit();
             this.panelVolume.ResumeLayout(false);
             this.panelVolume.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2409,21 +2409,21 @@ namespace KTVProject
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
     }
 }
