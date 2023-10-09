@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHelperItem.cs" />
     <Compile Include="DBHelperLogin3.cs" />
     <Compile Include="DBHelperLogin2.cs" />
     <Compile Include="DBHelperLogin.cs" />

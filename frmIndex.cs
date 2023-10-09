@@ -891,32 +891,26 @@ namespace KTVProject
                     //this.awmp_mv.URL = @"D:\KTVData\LoadPlay\秘密人偶剧.mp4";
                     //this.awmp_bz.URL = @"D:\KTVData\LoadPlay\秘密人偶剧伴奏.wav";
             }
-            //等待播放器准备就绪
-            while (true)
+            //如果在暂停状态则不播放
+            if (!paused)
             {
-                if((this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsReady && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsReady)&& ! paused)
-                {
-                    this.awmp_mv.Ctlcontrols.play();
-                    this.awmp_bz.Ctlcontrols.play();
-                    break;
-                }else if((this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsReady && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsReady) && paused)
-                {
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("播放器状态异常");
-                }
+                this.awmp_mv.Ctlcontrols.play();
+                this.awmp_bz.Ctlcontrols.play();
+            }
+            if (mute)
+            {
+                    //静音伴奏
+                    this.awmp_bz.settings.mute = true;
+                    //静音MV
+                    this.awmp_mv.settings.mute = true;
+            }
+            if (accompany)
+            {
+                    this.awmp_mv.settings.mute = true;
             }
             //刷新点歌列表
             getZongRow();//调用获取集合总长度方法
             showSong();
-            ////如果在暂停状态则暂停
-            //if (paused)
-            //{
-            //    this.awmp_mv.Ctlcontrols.pause();
-            //    this.awmp_bz.Ctlcontrols.pause();
-            //}
         }
         //延时三秒关闭音量显示
         private void timerVolume_Tick(object sender, EventArgs e)
@@ -1271,23 +1265,21 @@ namespace KTVProject
         //已点  参数
         public void showSong()
         {
-            this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[1].Enabled = true;
-            this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[0].Enabled = true;
+            this.panel10.Controls[0].Controls[1].Enabled = true;
+            this.panel10.Controls[0].Controls[0].Enabled = true;
             if (yidianpage == 1)
             {
                 //禁止对当前播放歌曲进行操作
-                this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[1].Enabled = false;
-                this.panel10.Controls[this.panel10.Controls.Count - 1].Controls[0].Enabled = false;
+                this.panel10.Controls[0].Controls[1].Enabled = false;
+                this.panel10.Controls[0].Controls[0].Enabled = false;
             }
             int pageup = 0;
-            for (int i = this.panel10.Controls.Count-1; i >=0; i--)
+            for (int i =0 ; i < this.panel10.Controls.Count ; i++)
             {
-                int xiabiao = (yidianpage - 1) * rows + this.panel10.Controls.Count - 1-i;
+                int xiabiao = (yidianpage - 1) * rows + i;
                 if (xiabiao < musics.Count)
                 {
-                    this.panel10.Controls[i].Controls[2].Visible = true;
-                    this.panel10.Controls[i].Controls[1].Visible = true;
-                    this.panel10.Controls[i].Controls[0].Visible = true;
+                    this.panel10.Controls[i].Visible = true;
                     this.panel10.Controls[i].Controls[1].Text = "置顶";
                     this.panel10.Controls[i].Controls[0].Text = "删除";
                     this.panel10.Controls[i].Controls[2].Text = musics[xiabiao].MusicName;
@@ -1296,9 +1288,7 @@ namespace KTVProject
                 }
                 else
                 {
-                    this.panel10.Controls[i].Controls[2].Visible = false;
-                    this.panel10.Controls[i].Controls[1].Visible = false;
-                    this.panel10.Controls[i].Controls[0].Visible = false;
+                    this.panel10.Controls[i].Visible = false;
                     pageup++;
                 }
             }
@@ -1596,6 +1586,7 @@ namespace KTVProject
                 countjia();//执行增加点击次数
                 ((Label)sender).Text = "已点";
             }
+            showSong();
         }
         //点击直接搜索（跳转到榜单页面）
         private void label4_Click(object sender, EventArgs e)

@@ -113,7 +113,8 @@ namespace KTVProject
             // string py = this.textBox1.Text.Trim();
             try
             {
-                DBHelper.OpenConnection();
+                DBHelperItem.OpenConnection();
+                DBHelper2.OpenConnection();
                 string tiaojian = "";
 
                 if (!leixing.Equals("4"))
@@ -122,16 +123,31 @@ namespace KTVProject
                 }
                 string sql = "select top " + pageSize + " ItemID,ItemName,ItemImagePath,ItemPrices from Items where 1=1 and ItemID not in(select top " + (pageSize * (pageNow - 1)) + " ItemID from Items where 1=1" + tiaojian + ")" + tiaojian + "";
 
-                SqlDataReader reader = DBHelper.GetExecuteReader(sql);
+                SqlDataReader reader = DBHelperItem.GetExecuteReader(sql);
                 for (int i = 0; i < this.panel3.Controls.Count; i++)
                 {
                     if (reader.Read())
                     {
-                        this.panel3.Controls[i].Controls[0].Text = "￥";
-                        ((PictureBox)(this.panel3.Controls[i].Controls[3])).Image = Image.FromFile(reader["ItemImagePath"].ToString());
-                        this.panel3.Controls[i].Controls[3].Tag = reader["ItemName"].ToString();
-                        this.panel3.Controls[i].Controls[2].Text = reader["ItemName"].ToString();
-                        this.panel3.Controls[i].Controls[1].Text = reader["ItemPrices"].ToString();
+                        int itemID = Convert.ToInt32( reader["ItemID"]);
+                        string sql2 = "select ItemStocks from Items WHERE ItemID = " + itemID;
+                        if (DBHelper2.GetExecuteScalar(sql2) > 0)
+                        {
+                            this.panel3.Controls[i].Controls[0].Text = "￥";
+                            ((PictureBox)(this.panel3.Controls[i].Controls[3])).Image = Image.FromFile(reader["ItemImagePath"].ToString());
+                            this.panel3.Controls[i].Controls[3].Tag = reader["ItemName"].ToString();
+                            this.panel3.Controls[i].Controls[2].Text = reader["ItemName"].ToString();
+                            this.panel3.Controls[i].Controls[1].Text = reader["ItemPrices"].ToString();
+                            this.panel3.Controls[i].Enabled = true;
+                        }
+                        else
+                        {
+                            this.panel3.Controls[i].Controls[0].Text = "￥";
+                            ((PictureBox)(this.panel3.Controls[i].Controls[3])).Image = Image.FromFile(reader["ItemImagePath"].ToString());
+                            this.panel3.Controls[i].Controls[3].Tag = reader["ItemName"].ToString();
+                            this.panel3.Controls[i].Controls[2].Text = reader["ItemName"].ToString()+"(无库存)";
+                            this.panel3.Controls[i].Controls[1].Text = reader["ItemPrices"].ToString();
+                            this.panel3.Controls[i].Enabled = false;
+                        }
                         this.panel3.Controls[i].Visible = true;
                     }
                     else
@@ -151,7 +167,8 @@ namespace KTVProject
             }
             finally
             {
-                DBHelper.CloseConnection();
+                DBHelperItem.CloseConnection();
+                DBHelper2.CloseConnection();
             }
         }
 
