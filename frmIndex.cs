@@ -891,12 +891,12 @@ namespace KTVProject
                     //this.awmp_mv.URL = @"D:\KTVData\LoadPlay\秘密人偶剧.mp4";
                     //this.awmp_bz.URL = @"D:\KTVData\LoadPlay\秘密人偶剧伴奏.wav";
             }
-            //等待播放器准备就绪
-            //不等了，容易出事
-                //if((this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsReady && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsReady)&& ! paused)
-                //{
-                    this.awmp_mv.Ctlcontrols.play();
-                    this.awmp_bz.Ctlcontrols.play();
+            //如果在暂停状态则不播放
+            if (!paused)
+            {
+                this.awmp_mv.Ctlcontrols.play();
+                this.awmp_bz.Ctlcontrols.play();
+            }
             if (mute)
             {
                     //静音伴奏
@@ -908,25 +908,9 @@ namespace KTVProject
             {
                     this.awmp_mv.settings.mute = true;
             }
-            //}
-            //else
-            //    if((this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsReady && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsReady) && paused)
-            //    {
-
-            //    }
-            //    else
-            //    {
-
-            //    }
             //刷新点歌列表
             getZongRow();//调用获取集合总长度方法
             showSong();
-            ////如果在暂停状态则暂停
-            //if (paused)
-            //{
-            //    this.awmp_mv.Ctlcontrols.pause();
-            //    this.awmp_bz.Ctlcontrols.pause();
-            //}
         }
         //延时三秒关闭音量显示
         private void timerVolume_Tick(object sender, EventArgs e)
