@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace KTVProject
 {
@@ -121,7 +122,7 @@ namespace KTVProject
                 {
                     tiaojian += " and ItemTypeID= " + leixing;
                 }
-                string sql = "select top " + pageSize + " ItemID,ItemName,ItemImagePath,ItemPrices from Items where 1=1 and ItemID not in(select top " + (pageSize * (pageNow - 1)) + " ItemID from Items where 1=1" + tiaojian + ")" + tiaojian + "";
+                string sql = "select top " + pageSize + " ItemID,ItemName,ItemImagePath,ItemPrices,ItemStocks from Items where 1=1 and ItemID not in(select top " + (pageSize * (pageNow - 1)) + " ItemID from Items where 1=1" + tiaojian + ")" + tiaojian + "";
 
                 SqlDataReader reader = DBHelperItem.GetExecuteReader(sql);
                 for (int i = 0; i < this.panel3.Controls.Count; i++)
@@ -130,13 +131,15 @@ namespace KTVProject
                     {
                         int itemID = Convert.ToInt32( reader["ItemID"]);
                         string sql2 = "select ItemStocks from Items WHERE ItemID = " + itemID;
-                        if (DBHelper2.GetExecuteScalar(sql2) > 0)
+                        int stocks = DBHelper2.GetExecuteScalar(sql2);
+                        if (stocks > 0)
                         {
                             this.panel3.Controls[i].Controls[0].Text = "￥";
                             ((PictureBox)(this.panel3.Controls[i].Controls[3])).Image = Image.FromFile(reader["ItemImagePath"].ToString());
                             this.panel3.Controls[i].Controls[3].Tag = reader["ItemName"].ToString();
                             this.panel3.Controls[i].Controls[2].Text = reader["ItemName"].ToString();
                             this.panel3.Controls[i].Controls[1].Text = reader["ItemPrices"].ToString();
+                            this.panel3.Controls[i].Controls[1].Tag = stocks;
                             this.panel3.Controls[i].Enabled = true;
                         }
                         else
@@ -146,6 +149,7 @@ namespace KTVProject
                             this.panel3.Controls[i].Controls[3].Tag = reader["ItemName"].ToString();
                             this.panel3.Controls[i].Controls[2].Text = reader["ItemName"].ToString()+"(无库存)";
                             this.panel3.Controls[i].Controls[1].Text = reader["ItemPrices"].ToString();
+                            this.panel3.Controls[i].Controls[1].Tag = stocks;
                             this.panel3.Controls[i].Enabled = false;
                         }
                         this.panel3.Controls[i].Visible = true;
@@ -155,6 +159,7 @@ namespace KTVProject
                         this.panel3.Controls[i].Controls[0].Text = "";
                         this.panel3.Controls[i].Controls[1].Text = "";
                         this.panel3.Controls[i].Controls[2].Text = "";
+                        this.panel3.Controls[i].Controls[1].Tag = "";
                         ((PictureBox)(this.panel3.Controls[i].Controls[3])).Image = null;
                         this.panel3.Controls[i].Visible = false;
                     }
@@ -286,7 +291,7 @@ namespace KTVProject
             try
             {
                 DBHelper.OpenConnection();
-                string sql = "select ItemName,ItemPrices,ItemTypeID,ItemImagePath from Items where ItemName='" + JiushuiName + "'";
+                string sql = "select ItemName,ItemPrices,ItemTypeID,ItemImagePath,ItemStocks from Items where ItemName='" + JiushuiName + "'";
                 SqlDataReader sdr = DBHelper.GetExecuteReader(sql);
                 if (sdr.Read())
                 {
@@ -296,10 +301,11 @@ namespace KTVProject
                     jsdb.Jiushuitype = Convert.ToInt32(sdr["ItemTypeID"]);
                     jsdb.JiushuiImg = sdr["ItemImagePath"].ToString();
                     jsdb.JiushuiConut = 1;
-                    if (jsdb.JiushuiConut == 0)
-                    {
-                        jsdb.JiushuiConut = 1;
-                    }
+                    jsdb.JiushuiStocks = Convert.ToInt32(sdr["ItemStocks"]);
+                    //if (jsdb.JiushuiConut == 0)
+                    //{
+                    //    jsdb.JiushuiConut = 1;
+                    //}
                     jsdb.Jiushuizongjia = jsdb.Jiushuidianjia * jsdb.JiushuiConut;
                     return jsdb;
                 }
@@ -347,11 +353,19 @@ namespace KTVProject
                     this.panel10.Controls[i].Controls[2].Tag = js[i].JiushuiName.ToString();
                     this.panel10.Controls[i].Controls[3].Tag = js[i].JiushuiName.ToString();
                     this.panel10.Controls[i].Controls[2].Text = js[i].JiushuiConut.ToString();
+                    this.panel10.Controls[i].Tag = js[i].JiushuiStocks.ToString();
                     this.panel10.Controls[i].Visible = true;
                 }
                 else
                 {
+                    this.panel10.Controls[i].Controls[1].Text = string.Empty;
+                    this.panel10.Controls[i].Controls[1].Tag = string.Empty;
+                    this.panel10.Controls[i].Controls[0].Tag = string.Empty;
                     this.panel10.Controls[i].Controls[0].Text = string.Empty;
+                    this.panel10.Controls[i].Controls[2].Tag = string.Empty;
+                    this.panel10.Controls[i].Controls[3].Tag = string.Empty;
+                    this.panel10.Controls[i].Controls[2].Text = string.Empty;
+                    this.panel10.Controls[i].Tag = string.Empty;
                     this.panel10.Controls[i].Visible = false;
 
                 }
@@ -413,8 +427,15 @@ namespace KTVProject
                 }
                 else
                 {
-                    js[liang].JiushuiConut++;
-                    js[liang].Jiushuizongjia = js[liang].Jiushuidianjia * js[liang].JiushuiConut;
+                    if (Convert.ToInt32(((PictureBox)sender).Parent.Controls[1].Tag) > js[liang].JiushuiConut)
+                    {
+                        js[liang].JiushuiConut++;
+                        js[liang].Jiushuizongjia = js[liang].Jiushuidianjia * js[liang].JiushuiConut;
+                    }
+                    else
+                    {
+                        MessageBox.Show("抱歉，该商品库存不足");
+                    }
                 }
                 
             }
@@ -429,9 +450,14 @@ namespace KTVProject
         private void label56_Click(object sender, EventArgs e)
         {
             int liang = Convert.ToInt32(this.textBox6.Text);
-            this.textBox6.Text = (liang + 1).ToString();
-
-
+            if (Convert.ToInt32(((Label)sender).Parent.Tag) > liang)
+            {
+                this.textBox6.Text = (liang + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("抱歉，该商品库存不足");
+            }
         }
         //数量减
         private void label55_Click(object sender, EventArgs e)
@@ -446,7 +472,14 @@ namespace KTVProject
         private void label51_Click(object sender, EventArgs e)
         {
             int liang = Convert.ToInt32(this.textBox5.Text);
-            this.textBox5.Text = (liang + 1).ToString();
+            if (Convert.ToInt32(((Label)sender).Parent.Tag) > liang)
+            {
+                this.textBox5.Text = (liang + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("抱歉，该商品库存不足");
+            }
         }
 
         private void label50_Click(object sender, EventArgs e)
@@ -461,7 +494,14 @@ namespace KTVProject
         private void label46_Click(object sender, EventArgs e)
         {
             int liang = Convert.ToInt32(this.textBox4.Text);
-            this.textBox4.Text = (liang + 1).ToString();
+            if (Convert.ToInt32(((Label)sender).Parent.Tag) > liang)
+            {
+                this.textBox4.Text = (liang + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("抱歉，该商品库存不足");
+            }
         }
 
         private void label45_Click(object sender, EventArgs e)
@@ -476,7 +516,14 @@ namespace KTVProject
         private void label41_Click(object sender, EventArgs e)
         {
             int liang = Convert.ToInt32(this.textBox3.Text);
-            this.textBox3.Text = (liang + 1).ToString();
+            if (Convert.ToInt32(((Label)sender).Parent.Tag) > liang)
+            {
+                this.textBox3.Text = (liang + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("抱歉，该商品库存不足");
+            }
         }
 
         private void label40_Click(object sender, EventArgs e)
@@ -491,7 +538,14 @@ namespace KTVProject
         private void label35_Click(object sender, EventArgs e)
         {
             int liang = Convert.ToInt32(this.textBox2.Text);
-            this.textBox2.Text = (liang + 1).ToString();
+            if (Convert.ToInt32(((Label)sender).Parent.Tag) > liang)
+            {
+                this.textBox2.Text = (liang + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("抱歉，该商品库存不足");
+            }
         }
 
         private void label34_Click(object sender, EventArgs e)
@@ -514,7 +568,14 @@ namespace KTVProject
         private void label27_Click(object sender, EventArgs e)
         {
             int liang = Convert.ToInt32(this.textBox1.Text);
-            this.textBox1.Text = (liang + 1).ToString();
+            if (Convert.ToInt32(((Label)sender).Parent.Tag) > liang)
+            {
+                this.textBox1.Text = (liang + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("抱歉，该商品库存不足");
+            }
 
         }
         #endregion
@@ -535,14 +596,17 @@ namespace KTVProject
                 }
             }
             //如果减少到0就删除这一项并重排数组
-            int jIndex = fangfa(name);
-            if (js[jIndex].JiushuiConut==0)
+            if (!textBox6.Text.Equals(string.Empty))
             {
-                for(int i = jIndex; i<js.Length-1; i++)
+                int jIndex = fangfa(name);
+                if (js[jIndex].JiushuiConut == 0)
                 {
-                    js[i] = js[i + 1];
+                    for (int i = jIndex; i < js.Length - 1; i++)
+                    {
+                        js[i] = js[i + 1];
+                    }
+                    js[js.Length - 1] = null;
                 }
-                js[js.Length - 1] = null;
             }
             zongjia();
             bangding();
@@ -562,8 +626,11 @@ namespace KTVProject
                     if (js[i] != null)
                     {
                         String shopTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        string sql = "insert into ItemShopList values("+roomId+ ",'"+ js[i].JiushuiName + "'," + js[i].JiushuiConut + "," + js[i].Jiushuidianjia + "," + js[i].Jiushuizongjia + ",'未结算','"+ shopTime +"')";
-                        DBHelper.GetExecuteNonQuery(sql);
+                        string sql1 = "select ItemStocks from Items where ItemName = '"+ js[i].JiushuiName + "'";
+                        string sql2 = "update Items set ItemStocks = "+(DBHelper.GetExecuteScalar(sql1) - js[i].JiushuiConut)+"where ItemName = '"+ js[i].JiushuiName + "'";
+                        string sql3 = "insert into ItemShopList values("+roomId+ ",'"+ js[i].JiushuiName + "'," + js[i].JiushuiConut + "," + js[i].Jiushuidianjia + "," + js[i].Jiushuizongjia + ",'未结算','"+ shopTime +"')";
+                        DBHelper.GetExecuteNonQuery(sql2);
+                        DBHelper.GetExecuteNonQuery(sql3);
                     }
                 }
                 MessageBox.Show("结算完成");
@@ -573,6 +640,7 @@ namespace KTVProject
                 }
                 lblzongjia.Text = "购物车没有商品";
                 bangding();
+                showJiushui();
             }
             catch (Exception es)
             {
