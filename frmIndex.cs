@@ -922,58 +922,9 @@ namespace KTVProject
         private void timer1s_Tick(object sender, EventArgs e)
         {
             //同步时间
-            if (!Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute).Equals(this.labelTime.Text))
+            if (!Convert.ToString(DateTime.Now.ToString("HH:mm:ss")).Equals(this.labelTime.Text))
             {
-                if(Convert.ToString(DateTime.Now.Hour).Length == 1)
-                {
-                    if (Convert.ToString(DateTime.Now.Minute).Length == 1)
-                    {
-                        if (Convert.ToString(DateTime.Now.Second).Length == 1)
-                        {
-                            this.labelTime.Text = Convert.ToString("0" + DateTime.Now.Hour + ":0" + DateTime.Now.Minute + ":0" + DateTime.Now.Second);
-                        }
-                        else
-                        {
-                            this.labelTime.Text = Convert.ToString("0" + DateTime.Now.Hour + ":0" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
-                        }
-                    }
-                    else
-                    {
-                        if (Convert.ToString(DateTime.Now.Second).Length == 1)
-                        {
-                            this.labelTime.Text = Convert.ToString("0" + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":0" + DateTime.Now.Second);
-                        }
-                        else
-                        {
-                            this.labelTime.Text = Convert.ToString("0" + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
-                        }
-                    }
-                }
-                else
-                {
-                    if (Convert.ToString(DateTime.Now.Minute).Length == 1)
-                    {
-                        if (Convert.ToString(DateTime.Now.Second).Length == 1)
-                        {
-                            this.labelTime.Text = Convert.ToString(DateTime.Now.Hour + ":0" + DateTime.Now.Minute + ":0" + DateTime.Now.Second);
-                        }
-                        else
-                        {
-                            this.labelTime.Text = Convert.ToString(DateTime.Now.Hour + ":0" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
-                        }
-                    }
-                    else
-                    {
-                        if (Convert.ToString(DateTime.Now.Second).Length == 1)
-                        {
-                            this.labelTime.Text = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":0" + DateTime.Now.Second);
-                        }
-                        else
-                        {
-                            this.labelTime.Text = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
-                        }
-                    }
-                }
+                this.labelTime.Text = Convert.ToString(DateTime.Now.ToString("HH:mm:ss"));
             }
             //连续播放
             if (this.awmp_mv.playState == WMPLib.WMPPlayState.wmppsStopped && this.awmp_bz.playState == WMPLib.WMPPlayState.wmppsStopped)
