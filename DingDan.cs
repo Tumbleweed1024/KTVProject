@@ -22,6 +22,13 @@ namespace KTVProject
             get { return jiushuiConut; }
             set { jiushuiConut = value; }
         }
+        private int jiushuiStocks;
+
+        public int JiushuiStocks
+        {
+            get { return jiushuiStocks; }
+            set { jiushuiStocks = value; }
+        }
 
         private double jiushuidianjia;
 
