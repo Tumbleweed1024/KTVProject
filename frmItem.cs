@@ -583,22 +583,20 @@ namespace KTVProject
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             string name = ((Control)sender).Tag.ToString();
+            int jIndex = fangfa(name);
             //MessageBox.Show(name);
-            for (int i = 0; i < js.Length; i++)
-            {
-                if (js[i] != null)
+            if (jIndex != -1)
                 {
-                    if (js[i].JiushuiName.Equals(name))
+                    if (!((Control)sender).Parent.Controls[2].Text.ToString().Equals(string.Empty))
                     {
-                        js[i].JiushuiConut = Convert.ToInt32(((Control)sender).Text);
-                        js[i].Jiushuizongjia = js[i].JiushuiConut * js[i].Jiushuidianjia;
+                        js[jIndex].JiushuiConut = Convert.ToInt32(((Control)sender).Parent.Controls[2].Text);
+                        js[jIndex].Jiushuizongjia = js[jIndex].JiushuiConut * js[jIndex].Jiushuidianjia;
                     }
                 }
-            }
+            
             //如果减少到0就删除这一项并重排数组
-            if (!textBox6.Text.Equals(string.Empty))
+            if (!((Control)sender).Parent.Controls[1].Text.Equals(string.Empty))
             {
-                int jIndex = fangfa(name);
                 if (js[jIndex].JiushuiConut == 0)
                 {
                     for (int i = jIndex; i < js.Length - 1; i++)
